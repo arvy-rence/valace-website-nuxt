@@ -1,10 +1,11 @@
 <template>
     <NuxtLink :to="linkDestination" @click="test()">
-        <li class="font-kulim">
+        <li class="font-kulim hover:underline">
             <slot/>
         </li>
     </NuxtLink>
 </template>
+
 <script>
 export default {
     name: 'FooterListItem',
@@ -26,3 +27,9 @@ export default {
     },
 }
 </script>
+
+<style>
+    .hoverable {
+        transition:
+    }
+</style>
