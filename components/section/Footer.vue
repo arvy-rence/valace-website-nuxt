@@ -62,11 +62,8 @@
 </template>
 
 <script>
-import FooterListItem from "../FooterListItem";
-
 export default {
     name: "Footer",
-    components: {FooterListItem},
 }
 </script>
 
