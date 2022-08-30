@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center flex justify-center bg-gray-100 py-[3rem] ">
+    <div class="text-center flex justify-center bg-gray-100 py-[3rem]">
         <div class="flex justify-around mx-[6rem] items-center">
             <div class="mx-[1rem] w-1/2">
                 <h1 class="text-primary font-khula text-4xl text-right">
