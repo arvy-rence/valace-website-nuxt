@@ -1,6 +1,10 @@
 <template>
     <div>
-        <SectionBookSelection :queryValues="dummy"/>
+        <SectionTopnotchers />
+        <SectionSisterCities/>
+        <SectionPartners/>
+        <!--    <SectionBookSelection :queryValues="dummy"/> -->
+        <SectionKOHA/>
     </div>
 </template>
 
