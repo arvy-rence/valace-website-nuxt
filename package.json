@@ -12,6 +12,7 @@
     "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "postcss": "^8.4.16"
   }
 }

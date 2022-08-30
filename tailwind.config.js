@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import colors from "tailwindcss/colors";
+
 module.exports = {
     content: [
         './assets/**/*.{vue,js,css}',
@@ -18,12 +21,17 @@ module.exports = {
             // custom
             'primary': '#00104A',
             'secondary': '#E10909',
+            'tertiary': '#000D3E',
 
             // built in
-            'white': '#ffffff',
-            'purple': '#3f3cbb',
-            'midnight': '#121063',
-            'metal': '#565584',
+            'black': colors.black,
+            'white': colors.white,
+            'gray': colors.gray,
+            'emerald': colors.emerald,
+            'indigo': colors.indigo,
+            'yellow': colors.yellow,
+            'purple': colors.purple,
+            'slate': colors.slate,
             'tahiti': '#3ab7bf',
             'silver': '#ecebff',
             'bubble-gum': '#ff77e9',
