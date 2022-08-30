@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-col justify-center items-center w-screen bg-gray-100 py">
+    <div class="flex-col justify-center items-center w-screen bg-gray-100">
         <h1 class="font-bold font-khula text-4xl text-tertiary text-center">
             BOOK SELECTION
         </h1>
