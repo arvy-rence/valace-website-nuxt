@@ -40,6 +40,10 @@ module.exports = {
         fontFamily: {
             'khula': ['Khula', 'sans-serif'],
             'kulim': ['Kulim Park', 'sans-serif']
+        },
+
+        backgroundImage: {
+            // 'sistercities-bg': "url('~/assets/images/book-bg.png')",
         }
     },
     plugins: [],
