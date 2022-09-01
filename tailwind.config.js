@@ -32,6 +32,7 @@ module.exports = {
             'yellow': colors.yellow,
             'purple': colors.purple,
             'slate': colors.slate,
+            'red': colors.red,
             'tahiti': '#3ab7bf',
             'silver': '#ecebff',
             'bubble-gum': '#ff77e9',
