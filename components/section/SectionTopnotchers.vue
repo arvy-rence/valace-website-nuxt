@@ -1,7 +1,7 @@
 <template>
-    <UtilVerticalSpacer :height="2" units="rem"/>
-    <div class="flex justify-around items-center">
-        <div class="w-1/4">
+    <UtilVerticalSpacer :height="3" units="rem"/>
+    <div class="grid grid-cols-8 gap-4">
+        <div class="col-start-3 col-span-2 inline-flex flex-col justify-center text-justify">
             <h1 class="text-4xl text-primary font-khula font-bold">
                 TOPNOTCHERS' SHELF
             </h1>
@@ -13,22 +13,14 @@
             </p>
         </div>
         <img :src="image" width="200" alt=""
-            class="img-with-shadow rounded-xl">
+            class="img-with-shadow rounded-xl col-start-6">
     </div>
-    <UtilVerticalSpacer :height="2" units="rem"/>
+    <UtilVerticalSpacer :height="3" units="rem"/>
 </template>
 
 <script setup>
     const date = new Date().toDateString()
     const image = "../../assets/images/people/dummy-1.png"
-    useHead({
-        link: [
-            {
-                rel: "stylesheet",
-                href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-            }
-        ]
-    })
 </script>
 
 <style>
