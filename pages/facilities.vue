@@ -6,8 +6,15 @@
 </template>
 
 <script>
+import {checkReload} from "../composables/checkReload";
+import SectionValACEDirectory from "../components/section/SectionValACEDirectory";
+
 export default {
-    name: "facilities"
+    name: "facilities",
+    components: {SectionValACEDirectory},
+    mounted() {
+        checkReload()
+    },
 }
 </script>
 
