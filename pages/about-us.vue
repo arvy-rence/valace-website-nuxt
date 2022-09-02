@@ -1,5 +1,6 @@
 <template>
     <div>
+        <img src="~/assets/images/about-banner.png" alt="" class="w-screen">
         <SectionLibraryInfo/>
         <SectionContactInfo/>
         <SectionMeetTheTeam/>
