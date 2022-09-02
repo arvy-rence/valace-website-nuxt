@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>Heloo</h1>
+        <img src="~/assets/images/facilities-banner.png" alt="" class="w-screen">
+        <SectionValACEDirectory/>
     </div>
 </template>
 
