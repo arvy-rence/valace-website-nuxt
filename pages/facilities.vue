@@ -1,12 +1,20 @@
 <template>
     <div>
-        <h1>Heloo</h1>
+        <img src="~/assets/images/facilities-banner.png" alt="" class="w-screen">
+        <SectionValACEDirectory/>
     </div>
 </template>
 
 <script>
+import {checkReload} from "../composables/checkReload";
+import SectionValACEDirectory from "../components/section/SectionValACEDirectory";
+
 export default {
-    name: "facilities"
+    name: "facilities",
+    components: {SectionValACEDirectory},
+    mounted() {
+        checkReload()
+    },
 }
 </script>
 

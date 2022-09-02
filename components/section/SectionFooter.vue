@@ -1,7 +1,7 @@
 <template>
     <div class="flex-col">
         <!-- logo panel // -->
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center pt-6">
             <NuxtLink to="https://facebook.com/" target="_blank">
                 <figure class="px-4">
                     <img src="~/assets/images/icons/fb-logo.png" height="30" width="30">
@@ -19,7 +19,7 @@
             </NuxtLink>
             <NuxtLink to="https://koha.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="~/assets/images/icons/koha.png" height="30" width="30">
+                    <img src="~/assets/images/icons/koha.png" height="22" width="22">
                 </figure>
             </NuxtLink>
         </div>
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-    name: "Footer",
+    name: "SectionFooter",
 }
 </script>
 

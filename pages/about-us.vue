@@ -1,12 +1,25 @@
 <template>
     <div>
-        <h1>about us page</h1>
+        <img src="~/assets/images/about-banner.png" alt="" class="w-screen">
+        <SectionLibraryInfo/>
+        <SectionContactInfo/>
+        <SectionMeetTheTeam/>
+        <SectionOthers/>
     </div>
 </template>
 
 <script>
+import SectionOthers from "../components/section/SectionOthers";
+import {checkReload} from "../composables/checkReload";
+import SectionMeetTheTeam from "../components/section/SectionMeetTheTeam";
+import SectionContactInfo from "../components/section/SectionContactInfo";
+import SectionLibraryInfo from "../components/section/SectionLibraryInfo";
 export default {
-    name: "about-us"
+    name: "about-us",
+    components: {SectionLibraryInfo, SectionContactInfo, SectionMeetTheTeam, SectionOthers},
+    mounted() {
+        checkReload()
+    },
 }
 </script>
 
