@@ -19,7 +19,6 @@
             </div>
             <div class="inline-flex items-center mt-5 pb-5">
                 <NuxtLink :to="newsInfo.newsLink"
-                          target="_blank"
                           class="text-primary text-sm underline font-bold">
                     <button class="py-2">
                         <span class="text-primary hover:underline">
