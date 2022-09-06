@@ -12,16 +12,20 @@
                 >
                     <i class="fa-solid fa-bullseye pr-[2rem]"></i> Mission and Vision
 
-                    <span v-show="missionVisionIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!missionVisionIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+<!--                    <span v-show="missionVisionIsActive" class="absolute right-[1rem]">-->
+<!--                        <i class="fa-solid fa-chevron-down"></i>-->
+<!--                    </span>-->
+<!--                    <span v-show="!missionVisionIsActive" class="absolute right-[1rem]">-->
+<!--                        <i class="fa-solid fa-chevron-up"></i>-->
+<!--                    </span>-->
+
+                    <span :class="[missionVisionIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
 
                 </button>
             </h1>
-            <div :class="[missionVisionIsActive ? 'hidden' : 'show']">
+            <div :class="[missionVisionIsActive ? ['hidden'] : ['show']]">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -47,16 +51,13 @@
                     @click="setGuidelinesToggle">
                     <i class="fa-solid fa-file-shield pr-[2rem]"></i>Guidelines
 
-                    <span v-show="guideLinesIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!guideLinesIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <span :class="[guideLinesIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
 
                 </button>
             </h1>
-            <div :class="[guideLinesIsActive ? 'hidden' : 'show']">
+            <div :class="[guideLinesIsActive ? ['custom-accordion-animation1'] : ['custom-accordion-animation2']]">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -81,15 +82,12 @@
                         @click="setFAQToggle">
                     <i class="fa-solid fa-question pr-[2rem]"></i> Frequently Asked Questions (FAQ)
 
-                    <span v-show="faqIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!faqIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <span :class="[faqIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
                 </button>
             </h1>
-            <div :class="[faqIsActive ? 'hidden' : 'show']">
+            <div :class="[faqIsActive ? ['hidden'] : ['show']]">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -136,5 +134,20 @@ export default {
 </script>
 
 <style scoped>
+
+.custom-accordion-animation1 {
+    transition: transform 0.5s linear;
+    transform-origin: top right;
+    transform-style: preserve-3D;
+    transform: translateY(10%);
+}
+
+.custom-accordion-animation2 {
+    transition: transform 0.5s linear;
+    transform-origin: top right;
+    transform-style: preserve-3D;
+    transform: translateY(100%);
+}
+
 
 </style>
