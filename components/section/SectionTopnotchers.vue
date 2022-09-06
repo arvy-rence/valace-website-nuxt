@@ -1,7 +1,7 @@
 <template>
     <UtilVerticalSpacer :height="3" units="rem"/>
     <div class="grid grid-cols-8 gap-4">
-        <div class="col-start-3 col-span-2 inline-flex flex-col justify-center text-justify">
+        <div class="col-start-3 col-span-2 inline-flex flex-col justify-center">
             <h1 class="text-4xl text-primary font-khula font-bold">
                 TOPNOTCHERS' SHELF
             </h1>
