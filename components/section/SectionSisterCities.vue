@@ -33,12 +33,13 @@
             <UtilPagination/>
         </div>
         <div class="flex justify-center items-center">
-            <button
-                @click="onClick"
-                class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
-            >
-                View All Sister Cities
-            </button>
+            <NuxtLink to="/sister-cities/">
+                <button
+                    class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
+                >
+                    View Sister Cities
+                </button>
+            </NuxtLink>
         </div>
         <UtilVerticalSpacer :height="2" units="rem"/>
     </div>
