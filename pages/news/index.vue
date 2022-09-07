@@ -14,14 +14,6 @@
                 <CardNews :newsInfo="newsInfo"/>
             </div>
         </div>
-        <div class="flex justify-center items-center py-[2rem]">
-            <button
-                class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
-            >
-                View All News
-            </button>
-        </div>
-        <UtilVerticalSpacer :height="2" units="rem"/>
     </div>
 </template>
 
