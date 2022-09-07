@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[url(../../assets/images/book-bg.png)] flex-col bg-img justify-center align-center">
+    <div class="bg-[url(/images/book-bg.png)] flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>
             <h2 class="font-bold text-lg text-gray-400 font-khula text-center">Valenzuela City Library</h2>
@@ -13,10 +13,10 @@
             <div class="w-[22rem] bg-gray">
                 <div class="bg-gray-100 rounded-xl img-with-shadow my-[.7rem] px-[.5rem] py-16">
                     <figure class="flex justify-center items-center py-[.5rem]">
-                        <img src="../../assets/images/icons/logo.png" width=75/>
+                        <img src="../../public/images/icons/logo.png" width=75/>
                     </figure>
                     <figure class="flex justify-center items-center">
-                        <img src="../../assets/images/koha.png" width="300"/>
+                        <img src="../../public/images/koha.png" width="300"/>
                     </figure>
                     <h1 class="font-bold text-md text-black-100 py-[.3rem] text-center font-khula">Valenzuela City Library</h1>
                     <div class="text-[12px] text-black-100 text-center font-khula">
@@ -29,8 +29,8 @@
             </div>
         </div>
 
-        <div class="flex justify-center py-[2rem]">
-            <UtilPagination/>
+        <div class="flex justify-center items-center py-[2rem]">
+            pagination component here
         </div>
         <div class="flex justify-center items-center">
             <NuxtLink to="/sister-cities/">

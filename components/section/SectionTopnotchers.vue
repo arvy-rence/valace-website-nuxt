@@ -20,7 +20,7 @@
 
 <script setup>
     const date = new Date().toDateString()
-    const image = "../../assets/images/people/dummy-1.png"
+    const image = "/images/people/dummy-1.png"
 </script>
 
 <style>

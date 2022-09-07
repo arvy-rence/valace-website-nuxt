@@ -4,22 +4,22 @@
         <div class="flex justify-center items-center pt-6">
             <NuxtLink to="https://facebook.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="~/assets/images/icons/fb-logo.png" height="30" width="30">
+                    <img src="/images/icons/fb-logo.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://twitter.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="~/assets/images/icons/twitter.png" height="30" width="30">
+                    <img src="/images/icons/twitter.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://maps.google.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="~/assets/images/icons/map.png" height="30" width="30">
+                    <img src="/images/icons/map.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://koha.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="~/assets/images/icons/koha.png" height="22" width="22">
+                    <img src="/images/icons/koha.png" height="22" width="22">
                 </figure>
             </NuxtLink>
         </div>

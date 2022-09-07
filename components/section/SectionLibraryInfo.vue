@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-[4rem]">
         <div class="w-full lg:w-2/5">
-            <img src="../../assets/images/valace-building.png" class="w-full">
+            <img src="/images/valace-building.png" class="w-full">
         </div>
         <div class="w-full lg:w-3/5 px-2 lg:px-6 mt-[1rem] lg:mt-0">
             <h1 class="font-bold text-2xl text-primary">

@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="w-full lg:w-1/2">
-            <img src="../../assets/images/koha.png" class="w-full" alt=""/>
+            <img src="/images/koha.png" class="w-full" alt=""/>
         </div>
     </div>
 </template>

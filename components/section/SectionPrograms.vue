@@ -11,7 +11,7 @@
         <div class="flex flex-row justify-center px-[2rem] lg:px-[6rem]">
             <div class="mx-auto">
                 <div class="rounded-full bg-red-100 flex items-center justify-center w-[10rem] h-[10rem]">
-                    <img src="../../assets/images/icons/arts.png" width="120px" height="120px"/>
+                    <img src="/images/icons/arts.png" width="120px" height="120px"/>
                 </div>
                 <div class="rounded-full bg-gray-500 flex w-[4rem] h-auto">
 
@@ -32,7 +32,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ex accumsan, gravida nunc in, elementum augue. Etiam non felis non tortor tempus sodales quis eget mauris. Cras urna ex, congue id tempor id, consectetur non nunc. Maecenas nec purus sit amet turpis hendrerit iaculis. In viverra condimentum tellus, in aliquet magna vulputate ac. Praesent scelerisque rhoncus faucibus. Mauris dignissim dui ut hendrerit elementum. In eu ante quis turpis consectetur porta id eleifend lacus. Ut enim erat, gravida quis sapien sit amet, efficitur auctor libero. Maecenas tristique augue non aliquet tristique.
                     </p>
                 </div>
-                <img src="../../assets/images/dummy.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:ml-[2rem] pt-[1rem] lg:pt-[1rem]"/>
+                <img src="../../public/images/dummy.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:ml-[2rem] pt-[1rem] lg:pt-[1rem]"/>
             </div>
         </div>
     </div>

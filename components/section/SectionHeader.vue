@@ -2,7 +2,7 @@
     <nav class="flex justify-between items-center px-16 h-12">
         <NuxtLink to="/">
             <figure>
-                <img src="~/assets/images/icons/logo.png" width="100" height="60" alt="">
+                <img src="/images/icons/logo.png" width="100" height="60" alt="">
             </figure>
         </NuxtLink>
         <!-- for small screens -->

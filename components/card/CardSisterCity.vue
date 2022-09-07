@@ -2,7 +2,7 @@
     <div class="w-[22rem] mx-4 custom-bottom-shadow img-with-shadow my-[1rem] px-[1.4rem] pt-4 min-h-[24rem]">
         <div class="mx-4 flex flex-col justify-center items-center align-center h-1/2">
             <figure class="inline-flex justify-center items-center py-[.5rem]">
-                <img src="../../assets/images/icons/logo.png" width="75" alt="">
+                <img src="/images/icons/logo.png" width="75" alt="">
             </figure>
             <figure class="inline-flex justify-center items-center">
                 <img :src="sisterCityInfo.imageURL" width="340" alt=""/>
