@@ -13,10 +13,10 @@
             <div class="w-[22rem] bg-gray">
                 <div class="bg-gray-100 rounded-xl img-with-shadow my-[.7rem] px-[.5rem] py-16">
                     <figure class="flex justify-center items-center py-[.5rem]">
-                        <img src="../../public/images/icons/logo.png" width=75/>
+                        <img src="/images/icons/logo.png" width=75/>
                     </figure>
                     <figure class="flex justify-center items-center">
-                        <img src="../../public/images/koha.png" width="300"/>
+                        <img src="/images/koha.png" width="300"/>
                     </figure>
                     <h1 class="font-bold text-md text-black-100 py-[.3rem] text-center font-khula">Valenzuela City Library</h1>
                     <div class="text-[12px] text-black-100 text-center font-khula">
