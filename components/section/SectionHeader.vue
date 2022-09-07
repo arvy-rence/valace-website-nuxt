@@ -5,7 +5,18 @@
                 <img src="~/assets/images/icons/logo.png" width="100" height="60" alt="">
             </figure>
         </NuxtLink>
-        <ul class="flex">
+        <!-- for small screens -->
+        <div class="lg:hidden space-y-2
+            border border-2 border-gray-300 rounded-md
+            py-1 px-1
+            group hover:bg-primary cursor-pointer" @click="openMenu">
+            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>
+            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>
+            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>
+        </div>
+
+        <!-- for large screens -->
+        <ul class="hidden lg:flex">
             <li class="mr-5">
                 <NuxtLink to="/"
                           :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"
@@ -46,7 +57,8 @@ export default {
                 home: true,
                 aboutUs: false,
                 facilities: false
-            }
+            },
+            isMenuOpen: false
         }
     },
     methods: {
@@ -68,6 +80,9 @@ export default {
                     this.isActive.aboutUs = false;
                     break;
             }
+        },
+        openMenu() {
+
         }
     }
 }
