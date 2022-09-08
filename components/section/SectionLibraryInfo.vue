@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-[4rem]">
+    <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-[2rem] lg:pt-[4rem]">
         <div class="w-full lg:w-2/5">
             <img src="/images/valace-building.png" class="w-full">
         </div>
