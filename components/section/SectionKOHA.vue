@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col-reverse lg:flex-row px-[6rem] py-[4rem]">
-        <div class="w-full lg:w-1/2 px-[1rem] mt-[2rem]">
+    <div class="flex flex-col-reverse lg:flex-row px-[1rem] lg:px-[6rem] py-[4rem]">
+        <div class="w-full lg:w-1/2 px-[1rem] mt-[1rem] lg:mt-[2rem]">
             <h1 class="text-primary font-khula text-4xl text-right">
                 Integrated <span class="font-bold">KOHA </span><br>Library System
             </h1>
