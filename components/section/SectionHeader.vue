@@ -25,8 +25,11 @@
                     HOME
                 </NuxtLink>
             </li>
-            <li class="mr-5">
-                <a class="text-blue-500 hover:text-blue-800" href="#">OPAC</a>
+            <li class="border-t md:border-none">
+                <NuxtLink to="https://opac-url.com"
+                          class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula">
+                    OPAC
+                </NuxtLink>
             </li>
             <li class="mr-5">
                 <NuxtLink to="/about-us"
@@ -89,5 +92,54 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 767px) {
+    .navicon {
+        width: 1.125em;
+        height: .125em;
+    }
 
+    .navicon::before,
+    .navicon::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease-out;
+        content: '';
+        background: #3D4852;
+    }
+
+    .navicon::before {
+        top: 5px;
+    }
+
+    .navicon::after {
+        top: -5px;
+    }
+
+    .menu-btn:not(:checked) ~ .menu {
+        display: none;
+    }
+
+    .menu-btn:checked ~ .menu {
+        display: block;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::before {
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon::before,
+    .menu-btn:checked ~ .menu-icon .navicon::after {
+        top: 0;
+    }
+}
 </style>
