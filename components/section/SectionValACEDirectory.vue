@@ -1,7 +1,7 @@
 <template>
     <UtilVerticalSpacer :height="3" units="rem"/>
     <div class="flex flex-col justify-center items-center">
-        <div class="py-[2rem] text-[3rem] items-start font-khula font-bold text-primary">
+        <div class="py-[2rem] text-[3rem] items-start font-khula font-bold text-center text-primary">
             VALACE DIRECTORY
         </div>
 

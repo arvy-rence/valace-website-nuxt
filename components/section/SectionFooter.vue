@@ -25,7 +25,7 @@
         </div>
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div class="flex justify-center">
-            <div class="flex justify-around items-start w-3/4">
+            <div class="flex justify-around items-start w-11/12 lg:w-3/4">
                 <ul>
                     <li class="font-bold font-khula text-primary">Header 1</li>
                     <FooterListItem href="/about-us">Item 1</FooterListItem>
