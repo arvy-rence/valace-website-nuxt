@@ -31,7 +31,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+import {generateSingleBook} from "../../composables/fetchBooksFromAPI";
+import CardCarousel from "../card/CardCarousel";
 
 export default {
     name: "SectionBookSelection",
