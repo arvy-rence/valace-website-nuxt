@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center bg-gray-100 py-[3rem]">
-        <div class="border border-black w-2/3 mb-[3rem]">
+        <div class="border border-black w-5/6 lg:w-2/3 mb-[3rem]">
             <h1 class="">
                 <button
                     class="relative flex items-center w-full py-4 px-5 text-xl"
@@ -10,18 +10,22 @@
                     ]"
                     @click="setMissionVisionToggle"
                 >
-                    <i class="fa-solid fa-bullseye pr-[2rem]"></i> Mission and Vision
+                    <i class="fa-solid fa-bullseye pr-[1rem]"></i> Mission and Vision
 
-                    <span v-show="missionVisionIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!missionVisionIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+<!--                    <span v-show="missionVisionIsActive" class="absolute right-[1rem]">-->
+<!--                        <i class="fa-solid fa-chevron-down"></i>-->
+<!--                    </span>-->
+<!--                    <span v-show="!missionVisionIsActive" class="absolute right-[1rem]">-->
+<!--                        <i class="fa-solid fa-chevron-up"></i>-->
+<!--                    </span>-->
+
+                    <span :class="[missionVisionIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
 
                 </button>
             </h1>
-            <div :class="[missionVisionIsActive ? 'hidden' : 'show']">
+            <div :class="[missionVisionIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -36,7 +40,7 @@
             </div>
         </div>
 
-        <div class="border border-black w-2/3 mb-[3rem]">
+        <div class="border border-black w-5/6 lg:w-2/3 mb-[3rem]">
             <h1 class="text-sm">
                 <button
                     class="relative flex items-center w-full py-4 px-5 text-xl"
@@ -45,18 +49,15 @@
                         ['bg-black', 'text-white']
                     ]"
                     @click="setGuidelinesToggle">
-                    <i class="fa-solid fa-file-shield pr-[2rem]"></i>Guidelines
+                    <i class="fa-solid fa-file-shield pr-[1rem]"></i>Guidelines
 
-                    <span v-show="guideLinesIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!guideLinesIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <span :class="[guideLinesIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
 
                 </button>
             </h1>
-            <div :class="[guideLinesIsActive ? 'hidden' : 'show']">
+            <div :class="[guideLinesIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -71,7 +72,7 @@
             </div>
         </div>
 
-        <div class="border border-black w-2/3">
+        <div class="border border-black w-5/6 lg:w-2/3">
             <h1 class="text-sm">
                 <button class="relative flex items-center w-full py-4 px-5 text-xl"
                         :class="[faqIsActive ?
@@ -79,17 +80,14 @@
                         ['bg-black', 'text-white']
                         ]"
                         @click="setFAQToggle">
-                    <i class="fa-solid fa-question pr-[2rem]"></i> Frequently Asked Questions (FAQ)
+                    <i class="fa-solid fa-question pr-[1rem]"></i> Frequently Asked Questions (FAQ)
 
-                    <span v-show="faqIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span v-show="!faqIsActive" class="absolute right-[1rem]">
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <span :class="[faqIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
+                       <i class="fa-solid fa-chevron-up"></i>
                     </span>
                 </button>
             </h1>
-            <div :class="[faqIsActive ? 'hidden' : 'show']">
+            <div :class="[faqIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
                 <div class="accordion-body py-4 px-5 bg-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -137,4 +135,26 @@ export default {
 
 <style scoped>
 
+.custom-default {
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -moz-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -o-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -ms-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
+    transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+
+.custom-accordion-animation1 {
+
+}
+
+.custom-accordion-animation2 {
+    max-height: 5000px;
+    -webkit-transition: max-height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -moz-transition: max-height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -o-transition: max-height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -ms-transition: max-height 0.5s ease-in-out, box-shadow 0.1s linear;
+    transition: max-height 0.5s ease-in-out, box-shadow 0.1s linear;
+}
 </style>

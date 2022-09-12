@@ -26,24 +26,21 @@ export default {
         }
     },
     methods: {
-        generateRandomWordQuery() {
-            /**
-             * Function to generate and push 3 random words from the in the wordlist to the
-             * generatedWords array
-             */
-            const words = [
-                "programming", "medicine", "history", "geography", "mathematics", "philosophy", "psychology", "business", "law"
-            ]
-            while (this.generatedWords.length < 3) {
-                let randomWord = words[Math.floor(Math.random() * words.length)];
-                if (this.generatedWords.includes(randomWord)) continue;
-                this.generatedWords.push(randomWord);
-            }
-        }
+        // generateRandomWordQuery() {
+        //     /**
+        //      * Function to generate and push 3 random words from the in the wordlist to the
+        //      * generatedWords array
+        //      */
+        //     while (this.generatedWords.length < 4) {
+        //         let randomWord = words[Math.floor(Math.random() * words.length)];
+        //
+        //         this.generatedWords.push(randomWord);
+        //     }
+        // }
     },
     created() {
         this.generatedWords = [];
-        this.generateRandomWordQuery()
+        // this.generateRandomWordQuery()
     },
     mounted() {
         checkReload()

@@ -23,7 +23,7 @@ export default {
         imageURL: {
             required: true,
             type: String,
-            default: "../../assets/images/people/dummy-1.png"
+            default: "/images/people/dummy-1.png"
         },
         className: String
     }

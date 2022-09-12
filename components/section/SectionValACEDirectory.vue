@@ -1,24 +1,34 @@
 <template>
-    <div class="bg-black">
-        <h1>VALACE DIRECTORY</h1>
-        <div class="relative bg-white w-[21rem] h-[22rem]">
-            <img src="../../assets/images/facility-card-bg.png" class="absolute bottom-0 z-0"/>
-            <img src="../../assets/images/icons/library.png" class="absolute left-1/2 transform -translate-x-1/2 z-10"/>
-            <h1 class="text-2xl w-full font-bold text-center absolute bottom-1/2">Library</h1>
-            <h2 class="text-xl w-full text-center absolute bottom-[4rem] px-[1rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis.</h2>
+    <UtilVerticalSpacer :height="3" units="rem"/>
+    <div class="flex flex-col justify-center items-center">
+        <div class="py-[2rem] text-[3rem] items-start font-khula font-bold text-center text-primary">
+            VALACE DIRECTORY
         </div>
 
-        <img src="../../assets/images/icons/arts.png"/>
-        <img src="../../assets/images/icons/educ.png"/>
-        <img src="../../assets/images/icons/sped.png"/>
-        <img src="../../assets/images/icons/training.png"/>
-
+        <div class="flex justify-center flex-wrap gap-[5rem]">
+            <div v-for="(item, index) in facilityInfoArray" :key="index">
+                <CardFacilityInfo :facilityInfo="item"/>
+            </div>
+        </div>
     </div>
+    <UtilVerticalSpacer :height="3" units="rem"/>
 </template>
 
 <script>
+import CardFacilityInfo from "../card/CardFacilityInfo";
+import {facilityInfo} from "../../data/facilityInfo";
+
 export default {
-    name: "SectionValACEDirectory"
+    name: "SectionValACEDirectory",
+    components: {CardFacilityInfo},
+    data() {
+        return {
+            facilityInfoArray: []
+        }
+    },
+    created() {
+        this.facilityInfoArray = facilityInfo
+    }
 }
 </script>
 

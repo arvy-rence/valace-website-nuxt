@@ -1,7 +1,7 @@
 <template>
     <div>
-        <img src="~/assets/images/about-banner.png" alt="" class="w-screen">
-        <SectionLibraryInfo/>
+        <img src="/images/about-banner.png" alt="" class="w-screen">
+        <SectionLibraryInfo id="map"/>
         <SectionContactInfo/>
         <SectionMeetTheTeam/>
         <SectionOthers/>

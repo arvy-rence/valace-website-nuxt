@@ -21,13 +21,13 @@ export default {
         return {
             // update this with the logos of the partners and linkages
             images: [
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png",
-                "../../assets/images/icons/logo.png"
+                "/images/icons/logo.png",
+                "/images/icons/logo.png",
+                "/images/icons/logo.png",
+                "/images/icons/logo.png",
+                "/images/icons/logo.png",
+                "/images/icons/logo.png",
+                "/images/icons/logo.png"
             ]
         }
     }

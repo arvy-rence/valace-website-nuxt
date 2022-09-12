@@ -2,7 +2,7 @@
     <div class="w-[22rem] bg-gray mx-4 ">
         <div class="bg-white-100 custom-bottom-shadow img-with-shadow my-[.7rem] px-[1.4rem] pt-4 min-h-[24rem]">
             <figure class="flex justify-center items-center py-[.5rem]">
-                <img src="../../assets/images/icons/logo.png" width="75" alt="">
+                <img src="/images/icons/logo.png" width="75" alt="">
             </figure>
             <figure class="flex justify-center items-center">
                 <img :src="newsInfo.newsImageURL" width="340" alt=""/>
@@ -19,7 +19,6 @@
             </div>
             <div class="inline-flex items-center mt-5 pb-5">
                 <NuxtLink :to="newsInfo.newsLink"
-                          target="_blank"
                           class="text-primary text-sm underline font-bold">
                     <button class="py-2">
                         <span class="text-primary hover:underline">

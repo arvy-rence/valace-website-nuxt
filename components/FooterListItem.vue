@@ -1,6 +1,6 @@
 <template>
-    <NuxtLink :to="linkDestination" @click="test()">
-        <li class="font-kulim hover:underline">
+    <NuxtLink :to="linkDestination">
+        <li class="font-kulim" :class="isLink ? 'hover:underline' : ''">
             <slot/>
         </li>
     </NuxtLink>
@@ -13,6 +13,10 @@ export default {
         href: {
             type: String,
             required: true
+        },
+        isLink: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
@@ -29,7 +33,5 @@ export default {
 </script>
 
 <style>
-    .hoverable {
-        transition:
-    }
+
 </style>
