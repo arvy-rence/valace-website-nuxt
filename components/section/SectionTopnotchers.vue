@@ -8,8 +8,8 @@
             <span class="text-gray-400 font-khula">
                 <i class="fa-solid fa-clock"></i> {{ date }}
             </span>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis iure repellat incidunt quidem adipisci architecto. Sapiente delectus amet, eaque esse labore ipsum beatae natus vel perferendis, voluptatem vero est distinctio?
+            <p class="font-kulim">
+                The Valenzuela City Library is dedicating a special space for our city's Board Exam Topnotchers entitled the Topnotchers' Shelf. It aims to highlight the academic excellence of Valenzuela City residents. This unique space will feature Valenzuelano Topnotchers together with select resources that they used for the exam and other reading materials which inspired them to do well in their studies.
             </p>
         </div>
         <img :src="image" class="img-with-shadow rounded-xl w-full md:w-[14rem]">
