@@ -1,7 +1,14 @@
 import Axios from 'axios'
 
 const primary = [
-    "programming", "medicine", "history", "geography", "mathematics", "philosophy", "psychology", "business", "law"
+    "programming", "medicine", "history", "geography", "mathematics", "philosophy", "psychology", "business", "law",
+    "Action", "Adventure", "Art", "Architecture", "Alternate History", "Autobiography", "Anthology", "Biography", "Chick lit",
+    "Business/economics", "Children's", "Crafts/hobbies", "Classic", "Cookbook", "Comic book", "Diary", "Coming-of-age",
+    "Dictionary", "Crime", "Encyclopedia", "Drama", "Guide", "Fairytale", "Health/fitness", "Fantasy", "History",
+    "Graphic novel", "Home and garden", "Historical fiction", "Humor", "Horror", "Journal", "Mystery", "Math",
+    "Paranormal romance", "Memoir", "Picture book", "Philosophy", "Poetry", "Prayer", "Political thriller", "Religion",
+    "spirituality", "new age", "Romance", "Textbook", "Satire", "True crime", "Science fiction", "Review", "Short story",
+    "Science", "Suspense", "Self help", "Thriller", "Sports and leisure", "Western", "Travel", "Young adult", "True crime"
 ]
 
 const secondary = [
@@ -78,47 +85,37 @@ const generateKeyword = () => {
     return keyword;
 }
 
-const getBooksFromAPI = async (query) => {
-    try {
-        const API_URL = `https://openlibrary.org/search.json?q=${query}`
-        const response = await Axios.get(API_URL);
-        const numberOfBooks = await response.data.numFound;
-        let randomDocIndex = 0
-        console.log(numberOfBooks);
-        if (numberOfBooks > 99) {
-            randomDocIndex = Math.floor(Math.random() * 99);
-        } else {
-            randomDocIndex = Math.floor(Math.random() * numberOfBooks);
-        }
-        if(!("cover_i" in await response.data.docs[randomDocIndex])) {
-            console.log("No cover image");
-            return getBooksFromAPI(generateKeyword())
-        }
-        return {
-            bookTitle: response.data.docs[randomDocIndex].title,
-            bookAuthor: response.data.docs[randomDocIndex].author_name,
-            bookImageURL: `http://covers.openlibrary.org/b/id/${response.data.docs[randomDocIndex].cover_i}-L.jpg`
-        }
-    } catch (e) {
-        console.log(e)
+
+export const getBookResponse = async (response) => {
+    const numberOfBooks = response.data.docs.length;
+    let randomDocIndex = 0
+    // console.log(numberOfBooks);
+    // if (numberOfBooks > 99) {
+    //     randomDocIndex = Math.floor(Math.random() * 99);
+    // } else {
+    //     randomDocIndex = Math.floor(Math.random() * numberOfBooks);
+    // }
+    randomDocIndex = Math.floor(Math.random() * numberOfBooks);
+    // console.log("Random Doc Index");
+    // console.log(randomDocIndex);
+
+    if(!("cover_i" in response.data.docs[randomDocIndex])) {
+        // console.log("No cover image");
+        return getBookResponse(response)
     }
-}
 
-
-
-export const generateBooks = async () => {
-    let generatedBooks = []
-    generatedBooks.push(await getBooksFromAPI(generateKeyword()));
-    generatedBooks.push(await getBooksFromAPI(generateKeyword()));
-    generatedBooks.push(await getBooksFromAPI(generateKeyword()));
-    generatedBooks.push(await getBooksFromAPI(generateKeyword()));
-    console.log(generatedBooks)
-    return generatedBooks
+    return {
+        bookTitle: response.data.docs[randomDocIndex].title,
+        bookAuthor: response.data.docs[randomDocIndex].author_name,
+        bookImageURL: `https://covers.openlibrary.org/b/id/${response.data.docs[randomDocIndex].cover_i}-L.jpg`
+    }
 }
 
 export const generateSingleBook = async () => {
     return await getBooksFromAPI(generateKeyword())
 }
+
+
 
 // module.exports = { generatedBooks, generateBooks }
 

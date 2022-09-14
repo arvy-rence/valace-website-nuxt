@@ -5,128 +5,301 @@
             <h1 class="font-bold font-khula text-4xl text-tertiary text-center">
                 BOOK SELECTION
             </h1>
-            <UtilVerticalSpacer :height="2" units="rem"/>
             <!-- carousel -->
-            <div class="h-screen">
-                <section class="container">
-                    <div id="carousel">
-                        <figure>
-                            <CardCarouselBackup :bookInfo="book1"/>
-                        </figure>
-                        <figure>
-                            <CardCarouselBackup :bookInfo="book2"/>
-                        </figure>
-                        <figure>
-                            <CardCarouselBackup :bookInfo="book3"/>
-                        </figure>
-                        <figure>
-                            <CardCarouselBackup :bookInfo="book4"/>
-                        </figure>
-                    </div>
-                </section>
+            <div class="carousel w-full flex" data-gap="10" data-bfc>
+
+                <figure class="w-1/3 md:w-1/4">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book1.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book2.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book3.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book4.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book5.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book6.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book7.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book8.bookImageURL" alt="">
+                </figure>
+                <nav class="static">
+                    <button class="nav prev absolute font-bold text-4xl text-primary top-1/2 bottom-1/2 left-[2rem] sm:left-[4rem] md:left-[10rem] lg:left-[15rem]">
+                        &lt;
+                    </button>
+
+                    <button class="nav next absolute font-bold text-4xl text-primary top-1/2 bottom-1/2 right-[2rem] sm:right-[4rem] md:right-[10rem] lg:right-[15rem]">
+                        &gt;
+                    </button>
+                </nav>
             </div>
+            <figure id="title_author" class="pt-4 w-5/6 lg:w-4/6 mx-auto">
+                <div class="asd">
+                    <h1 class="font-bold">{{ book1.bookTitle }}</h1>
+                    <h2 v-for="author in book1.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book2.bookTitle }}</h1>
+                    <h2 v-for="author in book2.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book3.bookTitle }}</h1>
+                    <h2 v-for="author in book3.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book4.bookTitle }}</h1>
+                    <h2 v-for="author in book4.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book5.bookTitle }}</h1>
+                    <h2 v-for="author in book5.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book6.bookTitle }}</h1>
+                    <h2 v-for="author in book6.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book7.bookTitle }}</h1>
+                    <h2 v-for="author in book7.bookAuthor">{{ author }}</h2>
+                </div>
+
+                <div class="asd">
+                    <h1 class="font-bold">{{ book8.bookTitle }}</h1>
+                    <h2 v-for="author in book8.bookAuthor">{{ author }}</h2>
+                </div>
+            </figure>
         </div>
         <UtilVerticalSpacer :height="2" units="rem"/>
     </div>
 </template>
 
 <script>
-import {generateSingleBook} from "../../composables/fetchBooksFromAPI";
+import {generateSingleBook, generateBooks, fillArrayWithBooks} from "../../composables/fetchBooksFromAPI.js";
 import CardCarousel from "../card/CardCarousel";
+
+let bookCollection = []
 
 export default {
     name: "SectionBookSelection",
     components: {CardCarousel},
 
-   data() {
+    data() {
         return {
-            bookInformation:[],
+            bookInformation: [],
+            bookCollection: bookCollection,
             book1: {},
             book2: {},
             book3: {},
-            book4: {}
+            book4: {},
+            book5: {},
+            book6: {},
+            book7: {},
+            book8: {},
+            showing: false
         }
-   },
+    },
+    methods: {
+        addBookToCollection(book) {
+            this.bookCollection.push(book)
+        }
+    },
+    computed: {},
+    mounted() {
+        window.addEventListener('load', () => {
+            var
+                carousels = document.querySelectorAll('.carousel')
+            ;
+
+            for (var i = 0; i < carousels.length; i++) {
+                carousel(carousels[i]);
+            }
+        });
+
+        function carousel(root) {
+            var
+                figure = root.querySelector('figure'),
+                nav = root.querySelector('nav'),
+                images = figure.children,
+                n = images.length,
+                gap = root.dataset.gap || 0,
+                bfc = 'bfc' in root.dataset,
+
+                theta = 2 * Math.PI / n,
+                currImage = 0
+
+
+
+            ;
+
+            setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+            window.addEventListener('resize', () => {
+                setupCarousel(n, parseFloat(getComputedStyle(images[0]).width))
+            });
+
+            setupNavigation();
+
+            function setupCarousel(n, s) {
+                var
+                    apothem = s / (2 * Math.tan(Math.PI / n))
+                ;
+
+                figure.style.transformOrigin = `50% 50% ${-apothem}px`;
+
+                for (var i = 0; i < n; i++)
+                    images[i].style.padding = `${gap}px`;
+                for (i = 1; i < n; i++) {
+                    images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
+                    images[i].style.transform = `rotateY(${i * theta}rad)`;
+                }
+                if (bfc) {
+                    for (i = 0; i < n; i++) {
+                        images[i].style.backfaceVisibility = 'hidden';
+
+                    }
+                }
+
+                rotateCarousel(currImage);
+            }
+
+            function setupNavigation() {
+                nav.addEventListener('click', onClick, true);
+
+                function onClick(e) {
+                    e.stopPropagation();
+
+                    var t = e.target;
+                    if (t.tagName.toUpperCase() !== 'BUTTON')
+                        return;
+
+                    if (t.classList.contains('next')) {
+                        currImage++;
+                    } else {
+                        currImage--;
+                    }
+
+
+                    // console.log("Logs: " + this.bookCollection[currImage].bookTitle);
+                    // document.getElementById("title").innerHTML = this.bookCollection[currImage].bookTitle;
+                    // document.getElementById("author").innerHTML = this.bookCollection[currImage].bookAuthor;
+                    rotateCarousel(currImage);
+                }
+
+            }
+
+            function rotateCarousel(imageIndex) {
+                figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+
+                var items = document.getElementsByClassName("asd");
+                // for(let i = 0; i < 8; i++) {
+                //     info[i].style.display = "hidden";
+                // }
+                hideItems(items);
+            }
+
+            function hideItems(items) {
+                let value = currImage % 8;
+
+                if (value < 0) {
+                    value = 8 - Math.abs(value);
+                }
+                for(var i=0, len = items.length; i < len; i++) {
+                    items[i].style.display = "none";
+                }
+                items[Math.abs(value)].style.display = "block";
+
+            }
+
+
+        }
+    },
     async created() {
-        this.book1 = await generateSingleBook()
-        this.book2 = await generateSingleBook()
-        this.book3 = await generateSingleBook()
-        this.book4 = await generateSingleBook()
+        // this.bookInformation = await generateBooks()
+        //
+        // console.log("BookInfo" + this.bookInformation);
+        // for (const bookPair of this.bookInformation) {
+        //     await bookPair.forEach(async (book) => {
+        //         console.log("low")
+        //         console.log(book)
+        //         await this.bookCollection.push(book)
+        //     })
+        // }
+
+        this.bookCollection = await fillArrayWithBooks();
+
+        this.book1 = this.bookCollection[0];
+        this.book2 = this.bookCollection[1];
+        this.book3 = this.bookCollection[2];
+        this.book4 = this.bookCollection[3];
+        this.book5 = this.bookCollection[4];
+        this.book6 = this.bookCollection[5];
+        this.book7 = this.bookCollection[6];
+        this.book8 = this.bookCollection[7];
+        this.showing = true
     }
 }
 </script>
 
 <style scoped>
-.container {
-    width: 700px;
-    position: relative;
-    perspective: 3000px;
-    padding: 100px;
-    left: 100px;
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
-#carousel {
-    position: relative;
-}
-#carousel figure {
-    display: block;
-    animation: rotate 30000ms ease-in-out infinite;
-    position: absolute;
-    background-color: white;
-    border-radius: 25px;
-    padding: 0;
+
+h1 {
     text-align: center;
-    min-width: 300px;
-    -webkit-box-reflect: below 30px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
+    margin-bottom: 0.5em;
 }
-#carousel figure:nth-child(0) {
-    animation-delay: -30000ms;
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 0;
 }
-#carousel figure:nth-child(1) {
-    animation-delay: -22500ms;
+
+.carousel {
+    perspective: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#carousel figure:nth-child(2) {
-    animation-delay: -15000ms;
+
+.carousel > * {
+    flex: 0 0 auto;
 }
-#carousel figure:nth-child(3) {
-    animation-delay: -7500ms;
+
+.carousel figure {
+    margin: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
-#carousel figure:nth-child(4) {
-    animation-delay: 0ms;
+
+.carousel figure img {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0px;
 }
-#carousel figure:nth-child(5) {
-    animation-delay: 7500ms;
+
+.carousel figure img:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-#carousel figure:nth-child(6) {
-    animation-delay: 15000ms;
+
+.carousel nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
 }
-@keyframes rotate {
-    0%, 20%, 99.7619047619%, 100% {
-        transform: rotateY(45deg) scale(0.6);
-        right: 0;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        z-index: -1;
-        -webkit-filter: opacity(100%) blur(3px);
-    }
-    24.7619047619%, 45% {
-        transform: rotateY(0deg) scale(1);
-        right: 40%;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-        z-index: 100;
-        -webkit-filter: opacity(100%) blur(0px);
-    }
-    49.7619047619%, 70% {
-        transform: rotateY(-45deg) scale(0.6);
-        right: 81%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        z-index: -1;
-        -webkit-filter: opacity(100%) blur(3px);
-    }
-    74.7619047619%, 95% {
-        transform: rotateY(-90deg) scale(0);
-        right: 0%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-        z-index: 0;
-        -webkit-filter: opacity(0%) blur(0px);
-    }
+
+.carousel nav button {
+    flex: 0 0 auto;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #333;
+    letter-spacing: 1px;
+    padding: 5px 10px;
 }
 </style>
