@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-100">
         <UtilVerticalSpacer :height="2" units="rem"/>
-        <div class="flex-col justify-center items-center w-screen">
+        <div class="flex-col justify-center items-center w-full">
             <h1 class="font-bold font-khula text-4xl text-tertiary text-center">
                 BOOK SELECTION
             </h1>

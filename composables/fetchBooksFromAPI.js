@@ -8,6 +8,68 @@ const secondary = [
     "flexible", "mystery", "possession", "canvas", "oppose", "fresh", "computing", "cattle", "full", "abundant"
 ]
 
+export const fillArrayWithBooks = async () => {
+    let fullBookList = [];
+    let generatedBookies = await generateBooks();
+    // console.log("Full");
+    // console.log(generatedBookies);
+    for (let y = 0; y < generatedBookies.length; y++) {
+        for(let x = 0; x < generatedBookies[y].length; x++) {
+            fullBookList.push(generatedBookies[y][x]);
+        }
+    }
+    // console.log("Fuller");
+    // console.log(fullBookList);
+    return fullBookList;
+}
+
+export const generateBooks = async () => {
+    let generatedBooks = []
+    generatedBooks.push(await getBooksFromAPI());
+    generatedBooks.push(await getBooksFromAPI());
+    generatedBooks.push(await getBooksFromAPI());
+    generatedBooks.push(await getBooksFromAPI());
+    return generatedBooks
+}
+
+const getBooksFromAPI = async () => {
+    try {
+        let response = await generateResponse();
+        while (response.data.docs.length < 10) {
+            response = await generateResponse();
+        }
+        // console.log("Response");
+        // console.log(response.data.docs.length);
+        // console.log("1");
+        const book1 = await getBookResponse(response);
+        // console.log("2 " + book1.bookTitle);
+        let book2 = await getBookResponse(response);
+        // console.log("3 " + book2.bookTitle);
+        while (book2.bookTitle === book1.bookTitle) {
+            book2 = await getBookResponse(response);
+        }
+        // console.log("4");
+        // console.log("Bookies");
+        // console.log(book1);
+        // console.log(book2);
+        const arr = [book1, book2];
+        return arr;
+    } catch (e) {
+        // console.log("ASD");
+        // console.log(e)
+    }
+}
+
+const generateResponse = async () => {
+    // console.log("Kek")
+    const API_URL = `https://openlibrary.org/search.json?q=${generateKeyword()}`;
+    // console.log(API_URL)
+    const response = await Axios.get(API_URL);
+    // console.log(response)
+
+    return response;
+}
+
 const generateKeyword = () => {
     let keyword = "";
     const primaryIndex = Math.floor(Math.random() * primary.length);
