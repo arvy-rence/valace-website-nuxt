@@ -1,11 +1,13 @@
 <template>
-    <testing/>
+    <SectionHero/>
 </template>
 
 <script>
-import Testing from "../components/section/Testing";
+import SectionHero from "../components/section/SectionHero";
+
+
 export default {
-    components: {Testing}
+    components: {SectionHero}
 }
 </script>
 
