@@ -1,14 +1,14 @@
 import Axios from 'axios'
 
 const primary = [
-    "programming", "medicine", "history", "geography", "mathematics", "philosophy", "psychology", "business", "law",
-    "Action", "Adventure", "Art", "Architecture", "Alternate History", "Autobiography", "Anthology", "Biography", "Chick lit",
-    "Business/economics", "Children's", "Crafts/hobbies", "Classic", "Cookbook", "Comic book", "Diary", "Coming-of-age",
-    "Dictionary", "Crime", "Encyclopedia", "Drama", "Guide", "Fairytale", "Health/fitness", "Fantasy", "History",
-    "Graphic novel", "Home and garden", "Historical fiction", "Humor", "Horror", "Journal", "Mystery", "Math",
-    "Paranormal romance", "Memoir", "Picture book", "Philosophy", "Poetry", "Prayer", "Political thriller", "Religion",
-    "spirituality", "new age", "Romance", "Textbook", "Satire", "True crime", "Science fiction", "Review", "Short story",
-    "Science", "Suspense", "Self help", "Thriller", "Sports and leisure", "Western", "Travel", "Young adult", "True crime"
+    "programming", "medicine", "history", "geography", "mathematics","business", "law",
+    "Action", "Adventure", "Art", "Architecture", "Alternate History", "Autobiography", "Anthology", "Biography",
+    "Business/economics", "Children's", "Crafts/hobbies", "Classic", "Cookbook", "Comic book", "Diary",
+    "Dictionary","Encyclopedia", "Guide", "Fairytale", "Health/fitness", "Fantasy", "History",
+    "Home and garden", "Historical fiction", "Humor", "Journal", "Mystery", "Math",
+    "Memoir", "Picture book","Poetry", "Health", "Career", "Life", "Infrastucture",
+    "Textbook","Science fiction", "Review", "Short story", "Thesaurus",
+    "Science","Self help","Sports", "Western", "Travel", "Young adult"
 ]
 
 const secondary = [
