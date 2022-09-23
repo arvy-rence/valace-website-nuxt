@@ -1,42 +1,42 @@
 export const teamInfo = [
     {
-        name: 'Clarence Rhey Salaveria',
-        position: 'Librarian',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/1.jpg',
     },
     {
-        name: 'James Dean San Miguel',
-        position: 'Head of IT',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/2.jpg'
     },
     {
-        name: 'Roselle Luna',
-        position: 'Graphics Designer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/3.jpg'
     },
     {
-        name: 'Jon Arvy Enriquez',
-        position: 'Developer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/4.jpg'
     },
     {
-        name: 'Roselle Luna',
-        position: 'Graphics Designer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/5.jpg'
     },
     {
-        name: 'Jon Arvy Enriquez',
-        position: 'Developer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/6.jpg'
     },
     {
-        name: 'Roselle Luna',
-        position: 'Graphics Designer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/7.jpg'
     },
     {
-        name: 'Jon Arvy Enriquez',
-        position: 'Developer',
-        imageURL: '/images/people/dummy-1.png'
+        name: 'A',
+        position: '',
+        imageURL: '/images/team/8.jpg'
     },
 ]
