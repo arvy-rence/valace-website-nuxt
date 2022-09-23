@@ -1,7 +1,7 @@
 <template>
-    <div :class="['max-w-[12rem]', 'bg-white', 'shadow-md', 'mb-5']">
+    <div :class="['max-w-[12rem]', 'bg-white', 'shadow-md', 'mb-5', 'rounded-lg', 'overflow-hidden', 'mx-[1.5rem]']">
         <div class="relative items-center">
-            <img class="rounded-t-lg" :src="imageURL"/>
+            <img class="rounded-lg" :src="imageURL"/>
             <h1 class="pl-2 absolute font-bold text-black-100 bottom-7">{{ name }}</h1>
             <h2 class="pl-3 absolute font-normal text-black-100 bottom-3">{{ position }}</h2>
         </div>
