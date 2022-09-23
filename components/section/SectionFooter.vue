@@ -28,8 +28,8 @@
         </div>
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div class="flex justify-center">
-            <div class="flex justify-around items-start w-11/12 lg:w-3/4">
-                <ul>
+            <div class="grid grid-cols-2 gap-2 md:flex md:flex-row md:justify-around items-start w-11/12 lg:w-3/4 px-[1rem]">
+                <ul class="pb-[2rem] md:pb-0">
                     <li class="font-bold font-khula text-lg text-primary">LIBRARY LOCATION</li>
                     <FooterListItem href="/#" class="cursor-default">
                         Valenzuela City Library, <br>
@@ -42,7 +42,7 @@
                         View Map
                     </FooterListItem>
                 </ul>
-                <ul>
+                <ul class="pb-[2rem] md:pb-0 pl-[2rem] md:pl-0">
                     <li class="font-bold font-khula text-lg text-primary">LIBRARY HOURS</li>
                     <FooterListItem href="" class="cursor-default">Monday - Sunday</FooterListItem>
                     <FooterListItem href="" class="cursor-default">9:00am - 2:00am</FooterListItem>

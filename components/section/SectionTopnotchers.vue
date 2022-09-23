@@ -1,6 +1,6 @@
 <template>
     <UtilVerticalSpacer :height="3" units="rem"/>
-    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[6rem] md:justify-center">
+    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[6rem] md:justify-center max-w-[calc(1500px)] mx-auto">
         <div class="inline-flex flex-col justify-center pt-[1rem] lg:pt-0 md:pr-[2rem]">
             <h1 class="text-4xl text-primary font-khula font-bold">
                 TOPNOTCHERS' SHELF

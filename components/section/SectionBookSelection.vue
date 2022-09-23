@@ -1,29 +1,29 @@
 <template>
     <div class="bg-gray-100">
         <UtilVerticalSpacer :height="2" units="rem"/>
-        <div class="flex-col justify-center items-center w-full">
+        <div class="flex-col justify-center items-center w-full max-w-[calc(1500px)] mx-auto">
             <h1 class="font-bold font-khula text-4xl text-tertiary text-center">
                 BOOK SELECTION
             </h1>
             <!-- carousel -->
-            <div class="carousel w-full flex" data-gap="10" data-bfc>
+            <div class="carousel w-full flex" data-gap="5" data-bfc>
 
                 <figure class="w-1/3 md:w-1/4">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book1.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book2.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book3.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book4.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book5.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book6.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book7.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[40rem] object-cover" :src="book8.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book1.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book2.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book3.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book4.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book5.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book6.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book7.bookImageURL" alt="">
+                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book8.bookImageURL" alt="">
                 </figure>
                 <nav class="static">
-                    <button class="nav prev absolute font-bold text-4xl text-primary top-1/2 bottom-1/2 left-[2rem] sm:left-[4rem] md:left-[10rem] lg:left-[15rem]">
+                    <button class="nav prev absolute font-bold h-20 text-4xl text-primary top-1/2 bottom-1/2 left-[2rem] sm:left-[4rem] md:left-[10rem] lg:left-[15rem]">
                         &lt;
                     </button>
 
-                    <button class="nav next absolute font-bold text-4xl text-primary top-1/2 bottom-1/2 right-[2rem] sm:right-[4rem] md:right-[10rem] lg:right-[15rem]">
+                    <button class="nav next absolute font-bold text-4xl h-20 text-primary top-1/2 bottom-1/2 right-[2rem] sm:right-[4rem] md:right-[10rem] lg:right-[15rem]">
                         &gt;
                     </button>
                 </nav>

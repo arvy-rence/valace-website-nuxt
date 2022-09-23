@@ -1,7 +1,7 @@
 <template>
     <div class="bg-[url(/images/book-bg.png)] flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
-        <div>
+        <div class="max-w-[calc(1500px)] mx-auto">
             <h2 class="font-bold text-lg text-gray-400 font-khula text-center">Valenzuela City Library</h2>
             <h1 class="font-bold text-4xl text-primary text-center font-khula">SISTER CITIES<br>
                 VISITING CITIES' CORNER
@@ -16,8 +16,8 @@
                 </div>
             </div>
         </div>
-        <div class="py-6">
-            <div class="flex flex-col justify-center flex-nowrap overflow-hidden">
+        <div class="py-6 max-w-[calc(1500px)] mx-auto">
+            <div class="flex flex-col justify-center flex-nowrap overflow-y-scroll h-[20rem] w-3/4 pt-[5rem] mx-auto">
                 <!-- card component -->
                 <div v-for="(info, index) in sisterCitiesData" :key="index">
                     <CardMiniSisterCity :sisterCityInfo="info"/>
@@ -51,9 +51,10 @@ export default {
         }
     },
     async created() {
-        for (let i = 0; i < 6; i++) {
-            this.sisterCitiesData.push(sisterCities[i])
-        }
+        this.sisterCitiesData = sisterCities
+        // for (let i = 0; i ; i++) {
+        //     this.sisterCitiesData.push(sisterCities[i])
+        // }
     },
 }
 </script>

@@ -48,7 +48,7 @@ export default {
                     newsId: 1,
                     newsTitle: "News Title",
                     newsDate: new Date(),
-                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
+                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem ",
                     newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
                     newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
                 },
@@ -56,13 +56,13 @@ export default {
                     newsId: 2,
                     newsTitle: "News Title",
                     newsDate: new Date(),
-                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
+                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
                     newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
                     newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
                 },
                 {
                     newsId: 3,
-                    newsTitle: "News Title",
+                    newsTitle: "News Title asdadasdasd asdadasdasd asdasdasda d asds da sdas d dasd asda da d sads ad asd asd asd as das das d asd asd asd asda s ",
                     newsDate: new Date(),
                     newsContent: "sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
                     newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",

@@ -1,33 +1,54 @@
 <template>
-    <div class="flex flex-col-reverse lg:flex-row px-[2rem] lg:px-[6rem] py-[4rem]" >
+    <div class="flex flex-col-reverse lg:flex-row px-[2rem] lg:px-[6rem] py-[4rem] max-w-[calc(1500px)] mx-auto" >
         <div class="w-full lg:w-1/2 px-[1rem] mt-[2rem]">
-            <h1 class="font-bold text-lg">
-                <i class="fa-solid fa-location-dot text-red-600"></i>    
+            <h1 class="font-bold text-gray-400 text-4xl">
+                FIND US
+            </h1>
+            <h1 class="font-bold text-2xl">
                 Location
             </h1>
-            <p class="pl-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam ipsa eum eligendi reprehenderit. Alias dicta repudiandae dolor aliquam inventore eum sunt. Aspernatur sapiente, sint quos quae blanditiis vel minima!
+            <p class="pl-0 text-2xl">
+                Valenzuela City Library, MXW9+54C, Llenado, Valenzuela, Metro Manila
             </p>
-            <h1 class="font-bold text-lg">
-                <i class="fa-solid fa-clock text-red-600"></i>
+            <h1 class="font-bold text-2xl pt-4">
                 Library Hours
             </h1>
-            <div class="pl-4">
-                <h2 class="font-semibold text-lg">Weekdays: 9am - 10pm</h2>
-                <h2 class="font-semibold text-lg">Saturday: 8am - 8pm</h2>
+            <div class="pl-0">
+                <h2 class="text-2xl">Weekdays: 9am - 10pm</h2>
+                <h2 class="text-2xl">Saturday: 8am - 8pm</h2>
+                <h2 class="text-2xl text-secondary font-bold">Closed on Holidays</h2>
             </div>
 
-            <h1 class="font-bold text-lg">
-                <i class="fa-solid fa-link text-red-600"></i>
-                Social Links
+            <h1 class="font-bold text-2xl pt-4">
+                Get in touch with us
             </h1>
-            <div class="pl-4">
-                <h2 class="font-semibold text-lg">
-                    <a href="https://facebook.com/valaceValenzuela" target="_blank"><i class="fa-brands fa-facebook"></i> facebook.com/valaceValenzuela</a>
-                </h2>
-                <h2 class="font-semibold text-lg">
-                    <a href="https://twitter.com/@valaceValenzuela" target="_blank"><i class="fa-brands fa-twitter"></i> @valaceValenzuela</a>
-                </h2>
+            <div class="pl-0 flex flex-col sm:flex-row">
+                <div>
+                    <h2 class="text-xl">Visit our social links:</h2>
+                    <h2>
+                        <a href="https://facebook.com/valaceValenzuela" target="_blank"><i class="fa-brands fa-facebook"></i> facebook.com/valaceValenzuela</a>
+                    </h2>
+                    <h2>
+                        <a href="https://twitter.com/@valaceValenzuela" target="_blank"><i class="fa-brands fa-twitter"></i> @valcitylibrary</a>
+                    </h2>
+                    <h2>
+                        <a href="https://twitter.com/@valaceValenzuela" target="_blank"><i class="fa-brands fa-square-instagram"></i> @Valenzuela City Library</a>
+                    </h2>
+                    <h2>
+                        <a href="https://twitter.com/@valaceValenzuela" target="_blank" class="flex flex-row"><img src="/images/icons/koha.png" alt="" class="w-[20px] h-[25px] pt-1"> library.valenzuela.gov.ph/OPAC</a>
+                    </h2>
+                </div>
+                <div class="pl-0 sm:pl-4">
+                    <h2 class="text-xl">Contact Us:</h2>
+                    <h2>
+                        <a href="https://twitter.com/@valaceValenzuela" target="_blank"><i class="fa-solid fa-phone"></i> (02)1234-5678</a>
+                    </h2>
+                    <h2>
+                        <a href="https://twitter.com/@valaceValenzuela" target="_blank"><i class="fa-solid fa-envelope"></i> valenzuelacitylibrary@gmail.com</a>
+                    </h2>
+                </div>
+
+
             </div>
         </div>
         <div class="w-full lg:w-1/2">
