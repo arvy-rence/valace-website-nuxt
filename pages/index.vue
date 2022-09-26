@@ -2,6 +2,7 @@
     <div>
         <SectionHero/>
         <SectionNews/>
+        <SectionEvents/>
         <SectionTopnotchers/>
         <SectionSisterCities/>
         <SectionBookSelection :queryValues="generatedWords"/>
@@ -18,10 +19,19 @@ import SectionSisterCities from "../components/section/SectionSisterCities";
 import SectionTopnotchers from "../components/section/SectionTopnotchers";
 import SectionNews from "../components/section/SectionNews";
 import SectionHero from "../components/section/SectionHero";
+import SectionEvents from "../components/section/SectionEvents";
 
 export default {
     name: "index",
-    components: {SectionHero, SectionNews, SectionTopnotchers, SectionSisterCities, SectionPartners, SectionKOHA},
+    components: {
+        SectionEvents,
+        SectionHero,
+        SectionNews,
+        SectionTopnotchers,
+        SectionSisterCities,
+        SectionPartners,
+        SectionKOHA
+    },
     data() {
         return {
             generatedWords: [],
