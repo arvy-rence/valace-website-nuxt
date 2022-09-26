@@ -11,7 +11,7 @@
                 <i class="fa-regular fa-calendar"></i> {{ newsInfo.news_date }}
             </div>
             <div class="block overflow-hidden h-[10rem]">
-                <h1 class="font-bold text-xl text-black-100 py-2 text-left font-kulim overflow-hidden max-h-[4.3rem]">{{ newsInfo.news_title }}</h1>
+                <h1 class="font-bold text-xl text-black-100 py-2 text-left text-primary font-kulim overflow-hidden max-h-[4.3rem]">{{ newsInfo.news_title }}</h1>
                 <div class="text-[15px] text-black-100 text-left font-kulim">
                     <p class="overflow-hidden">
                         {{ newsInfo.news_description }}
