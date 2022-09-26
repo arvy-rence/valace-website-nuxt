@@ -14,6 +14,7 @@
                 <CardNews :newsInfo="news"/>
             </div>
         </div>
+        <Loader :isLoading="isLoading"/>
         <div class="flex justify-center items-center py-[2rem]">
             <NuxtLink to="/news/">
                 <button
@@ -28,59 +29,23 @@
 </template>
 
 <script>
+import axios from "~/server/index"
 import CardNews from "../card/CardNews";
+import Loader from "../Loader";
 
 export default {
     name: "SectionNews",
-    components: {CardNews},
+    components: {Loader, CardNews},
     data() {
         return {
-            dummyNewsData: {
-                newsId: 1,
-                newsTitle: "News Title",
-                newsDate: new Date(),
-                newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
-                newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
-                newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
-            },
-            newsData: [
-                {
-                    newsId: 1,
-                    newsTitle: "News Title",
-                    newsDate: new Date(),
-                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem ",
-                    newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
-                    newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
-                },
-                {
-                    newsId: 2,
-                    newsTitle: "News Title",
-                    newsDate: new Date(),
-                    newsContent: "lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
-                    newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
-                    newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
-                },
-                {
-                    newsId: 3,
-                    newsTitle: "News Title asdadasdasd asdadasdasd asdasdasda d asds da sdas d dasd asda da d sads ad asd asd asd as das das d asd asd asd asda s ",
-                    newsDate: new Date(),
-                    newsContent: "sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem lorem ipsum dolor sit amet lorem",
-                    newsImageURL: "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.png",
-                    newsLink: "https://blog.logrocket.com/understanding-computed-properties-in-vue-js/"
-                },
-            ]
+            isLoading: true,
+            newsData: []
         }
     },
-    methods: {
-        onClick() {
-            alert("loow")
-        }
-    },
-    created() {
-        // fetch data from news api
-        // divide news articles to three
-        // pass the quotient to pagination component
-        // only get first 3 articles
+    async created() {
+        const {data} = await axios.get("/news/latestNews")
+        this.newsData = data.latestNews
+        this.isLoading = false
     }
 }
 </script>
