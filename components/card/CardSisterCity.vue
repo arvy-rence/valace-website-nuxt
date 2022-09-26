@@ -5,19 +5,19 @@
                 <img src="/images/icons/logo.png" width="75" alt="">
             </figure>
             <figure class="inline-flex justify-center items-center">
-                <img :src="sisterCityInfo.imageURL" width="340" alt=""/>
+                <img :src="sisterCityInfo.image_link" width="340" alt=""/>
             </figure>
-            <h1 class="font-bold text-xl text-black-100 py-2 text-left font-kulim text-center">
-                {{ sisterCityInfo.city }}
+            <h1 class="font-bold text-xl text-black-100 py-2 text-left text-primary font-kulim text-center">
+                {{ sisterCityInfo.library_name }}
             </h1>
             <div class="text-[15px] text-black-100 text-center font-kulim pt-2">
-                <i class="fa-solid fa-location-pin"></i>
+                <i class="fa-solid fa-note-sticky"></i>
                 <span class="pl-2">
-                    {{ sisterCityInfo.address }}
+                    {{ sisterCityInfo.library_description }}
                 </span>
             </div>
             <div class="inline-flex items-center mt-5 pb-5">
-                <NuxtLink :to="sisterCityInfo.link"
+                <NuxtLink :to="`/sister-cities/${sisterCityInfo.id}`"
                           class="text-primary text-sm underline font-bold">
                     <button class="py-2">
                         <span class="text-primary hover:underline">

@@ -9,6 +9,7 @@
                 SISTER CITIES VISITING CITIES' CORNER
             </h1>
         </div>
+        <Loader :isLoading="isLoading"/>
         <div class="flex justify-center flex-wrap">
             <div v-for="(info, index) in sisterCitiesData" :key="index">
                 <CardSisterCity :sisterCityInfo="info"/>
@@ -18,20 +19,25 @@
 </template>
 
 <script>
-import {checkReload} from "../composables/checkReload";
-import {sisterCities} from "../data/sisterCities";
-import CardSisterCity from "../components/card/CardSisterCity";
+import {checkReload} from "../../composables/checkReload"
+import axios from "~/server/index"
+import CardSisterCity from "../../components/card/CardSisterCity"
+
 
 export default {
     name: "sister-cities",
     components: {CardSisterCity},
     data() {
         return {
-            sisterCitiesData: []
+            sisterCitiesData: [],
+            isLoading: true
         }
     },
     async created() {
-        this.sisterCitiesData = sisterCities
+        const {data} = await axios.get("/sisterCity")
+        this.sisterCitiesData = data.sisterCities
+
+        this.isLoading = false
     },
     mounted() {
         checkReload()

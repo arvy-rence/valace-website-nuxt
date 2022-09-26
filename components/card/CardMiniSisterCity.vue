@@ -2,12 +2,12 @@
     <div class="card-class px-[2rem] sm:px-[5rem] md:px-[10rem] lg:px-[20rem] xl:px-[25rem]
     py-2">
         <div class="bg-white border border-gray-300 flex items-center justify-start px-3 py-3">
-            <img src="/images/icons/logo.png" alt="" class="py-2" width="100">
+            <img :src="sisterCityInfo.image_link" alt="" class="py-2" width="100">
             <div class="flex flex-col">
-                <span class="pl-5 font-khula text-md md:text-xl font-bold city-text">{{ sisterCityInfo.city }}</span>
+                <span class="pl-5 font-khula text-md md:text-xl font-bold text-primary city-text">{{ sisterCityInfo.library_name }}</span>
                 <span class="pl-5 font-kulim text-sm md:text-base">
-                    <i class="fa-solid fa-location-pin"></i>
-                    {{ sisterCityInfo.address }}
+                    <i class="fa-solid fa-note-sticky"></i>
+                    {{ sisterCityInfo.library_description }}
                 </span>
             </div>
         </div>

@@ -23,6 +23,7 @@
                     <CardMiniSisterCity :sisterCityInfo="info"/>
                 </div>
             </div>
+            <Loader :isLoading="isLoading"/>
             <UtilVerticalSpacer :height="2" units="rem"/>
             <div class="flex justify-center items-center">
                 <NuxtLink to="/sister-cities/">
@@ -39,7 +40,7 @@
 </template>
 
 <script>
-import {sisterCities} from "../../data/sisterCities";
+import axios from "~/server/index"
 import CardMiniSisterCity from "../card/CardMiniSisterCity";
 
 export default {
@@ -47,14 +48,14 @@ export default {
     components: {CardMiniSisterCity},
     data() {
         return {
-            sisterCitiesData: []
+            sisterCitiesData: [],
+            isLoading: true
         }
     },
     async created() {
-        this.sisterCitiesData = sisterCities
-        // for (let i = 0; i ; i++) {
-        //     this.sisterCitiesData.push(sisterCities[i])
-        // }
+        const {data} = await axios.get("/sisterCity")
+        this.sisterCitiesData = data.sisterCities
+        this.isLoading = false
     },
 }
 </script>
