@@ -8,7 +8,7 @@
                 <img :src="newsInfo.news_image_link" alt="" class="w-[20rem] h-[12rem] object-cover"/>
             </figure>
             <div class="text-gray-400 font-kulim pt-4">
-                <i class="fa-regular fa-calendar"></i> {{ newsInfo.news_date }}
+                <i class="fa-regular fa-calendar"></i> {{ convertToMoment(newsInfo.news_date) }}
             </div>
             <div class="block overflow-hidden h-[10rem]">
                 <h1 class="font-bold text-xl text-black-100 py-2 text-left text-primary font-kulim overflow-hidden max-h-[4.3rem]">{{ newsInfo.news_title }}</h1>
@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import {convertToMoment} from "../../composables/convertToMoment";
+
 export default {
     name: "CardNews",
     data() {
