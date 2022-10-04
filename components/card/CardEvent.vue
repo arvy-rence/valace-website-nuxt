@@ -1,34 +1,36 @@
 <template>
     <div :data-month="numericMonth" class="pl-[10rem] text-primary text-4xl uppercase font-bold"></div>
-    <div class="card-class px-[2rem] sm:px-[5rem] md:px-[10rem] lg:px-[20rem] xl:px-[25rem]
-    py-2">
-        <div class="bg-white border border-gray-300 flex items-center justify-start px-3 py-3">
-            <img :src="eventData.event_image_link" alt="" class="mx-2" width="150">
-            <div class="flex flex-col">
-                <span class="pl-5 font-khula text-md md:text-xl font-bold text-primary city-text">{{
-                        eventData.event_name
-                    }}</span>
-                <span class="pl-5 font-kulim text-sm md:text-base">
-                    <i class="fa-solid fa-location-pin"></i>
-                    {{ eventData.event_location }}
-                </span>
-                <span class="pl-5 font-kulim text-sm md:text-base">
-                    <i class="fa-solid fa-calendar"></i>
-                    {{ convertToMoment(eventData.event_date) }}
-                </span>
-                <span class="pl-5 font-kulim text-sm md:text-base">
-                    <i class="fa-solid fa-note-sticky"></i>
-                    {{ eventData.event_description }}
-                </span>
-                <NuxtLink :to="`/events/${eventData.id}`"
-                          class="pl-5 text-primary text-sm underline font-bold">
-                    <button class="py-2">
-                    <span class="text-primary font-kulim text-xs hover:underline opacity-50">
-                        Read More
-                    </span>
-                    </button>
-                </NuxtLink>
-            </div>
+    <div class="flex flex-col md:flex-row relative bg-white border border-gray-300 items-center justify-start px-3 py-3 mx-auto w-5/6 my-[.5rem] shadow-lg overflow-hidden">
+        <img :src="eventData.event_image_link" alt="" class="mx-2 w-full md:w-[9rem] md:h-[6rem] object-cover mt-[2.2rem] md:mt-0" width="">
+        <div class="flex flex-col">
+            <span class="md:pl-5 text-center md:text-left font-khula text-2xl md:text-xl font-bold text-primary city-text w-full md:w-[calc(100%-90px)]">{{
+                    eventData.event_name
+                }}</span>
+            <span class="md:pl-5 font-kulim text-sm md:text-base text-primary">
+                <i class="fa-solid fa-calendar"></i>
+                {{ convertToMoment(eventData.event_date) }}
+            </span>
+            <span class="md:pl-5 font-kulim text-sm md:text-base text-primary">
+                <i class="fa-solid fa-location-pin"></i>
+                {{ eventData.event_location }}
+            </span>
+            <span class="md:pl-5 font-kulim text-sm md:text-base text-primary">
+                <i class="fa-solid fa-note-sticky"></i>
+                {{ eventData.event_description }}
+            </span>
+<!--            <NuxtLink :to="`/events/${eventData.id}`"-->
+<!--                      class="pl-5 text-primary text-sm underline font-bold text-primary">-->
+<!--                <button class="py-2">-->
+<!--                <span class="text-primary font-kulim text-xs hover:underline opacity-50">-->
+<!--                    Read More-->
+<!--                </span>-->
+<!--                </button>-->
+<!--            </NuxtLink>-->
+        </div>
+        <div class="bg-primary absolute right-0 top-2 w-[6rem] h-[2rem]">
+            <p class="text-white font-kulim text-xs hover:underline font-bold text-center pt-[8px]">
+                November
+            </p>
         </div>
     </div>
 </template>
@@ -71,25 +73,4 @@ div[data-month="11"]:empty::after {
     content: "November";
 }
 
-.card-class {
-    min-width: 1000px;
-    max-width: 1000px;
-}
-@media(min-width: 1024px) {
-    .card-class {
-        padding: 0.5rem 12rem 0.5rem 12rem;
-    }
-}
-
-@media(min-width: 600px) {
-    .city-text {
-        font-size: 1.2rem;
-    }
-}
-
-@media(min-width: 312px) {
-    .city-text {
-        font-size: 1rem;
-    }
-}
 </style>
