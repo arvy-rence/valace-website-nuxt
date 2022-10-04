@@ -8,7 +8,7 @@ const primary = [
     "Home and garden", "Historical fiction", "Humor", "Journal", "Mystery", "Math",
     "Memoir", "Picture book","Poetry", "Health", "Career", "Life", "Infrastucture",
     "Textbook","Science fiction", "Review", "Short story", "Thesaurus",
-    "Science","Self help","Sports", "Western", "Travel", "Young adult"
+    "Science","Self help","Sports", "Western", "Travel"
 ]
 
 const secondary = [
