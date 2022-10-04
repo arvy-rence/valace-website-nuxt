@@ -1,38 +1,42 @@
 <template>
-    <div class="bg-white-100 flex-col bg-img justify-center align-center">
-        <UtilVerticalSpacer :height="2" units="rem"/>
-        <div>
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
-                Valenzuela City Library
-            </h2>
-            <h1 class="font-bold text-4xl text-primary text-center font-khula">
-                EVENTS AND ACTIVITIES
-            </h1>
-            <div class="flex justify-center">
-                <div class="w-1/2">
-                    <p class="font-kulim text-xl">
-                        Join us in different events and activities that we have prepared for you here in the Valenzuela Academic Center for Excellence!
-                    </p>
+    <div class="bg-gray-100">
+
+        <div class="flex-col bg-img justify-center align-center max-w-[calc(1500px)] mx-auto">
+            <UtilVerticalSpacer :height="2" units="rem"/>
+            <div class="px-[1rem]">
+                <h2 class="font-bold text-gray-400 font-khula text-center text-lg sm:text-3xl">
+                    Valenzuela City Library
+                </h2>
+                <h1 class="font-bold text-primary text-center font-khula text-4xl sm:text-6xl">
+                    EVENTS AND ACTIVITIES
+                </h1>
+                <div class="flex justify-center">
+                    <div class="w-full md:px-[4rem] lg:px-0 lg:w-1/2">
+                        <p class="font-kulim font-kulim text-xl text-center text-primary pb-2">
+                            Join us in different events and activities that we have prepared for you here in the Valenzuela Academic Center for Excellence!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="flex justify-center flex-wrap">
-            <div v-for="eventData in events" :key="eventData.id">
-                <CardEvent :eventData="eventData"/>
-            </div>
-        </div>
-        <Loader :isLoading="isLoading"/>
 
-        <div class="flex justify-center items-center py-[2rem]">
-            <NuxtLink to="/events/">
-                <button
-                    class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
-                >
-                    View All Events
-                </button>
-            </NuxtLink>
+            <div class="flex flex-col overflow-y-scroll h-[30rem] w-3/4 mx-auto">
+                <div v-for="eventData in events" :key="eventData.id">
+                    <CardEvent :eventData="eventData"/>
+                </div>
+            </div>
+            <Loader :isLoading="isLoading"/>
+
+            <div class="flex justify-center items-center py-[2rem]">
+                <NuxtLink to="/events/">
+                    <button
+                        class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
+                    >
+                        View All Events
+                    </button>
+                </NuxtLink>
+            </div>
+            <UtilVerticalSpacer :height="2" units="rem"/>
         </div>
-        <UtilVerticalSpacer :height="2" units="rem"/>
     </div>
 </template>
 

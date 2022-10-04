@@ -1,14 +1,14 @@
 <template>
-    <div class="bg-[url(/images/book-bg.png)] flex-col bg-img justify-center align-center">
+    <div class="bg-[url(/images/sisters-bg.png)] flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div class="max-w-[calc(1500px)] mx-auto">
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center">Valenzuela City Library</h2>
-            <h1 class="font-bold text-4xl text-primary text-center font-khula">SISTER CITIES<br>
+            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">Valenzuela City Library</h2>
+            <h1 class="font-bold text-4xl md:text-6xl text-primary text-center font-khula px-[1rem]">SISTER CITIES<br>
                 VISITING CITIES' CORNER
             </h1>
             <div class="flex justify-center">
-                <div class="w-1/2">
-                    <p class="font-kulim text-xl">
+                <div class="w-full px-[2rem] md:px-[4rem] lg:px-0 lg:w-1/2">
+                    <p class="font-kulim text-xl text-center">
                         The Sister City, Sister Library Initiative is a program that aims to foster the ties between
                         Valenzuela
                         City and its sister municipality, Baliwag, through public library partnership.
@@ -17,9 +17,9 @@
             </div>
         </div>
         <div class="py-6 max-w-[calc(1500px)] mx-auto">
-            <div class="flex flex-col justify-center flex-nowrap overflow-y-scroll h-[20rem] w-3/4 pt-[5rem] mx-auto">
+            <div class="flex flex-col overflow-y-scroll h-[30rem] w-3/4 mx-auto px-1">
                 <!-- card component -->
-                <div v-for="(info, index) in sisterCitiesData" :key="index">
+                <div v-for="(info, index) in sisterCitiesData" :key="index" class="">
                     <CardMiniSisterCity :sisterCityInfo="info"/>
                 </div>
             </div>

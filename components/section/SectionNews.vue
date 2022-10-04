@@ -1,11 +1,11 @@
 <template>
-    <div class="bg-white-100 flex-col bg-img justify-center align-center">
+    <div class="bg-white-100 flex-col bg-img justify-center align-center px-[1rem]">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
+            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">
                 Valenzuela City Library
             </h2>
-            <h1 class="font-bold text-4xl text-primary text-center font-khula">
+            <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula">
                 NEWS & ANNOUNCEMENTS
             </h1>
         </div>

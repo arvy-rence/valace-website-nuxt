@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-col">
+    <div class="flex-col relative lg:pt-[0rem]">
         <!-- logo panel // -->
         <div class="flex justify-center items-center">
             <img src="/images/icons/logo.png" width="150" alt="">
@@ -54,7 +54,7 @@
                     <FooterListItem href="/about-us"
                                     :isLink="true">
                         <i class="fa-solid fa-phone text-primary"></i>
-                        (02)1234-5678
+                        8-352-1000
                     </FooterListItem>
                     <FooterListItem href="/about-us"
                                     :isLink="true">
@@ -71,6 +71,12 @@
             </div>
         </div>
         <UtilVerticalSpacer :height="2" units="rem"/>
+        <div class="absolute flex flex-col items-center right-2 top-0 md:right-[4rem] md:top-[1rem] lg:right-[6rem] lg:top-[3rem] font-semibold">
+            <button class="w-[2rem] h-[2rem] sm:w-[3rem] sm:h-[3rem] bg-primary rounded-full text-white" @click="scrollToTop">
+                <i class="fa-solid fa-chevron-up"/>
+            </button>
+            <h1 class="text-primary text-xs md:text-lg">Back to top</h1>
+        </div>
         <div class="bg-primary py-2 text-center">
             <span class="text-white font-khula">
                 All Rights Reserved &copy; 2022. ValenzuelaCityLibrary
@@ -82,6 +88,15 @@
 <script>
 export default {
     name: "SectionFooter",
+
+    methods: {
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        },
+    }
 }
 </script>
 

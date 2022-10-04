@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100 ">
+    <div class="bg-gray-100 font-khula">
         <div class="flex flex-col justify-center items-center py-[3rem] max-w-[calc(1500px)] mx-auto">
 <!--            //Guidelines-->
             <div class="border border-black w-5/6 lg:w-2/3 mb-[3rem]">
@@ -11,7 +11,7 @@
                         ['bg-primary', 'text-white']
                     ]"
                         @click="setGuidelinesToggle">
-                        <i class="fa-solid fa-file-shield pr-[1rem]"></i>Guidelines
+                        <i class="fa-solid fa-file-shield pr-[1rem]"></i><h1 class="font-khula pt-1">Guidelines</h1>
 
                         <span :class="[guideLinesIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
                        <i class="fa-solid fa-chevron-up"></i>
@@ -20,7 +20,7 @@
                     </button>
                 </h1>
                 <div :class="[guideLinesIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
-                    <div class="accordion-body py-4 px-5 bg-white px-[6rem] text-primary">
+                    <div class="accordion-body py-4 px-5 bg-white px-[2rem] md:px-[6rem] text-primary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
                         Nunc velit purus, vehicula eu sodales gravida, euismod eget mauris. Sed sit amet malesuada enim, sed eleifend ex. Suspendisse cursus molestie urna, at venenatis magna porta euismod. Donec non pulvinar nulla. Nam bibendum libero vel orci tincidunt lobortis. Duis vulputate posuere lorem eu fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In neque ligula, luctus at finibus sit amet, suscipit in risus. Morbi at elit sagittis, ultricies ante ut, porttitor dolor. Ut sed aliquam nisi, ac maximus risus. Vivamus augue quam, pharetra a imperdiet a, porta vitae velit. Praesent elementum turpis sit amet commodo placerat.
@@ -45,7 +45,7 @@
                     ]"
                         @click="setMissionVisionToggle"
                     >
-                        <i class="fa-solid fa-bullseye pr-[1rem]"></i> Mission and Vision
+                        <i class="fa-solid fa-bullseye pr-[1rem]"></i> <h1 class="font-khula pt-1">Mission and Vision</h1>
 
                         <span :class="[missionVisionIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
                        <i class="fa-solid fa-chevron-up"></i>
@@ -54,11 +54,11 @@
                     </button>
                 </h1>
                 <div :class="[missionVisionIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
-                    <div class="accordion-body py-4 px-5 bg-white px-[6rem] text-primary">
+                    <div class="accordion-body py-4 px-5 bg-white px-[2rem] md:px-[6rem] text-primary">
                         <h1 class="font-bold text-lg">Mission</h1>
                         Lead and engage in a dynamic advocacy of literacy and lifelong learning chiefly amongst Valenzuelanos by sustaining and providing quality access to community relevant resources and through the delivery of effective and meaningful programs.
 
-                        <h1 class="font-bold text-lg pt-[1rem]">Vision</h1>
+                        <h1 class="font-bold text-lg pt-5">Vision</h1>
                         To be a leading public library system which caters to the literacy needs and lifelong learning of Valenzuela City constituents and the general public.
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         ['bg-primary', 'text-white']
                         ]"
                             @click="setFAQToggle">
-                        <i class="fa-solid fa-question pr-[1rem]"></i> Frequently Asked Questions (FAQ)
+                        <i class="fa-solid fa-question pr-[1rem]"></i> <h1 class="font-khula pt-1">Frequently Asked Questions (FAQ)</h1>
 
                         <span :class="[faqIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
                        <i class="fa-solid fa-chevron-up"></i>
@@ -81,16 +81,18 @@
                     </button>
                 </h1>
                 <div :class="[faqIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
-                    <div class="accordion-body py-4 px-5 bg-white px-[6rem] text-primary">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
+                    <div class="accordion-body py-4 px-5 bg-white px-[2rem] md:px-[6rem] text-primary">
+                        <h1 class="font-bold text-lg">Where is the Valenzuela City Library located?</h1>
+                        Valenzuela City Library is located at: MXW9+54C, Llenado, Valenzuela, Metro Manila
 
-                        Nunc velit purus, vehicula eu sodales gravida, euismod eget mauris. Sed sit amet malesuada enim, sed eleifend ex. Suspendisse cursus molestie urna, at venenatis magna porta euismod. Donec non pulvinar nulla. Nam bibendum libero vel orci tincidunt lobortis. Duis vulputate posuere lorem eu fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In neque ligula, luctus at finibus sit amet, suscipit in risus. Morbi at elit sagittis, ultricies ante ut, porttitor dolor. Ut sed aliquam nisi, ac maximus risus. Vivamus augue quam, pharetra a imperdiet a, porta vitae velit. Praesent elementum turpis sit amet commodo placerat.
+                        <h1 class="font-bold text-lg pt-5">What is the Valenzuela City Library’s operating hours?</h1>
+                        Valenzuela City Library is open from Monday to Sunday, 9:00 AM to 2:00 AM and closed on holidays.
 
-                        Aliquam sit amet massa volutpat, aliquet augue vitae, dignissim lorem. Aenean id maximus est, ac posuere tortor. Curabitur porta ligula molestie, luctus eros bibendum, venenatis odio. Suspendisse posuere, nunc nec mattis interdum, nibh dolor semper tortor, mattis aliquam est ligula id velit. Pellentesque varius nisi consequat mauris malesuada euismod. Sed pretium at magna sed suscipit. In faucibus est quis massa eleifend, quis pretium turpis commodo. Suspendisse potenti. Proin euismod consequat placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque ultrices purus eget erat sodales accumsan. Sed hendrerit, ex sed viverra ultricies, tortor turpis accumsan orci, eu aliquam sapien nulla ac turpis. Suspendisse tempor dui id pharetra fermentum.
+                        <h1 class="font-bold text-lg pt-5">What is the telephone number of the Valenzuela City Library?</h1>
+                        Valenzuela City Library’s telephone number is (02)1234-5678.
 
-                        Integer sit amet pellentesque eros, in ultrices nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tincidunt mi. Sed consequat pharetra risus. Nam sagittis nisl neque, vel tincidunt ex laoreet ut. Nam vehicula mattis ligula, ut bibendum erat sodales id. Sed a nisi nulla. Phasellus volutpat commodo tellus sit amet accumsan. Aliquam vitae mi nec justo pellentesque sollicitudin vel at enim. Cras luctus tincidunt gravida. Nullam volutpat dui leo, id pulvinar diam vulputate sit amet. Sed in vehicula dui.
-
-                        Sed ac mauris dui. Proin lacinia tempor mollis. Sed sapien augue, facilisis at luctus non, faucibus in enim. Vestibulum vel dolor quis tortor ultrices pharetra. Etiam semper at nisi sed rutrum. Fusce tempus orci sapien, eget ullamcorper velit porttitor nec. Nam sed consequat lectus. Nulla vitae hendrerit turpis, vitae tristique neque. Nunc bibendum accumsan ante, vitae molestie metus interdum sed. Phasellus molestie elit eget faucibus molestie. Donec lobortis, nisi et efficitur interdum, nunc lacus vulputate velit, vel tincidunt libero risus eget enim. Ut vestibulum dignissim sapien, vitae fringilla diam vehicula eu. Nulla tempus cursus nulla quis porttitor. Vivamus aliquet erat eget erat sollicitudin, et mattis ante efficitur.
+                        <h1 class="font-bold text-lg pt-5">What is the official link for the Library System (OPAC) of Valenzuela City Library?</h1>
+                        Visit our official link: library.valenzuela.gov.ph
                     </div>
                 </div>
             </div>

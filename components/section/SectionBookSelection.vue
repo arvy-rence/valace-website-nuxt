@@ -9,21 +9,21 @@
             <div class="carousel w-full flex" data-gap="5" data-bfc>
 
                 <figure class="w-1/3 md:w-1/4">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book1.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book2.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book3.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book4.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book5.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book6.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book7.bookImageURL" alt="">
-                    <img class="h-60 sm:72 md:h-96 lg:h-[30rem] object-contain" :src="book8.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book1.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book2.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book3.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book4.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book5.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book6.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book7.bookImageURL" alt="">
+                    <img class="h-60 sm:h-80 md:h-[15rem] lg:h-[30rem] object-contain" :src="book8.bookImageURL" alt="">
                 </figure>
                 <nav class="static">
-                    <button class="nav prev absolute font-bold h-20 text-4xl text-primary top-1/2 bottom-1/2 left-[2rem] sm:left-[4rem] md:left-[10rem] lg:left-[15rem]">
+                    <button class="nav prev absolute font-bold h-20 text-4xl text-primary top-1/3 lg:top-1/2 lg:bottom-1/2 left-[2rem] left-[0rem] sm:left-[0rem] md:left-[5rem] lg:left-[15rem]">
                         &lt;
                     </button>
 
-                    <button class="nav next absolute font-bold text-4xl h-20 text-primary top-1/2 bottom-1/2 right-[2rem] sm:right-[4rem] md:right-[10rem] lg:right-[15rem]">
+                    <button class="nav next absolute font-bold text-4xl h-20 text-primary top-1/3 lg:top-1/2 lg:bottom-1/2 right-[2rem] right-[0rem] sm:right-[0rem] md:right-[5rem] lg:right-[15rem]">
                         &gt;
                     </button>
                 </nav>
@@ -301,5 +301,9 @@ h2 {
     color: #333;
     letter-spacing: 1px;
     padding: 5px 10px;
+}
+
+.asd {
+    border-image-width: 10px;
 }
 </style>
