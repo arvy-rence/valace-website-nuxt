@@ -1,13 +1,15 @@
 <template>
-    <SectionHero/>
+    <SectionEvents/>
 </template>
 
 <script>
-import SectionHero from "../components/section/SectionHero";
+import Testing from "../components/section/Testing";
+import SectionTopnotchers from "../components/section/SectionTopnotchers";
+import SectionEvents from "../components/section/SectionEvents";
 
 
 export default {
-    components: {SectionHero}
+    components: {SectionEvents, SectionTopnotchers, Testing}
 }
 </script>
 
