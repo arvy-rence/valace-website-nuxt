@@ -1,5 +1,5 @@
 <template>
-    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[5rem] px-[1rem]">KNOW MORE ABOUT OUR</h2>
+    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[4rem] px-[1rem]">KNOW MORE ABOUT OUR</h2>
     <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula px-[1rem]">VALENZUELA CITY LIBRARY</h1>
     <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-0 sm:pt-[2rem] lg:pt-[3rem] max-w-[calc(1500px)] mx-auto">
 
@@ -75,7 +75,7 @@
         <div class="w-full lg:w-3/5 px-2 lg:px-[6rem] mt-[1rem] lg:mt-0 flex flex-col">
             <div class="my-auto flex flex-col h-full">
                 <h1 class="font-bold text-gray-400 text-4xl pb-2">
-                    FIND US
+                    LIBRARY PROGRAMS
                 </h1>
                 <p class="text-md sm:text-xl text-primary font-kulim">
                     The Valenzuela Academic Center for Excellence (ValAce)  offers program in the City Library that aims to help the Valenzuelanos to have easy access to any event and program that they can participate. 

@@ -1,6 +1,6 @@
 <template>
     <div class="w-[22rem] bg-gray mx-4 ">
-        <div class="block bg-white-100 custom-bottom-shadow img-with-shadow my-[.7rem] px-[1.4rem] pt-4 h-[32rem]">
+        <div class="block bg-white-100 shadow-lg img-with-shadow my-[.7rem] px-[1.4rem] pt-4 h-[32rem]">
             <figure class="flex justify-center items-center py-[.5rem]">
                 <img src="/images/icons/logo.png" width="75" alt="" />
             </figure>

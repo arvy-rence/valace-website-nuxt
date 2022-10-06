@@ -22,13 +22,13 @@
 <!--                </button>-->
 <!--            </div>-->
 
-           <!-- <div class="block relative overflow-hidden h-full z-0">-->
-<!--                <img src="public/images/hero-desktop.png" alt="" class="hero lg:block hidden"> -->
+<!--            <div class="block relative overflow-hidden h-full z-0">-->
+<!--                <img src="public/images/hero-desktop.png" alt="" class="hero lg:block hidden">-->
 
 <!--                <img src="public/images/hero-mobile.png" alt="" class="w-full hidden md:block lg:hidden">-->
 
 <!--                <img src="public/images/mobile.png" alt="" class="w-full block md:hidden">-->
-<!--            </div> -->
+<!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
 
@@ -98,37 +98,72 @@
 
 
 
-   <div class="w-full bg-gray-200">
-       <div class="block relative overflow-hidden h-auto lg:h-[calc(647px)] max-w-[calc(1519.2px)] mx-auto">
-           <div class="block relative overflow-hidden h-auto lg:h-[calc(100vh-63.2px)]">
-                <div class="w-full px-[2rem] lg:px-0 lg:w-[34rem] z-10 absolute top-[calc(45%)] lg:top-[calc(17%)] lg:left-[5rem] pt-[2rem]">
-                    <h2 class="text-md sm:text-xl text-primary">
-                        WELCOME TO
-                    </h2>
-                    <h1 class="text-4xl sm:text-5xl font-bold text-primary -mt-[.5rem]">
-                        VALENZUELA CITY LIBRARY
-                    </h1>
-                    <p class="text-sm sm:text-lg text-primary pt-[1rem]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a ultricies tortor. In hac habitasse platea dictumst. Curabitur non justo lacinia mauris finibus fringilla. Cras accumsan nulla et erat varius, quis sagittis tellus congue.
-                    </p>
-                    <p class="text-sm sm:text-lg text-primary pt-[1rem] pb-[1rem]">
-                        #AklatanParaSaBawatValenzuelano
-                    </p>
-                    <button class="bg-primary h-[3rem] w-[16rem] sm:h-[3rem] sm:w-[15rem]">
-                        <a href="/about" class="text-lg sm:text-lg font-bold text-white font-khula">
-                            Visit Public Access Catalog
-                        </a>
-                    </button>
-                    
-                </div>
+<!--   <div class="w-full bg-gray-200">-->
+<!--       <div class="block relative overflow-hidden h-auto lg:h-[calc(647px)] max-w-[calc(1519.2px)] mx-auto">-->
+<!--           <div class="block relative overflow-hidden h-auto lg:h-[calc(100vh-63.2px)]">-->
+<!--                <div class="w-full px-[2rem] lg:px-0 lg:w-[34rem] z-10 absolute top-[calc(45%)] lg:top-[calc(17%)] lg:left-[5rem] pt-[2rem]">-->
+<!--                    <h2 class="text-md sm:text-xl text-primary">-->
+<!--                        WELCOME TO-->
+<!--                    </h2>-->
+<!--                    <h1 class="text-4xl sm:text-5xl font-bold text-primary -mt-[.5rem]">-->
+<!--                        VALENZUELA CITY LIBRARY-->
+<!--                    </h1>-->
+<!--                    <p class="text-sm sm:text-lg text-primary pt-[1rem]">-->
+<!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a ultricies tortor. In hac habitasse platea dictumst. Curabitur non justo lacinia mauris finibus fringilla. Cras accumsan nulla et erat varius, quis sagittis tellus congue.-->
+<!--                    </p>-->
+<!--                    <p class="text-sm sm:text-lg text-primary pt-[1rem] pb-[1rem]">-->
+<!--                        #AklatanParaSaBawatValenzuelano-->
+<!--                    </p>-->
+<!--                    <button class="bg-primary h-[3rem] w-[16rem] sm:h-[3rem] sm:w-[15rem]">-->
+<!--                        <a href="/about" class="text-lg sm:text-lg font-bold text-white font-khula">-->
+<!--                            Visit Public Access Catalog-->
+<!--                        </a>-->
+<!--                    </button>-->
+<!--                    -->
+<!--                </div>-->
 
-                <div class="block relative overflow-hidden h-full z-0">
-                    <img src="public/images/hero-desktop.png" alt="" class="hero lg:block hidden">
+<!--                <div class="block relative overflow-hidden h-full z-0">-->
+<!--                    <img src="public/images/hero-3.png" alt="" class="hero lg:block hidden">-->
 
-                    <img src="public/images/hero-mobile.png" alt="" class="w-full hidden md:block lg:hidden">
+<!--                    <img src="public/images/mobile-hero-3.png" alt="" class="w-full hidden md:block lg:hidden">-->
 
-                    <img src="public/images/mobile.png" alt="" class="w-full block md:hidden">
-                </div>
+<!--                    <img src="public/images/mobile-hero-3.png" alt="" class="w-full block md:hidden">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <div class="w-full bg-white">
+        <div class="block relative overflow-hidden h-auto lg:h-[calc(647px)] max-w-[calc(1519.2px)] mx-auto">
+            <!--    <div class="block relative overflow-hidden h-auto lg:h-[calc(100vh-63.2px)]">-->
+            <div class="w-full px-[2rem] lg:px-0 lg:w-[34rem] z-10 absolute top-[calc(45%)] lg:top-[calc(17%)] lg:left-[5rem] pt-[2rem]">
+                <h2 class="text-md sm:text-xl text-primary">
+                    WELCOME TO
+                </h2>
+                <h1 class="text-4xl sm:text-5xl font-bold text-primary -mt-[.5rem]">
+                    VALENZUELA CITY LIBRARY
+                </h1>
+                <p class="text-sm sm:text-lg text-primary pt-[1rem]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a ultricies tortor. In hac habitasse platea dictumst. Curabitur non justo lacinia mauris finibus fringilla. Cras accumsan nulla et erat varius, quis sagittis tellus congue.
+                </p>
+                <p class="text-sm sm:text-lg text-primary pt-[1rem] pb-[1rem]">
+                    #AklatanParaSaBawatValenzuelano
+                </p>
+                <button class="bg-primary h-[3rem] w-[16rem] sm:h-[3rem] sm:w-[15rem]">
+                    <a href="/about" class="text-lg sm:text-lg font-bold text-white font-khula">
+                        Visit Public Access Catalog
+                    </a>
+                </button>
+
+            </div>
+
+            <div class="block relative overflow-hidden h-full z-0">
+                <img src="public/images/hero-3.png" alt="" class="hero lg:block hidden">
+
+                <img src="public/images/mobile-hero-3.png" alt="" class="w-full hidden md:block lg:hidden">
+
+                <img src="public/images/mobile-hero-3.png" alt="" class="w-full block md:hidden">
             </div>
         </div>
     </div>
@@ -141,10 +176,10 @@ export default {
 </script>
 
 <style scoped>
-/*.hero {*/
-/*    object-fit: cover;*/
-/*    height: 100%;*/
-/*    object-position: 80%;*/
-/*}*/
+.hero {
+    object-fit: cover;
+    height: 100%;
+    object-position: 80%;
+}
 
 </style>

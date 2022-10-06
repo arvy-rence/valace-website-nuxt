@@ -10,12 +10,12 @@
         </div>
 
 
-        <div class="flex flex-row justify-center px-[2rem] lg:px-[6rem] pb-[4rem]">
+        <div class="flex flex-row justify-center px-[1rem] lg:px-[6rem] pb-[4rem]">
             <div class="mx-auto relative">
-                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute left-1/2 transform -translate-x-1/2 gradient-color-circle">
+                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 gradient-color-circle">
                     <img src="/images/icons/arts.png" width="120px" height="120px"/>
                 </div>
-                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-1/2 transform -translate-x-1/2 top-[8rem] gradient-color-line">
+                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-[4rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 top-[8rem] gradient-color-line">
 
                 </div>
             </div>
