@@ -1,25 +1,26 @@
 <template>
-    <div class="bg-gray-100 font-khula">
+    <div class="font-khula relative ">
+        <div class="w-full h-full absolute -z-10 bg-primary opacity-20"></div>
         <div class="flex flex-col justify-center items-center py-[3rem] max-w-[calc(1500px)] mx-auto">
 <!--            //Guidelines-->
-            <div class="border border-black w-5/6 lg:w-2/3 mb-[3rem]">
+            <div class="w-5/6 lg:w-2/3 mb-[3rem]">
                 <h1 class="text-sm">
                     <button
                         class="relative flex items-center w-full py-4 px-5 text-xl"
                         :class="[guideLinesIsActive ?
-                        ['bg-white', 'text-black'] :
+                        ['bg-white', 'text-primary'] :
                         ['bg-primary', 'text-white']
                     ]"
                         @click="setGuidelinesToggle">
                         <i class="fa-solid fa-file-shield pr-[1rem]"></i><h1 class="font-khula pt-1">Guidelines</h1>
 
                         <span :class="[guideLinesIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
-                       <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-up"></i>
                     </span>
 
                     </button>
                 </h1>
-                <div :class="[guideLinesIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default">
+                <div :class="[guideLinesIsActive ? [''] : ['custom-accordion-animation2']]" class="custom-default bg-white">
                     <div class="accordion-body py-4 px-5 bg-white px-[2rem] md:px-[6rem] text-primary">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at maximus dolor, sed volutpat felis. Mauris imperdiet commodo ante, at luctus dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquam, erat eu interdum varius, libero odio cursus mi, mollis hendrerit augue sem vel nunc. Aenean vehicula hendrerit orci, vel gravida metus viverra quis. Integer dignissim metus non nibh lobortis, sed dictum urna cursus. Fusce commodo nisi diam, pharetra consequat tellus dictum non. Vestibulum consequat cursus lacus vitae efficitur. Maecenas luctus egestas neque, sed pulvinar lectus finibus sed. Nullam fringilla enim nec est volutpat, et placerat lacus egestas. Fusce ullamcorper erat ut tellus consequat, ullamcorper porttitor orci blandit.
 
@@ -35,12 +36,12 @@
             </div>
 
 <!--            //Mission and Vision-->
-            <div class="border border-black w-5/6 lg:w-2/3 mb-[3rem]">
+            <div class="w-5/6 lg:w-2/3 mb-[3rem]">
                 <h1 class="">
                     <button
                         class="relative flex items-center w-full py-4 px-5 text-xl"
                         :class="[missionVisionIsActive ?
-                        ['bg-white', 'text-black'] :
+                        ['bg-white', 'text-primary'] :
                         ['bg-primary', 'text-white']
                     ]"
                         @click="setMissionVisionToggle"
@@ -65,15 +66,15 @@
             </div>
 
 <!--            //FAQ-->
-            <div class="border border-black w-5/6 lg:w-2/3">
+            <div class="w-5/6 lg:w-2/3">
                 <h1 class="text-sm">
                     <button class="relative flex items-center w-full py-4 px-5 text-xl"
                             :class="[faqIsActive ?
-                        ['bg-white', 'text-black'] :
+                        ['bg-white', 'text-primary'] :
                         ['bg-primary', 'text-white']
                         ]"
                             @click="setFAQToggle">
-                        <i class="fa-solid fa-question pr-[1rem]"></i> <h1 class="font-khula pt-1">Frequently Asked Questions (FAQ)</h1>
+                        <i class="fa-solid fa-question pr-[1rem]"></i> <h1 class="font-khula pt-1">Frequently Asked Questions (FAQs)</h1>
 
                         <span :class="[faqIsActive ? ['rotate-180', 'duration-300'] : ['rotate-0', 'duration-300']]" class="absolute right-[1rem]">
                        <i class="fa-solid fa-chevron-up"></i>
@@ -89,7 +90,7 @@
                         Valenzuela City Library is open from Monday to Sunday, 9:00 AM to 2:00 AM and closed on holidays.
 
                         <h1 class="font-bold text-lg pt-5">What is the telephone number of the Valenzuela City Library?</h1>
-                        Valenzuela City Library’s telephone number is (02)1234-5678.
+                        Valenzuela City Library’s telephone number is 8-352-1000.
 
                         <h1 class="font-bold text-lg pt-5">What is the official link for the Library System (OPAC) of Valenzuela City Library?</h1>
                         Visit our official link: library.valenzuela.gov.ph
@@ -139,10 +140,6 @@ export default {
     -o-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
     -ms-transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
     transition: max-height 0.3s ease-in-out, box-shadow 0.6s linear;
-}
-
-.custom-accordion-animation1 {
-
 }
 
 .custom-accordion-animation2 {
