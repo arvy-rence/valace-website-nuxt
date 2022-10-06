@@ -1,4 +1,5 @@
 <template>
+    <div class="pt-[82.8px]"></div>
     <div>
         <img src="/images/about-banner.png" alt="" class="w-screen opacity-50">
         <SectionLibraryInfo id="map"/>

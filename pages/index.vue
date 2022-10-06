@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div class="pt-[82.8px]"></div>
         <SectionHero/>
         <SectionNews/>
         <SectionEvents/>

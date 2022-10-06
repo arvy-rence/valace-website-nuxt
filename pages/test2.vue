@@ -1,4 +1,5 @@
 <template>
+    <div class="pt-[82.8px]"></div>
     <h2>Hidden backfaces</h2>
     <div class="carousel" data-gap="0" data-bfc>
         <figure class="w-4/5 md:w-1/4">
