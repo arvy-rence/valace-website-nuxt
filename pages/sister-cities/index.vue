@@ -1,4 +1,5 @@
 <template>
+    <div class="pt-[82.8px]"></div>
     <div class="bg-white-100 flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>

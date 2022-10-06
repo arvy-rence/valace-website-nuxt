@@ -1,4 +1,5 @@
 <template>
+    <div class="pt-[82.8px]"></div>
     <UtilVerticalSpacer :height="3" units="rem"/>
     <div class="flex flex-col justify-start px-[2rem]">
         <h1 class="text-center text-primary text-4xl font-bold font-khula">
@@ -41,7 +42,10 @@ export default {
         this.newsInfo = response.data
         this.newsInfo["newsDate"] = new Date().toDateString()
         this.newsInfo["newsImageURL"] = "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&w=1000&q=80"
-    }
+    },
+    mounted() {
+        checkReload()
+    },
 }
 </script>
 
