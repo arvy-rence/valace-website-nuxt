@@ -1,7 +1,9 @@
 <template>
     <nav class="nav flex flex-wrap items-center justify-between px-4 bg-white">
         <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
-            <img src="/images/icons/logo.png" width="150" height="600" alt="">
+            <NuxtLink to="/">
+                <img src="/images/icons/logo.png" width="150" height="600" alt="">
+            </NuxtLink>
         </div>
 
         <input class="menu-btn hidden" type="checkbox" id="menu-btn">
@@ -12,23 +14,22 @@
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
             <li class="border-t md:border-none">
                 <NuxtLink to="/" :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold text-2xl"
-                          @click="changeActive(1)">HOME</NuxtLink>
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >HOME</NuxtLink>
             </li>
             <li class="border-t md:border-none">
                 <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl">OPAC</a>
             </li>
             <li class="border-t md:border-none">
-                <NuxtLink to="/about-us"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          @click="changeActive(2)">ABOUT US
+                <NuxtLink to="/about-us" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >ABOUT US
                 </NuxtLink>
             </li>
             <li class="border-t md:border-none">
-                <NuxtLink to="/facilities"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          @click="changeActive(3)">FACILITIES
-
+                <NuxtLink to="/facilities" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >FACILITIES
                 </NuxtLink>
             </li>
 
@@ -67,10 +68,26 @@ export default {
                 aboutUs: false,
                 facilities: false
             },
-            isMenuOpen: false
+            isMenuOpen: false,
+            route: this.$route.name
         }
     },
     methods: {
+        checkRoute() {
+            if (this.route === 'index') {
+                this.isActive.home = true
+                this.isActive.aboutUs = false
+                this.isActive.facilities = false
+            } else if (this.route === 'about-us') {
+                this.isActive.home = false
+                this.isActive.aboutUs = true
+                this.isActive.facilities = false
+            } else if (this.route === 'facilities') {
+                this.isActive.home = false
+                this.isActive.aboutUs = false
+                this.isActive.facilities = true
+            }
+        },
         changeActive(page) {
             switch (page) {
                 case 1:
@@ -90,9 +107,9 @@ export default {
                     break;
             }
         },
-        openMenu() {
-
-        }
+    },
+    mounted() {
+        this.checkRoute()
     }
 }
 </script>
