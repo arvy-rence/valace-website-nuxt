@@ -6,7 +6,7 @@
         <SectionEvents/>
         <SectionTopnotchers/>
         <SectionSisterCities/>
-        <SectionBookSelection :queryValues="generatedWords"/>
+        <SectionNewBookSelection/>
         <SectionKOHA/>
         <SectionPartners/>
     </div>
