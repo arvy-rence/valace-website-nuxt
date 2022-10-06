@@ -73,11 +73,17 @@
 <!--            <img src="/images/valace-building.png" class="w-full object-contain">-->
         </div>
         <div class="w-full lg:w-3/5 px-2 lg:px-[6rem] mt-[1rem] lg:mt-0 flex flex-col">
-            <div class="my-auto">
+            <div class="my-auto flex flex-col h-full">
+                <h1 class="font-bold text-gray-400 text-4xl pb-2">
+                    FIND US
+                </h1>
                 <p class="text-md sm:text-xl text-primary font-kulim">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, excepturi quos. Recusandae, est. Natus iste qui accusantium, deleniti atque quidem totam eum. Ipsum mollitia quibusdam modi at quae, a est? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas exercitationem consequuntur asperiores, ipsa distinctio natus magni, iste cum atque unde, inventore ullam cupiditate dolorem id dolor reprehenderit assumenda temporibus eum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores quod officiis, commodi corporis ut et pariatur exercitationem inventore. Tempora quasi iusto laudantium aut porro libero, cum explicabo asperiores excepturi!
+                    The Valenzuela Academic Center for Excellence (ValAce)  offers program in the City Library that aims to help the Valenzuelanos to have easy access to any event and program that they can participate. 
                 </p>
-                <button class="bg-primary text-white py-3 px-12 text-xl font-bold mt-[1rem] w-[15rem]">Read More</button>
+                <NuxtLink to="/programs/">
+                    <button class="bg-primary text-white py-3 px-12 text-xl font-bold mt-[1rem] w-[15rem]">Read More</button>
+                </NuxtLink>
+                
             </div>
 
         </div>

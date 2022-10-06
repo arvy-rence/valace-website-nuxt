@@ -11,22 +11,42 @@
             <span class="text-primary font-khula">
                 <i class="fa-solid fa-clock"></i> {{ date }}
             </span>
-            <p class="font-kulim text-primary w-full md:w-[30rem] lg:w-[40rem] lg:text-2xl w-full">
+            <p class="font-kulim text-primary w-full md:w-[30rem] lg:w-full lg:text-2xl w-full">
                 The Valenzuela City Library is dedicating a special space for our city's Board Exam Topnotchers entitled the Topnotchers' Shelf. It aims to highlight the academic excellence of Valenzuela City residents. This unique space will feature Valenzuelano Topnotchers together with select resources that they used for the exam and other reading materials which inspired them to do well in their studies.
             </p>
         </div>
         <div class="flex flex-col items-end w-full md:w-2/5">
             <img :src="image" class="img-with-shadow w-full md:w-[16rem]">
-            <h1 class="font-kulim text-primary w-[40rem] text-right text-2xl">Engineer Jesher Garde</h1>
-            <h2 class="font-kulim text-primary w-[40rem] text-right text-md">Top 2 / Aeronautical Engineer Licensure Examination</h2>
+            <h1 class="font-kulim text-primary w-full sm:w-[40rem] text-right text-2xl">Engineer Jesher Garde</h1>
+            <h2 class="font-kulim text-primary w-full sm:w-[40rem] text-right text-md">Top 2 / Aeronautical Engineer Licensure Examination</h2>
         </div>
     </div>
     <UtilVerticalSpacer :height="3" units="rem"/>
 </template>
 
-<script setup>
-    const date = new Date().toDateString()
-    const image = "/images/dr.png"
+<script>
+export default {
+    name: "SectionTopnotchers",
+    data() {
+        return {
+            topnotchers: [
+                {
+                    name: "Engineer Jesher Garde",
+                    title: "Top 2 / Aeronautical Engineer Licensure Examination"
+                },
+                {
+                    name: "Dr. Loubomir Cyrus E. Antonio",
+                    title: ""
+                },
+                {
+                    name: "Sir Nicko Tumala",
+                    title: ""
+                    
+                }
+            ]
+        }
+    }
+}   
 </script>
 
 <style>

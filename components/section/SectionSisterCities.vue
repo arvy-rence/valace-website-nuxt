@@ -2,7 +2,7 @@
     <div class="bg-[url(/images/sisters-bg.png)] flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div class="max-w-[calc(1500px)] mx-auto">
-            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">Valenzuela City Library</h2>
+            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center opacity-50">Valenzuela City Library</h2>
             <h1 class="font-bold text-4xl md:text-6xl text-primary text-center font-khula px-[1rem]">SISTER CITIES<br>
                 VISITING CITIES' CORNER
             </h1>
@@ -28,7 +28,7 @@
             <div class="flex justify-center items-center">
                 <NuxtLink to="/sister-cities/">
                     <button
-                        class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
+                        class="bg-primary px-[7rem] py-3 text-white font-bold font-khula text-lg"
                     >
                         View Sister Cities
                     </button>

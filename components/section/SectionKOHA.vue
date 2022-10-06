@@ -10,8 +10,7 @@
             <h2 class="underline text-xl font-semibold text-gray-400 pt-1 hover:text-primary duration-500"><a href="about">Visit now</a></h2>
         </div>
         <div class="w-full lg:w-5/12">
-            <img src="/images/koha.png" class="w-full" alt=""/>
-            <h1 class="text-2xl text-primary w-full text-center">(Sample Vid)</h1>
+            <img src="/images/sample-vid.png" class="w-full" alt=""/>
         </div>
     </div>
 </template>

@@ -4,7 +4,7 @@
         <div class="flex-col bg-img justify-center align-center max-w-[calc(1500px)] mx-auto">
             <UtilVerticalSpacer :height="2" units="rem"/>
             <div class="px-[1rem]">
-                <h2 class="font-bold text-gray-400 font-khula text-center text-lg sm:text-3xl">
+                <h2 class="font-bold text-gray-400 opacity-50 font-khula uppercase text-center text-lg sm:text-3xl">
                     Valenzuela City Library
                 </h2>
                 <h1 class="font-bold text-primary text-center font-khula text-4xl sm:text-6xl">
@@ -29,7 +29,7 @@
             <div class="flex justify-center items-center py-[2rem]">
                 <NuxtLink to="/events/">
                     <button
-                        class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
+                        class="bg-primary px-[7rem] py-3 text-white font-bold font-khula text-lg"
                     >
                         View All Events
                     </button>

@@ -1,5 +1,5 @@
 <template>
-    <nav class="nav flex flex-wrap items-center justify-between px-4">
+    <nav class="nav flex flex-wrap items-center justify-between px-4 bg-white">
         <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
             <img src="/images/icons/logo.png" width="150" height="600" alt="">
         </div>
@@ -148,4 +148,14 @@ export default {
         top: 0;
     }
 }
+
+.nav {
+    position:fixed; /* fixing the position takes it out of html flow - knows
+                     nothing about where to locate itself except by browser
+                     coordinates */
+    left:0;           /* top left corner should start at leftmost spot */
+    top:0;            /* top left corner should start at topmost spot */
+    width:100vw;      /* take up the full browser width */
+    z-index:200;  /* high z index so other content scrolls underneath */
+  }
 </style>

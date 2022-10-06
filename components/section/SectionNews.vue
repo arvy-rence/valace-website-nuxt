@@ -2,7 +2,7 @@
     <div class="bg-white-100 flex-col bg-img justify-center align-center px-[1rem]">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>
-            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">
+            <h2 class="font-bold uppercase text-gray-400 opacity-50 text-lg sm:text-3xl font-khula text-center opacity-50">
                 Valenzuela City Library
             </h2>
             <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula">
@@ -18,7 +18,7 @@
         <div class="flex justify-center items-center py-[2rem]">
             <NuxtLink to="/news/">
                 <button
-                    class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
+                    class="bg-primary px-[7rem] py-3 text-white font-bold font-khula text-lg"
                 >
                     View All News
                 </button>

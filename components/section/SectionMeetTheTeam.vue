@@ -36,7 +36,7 @@
                         imageURL="/images/team/4.jpg"
                     />
                     <CardTeamInfo
-                        name="Ann Patricia Badique"
+                        name="Anne Patricia Badique"
                         position=""
                         imageURL="/images/team/3.jpg"
                     />
@@ -60,7 +60,7 @@
                     <CardTeamInfo
                         name="Joyce Ann Artacho"
                         position=""
-                        imageURL="/images/team/7.jpg"
+                        imageURL="/images/team/7.png"
                     />
                     <CardTeamInfo
                         name="Roselle Luna"

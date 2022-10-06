@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-col relative lg:pt-[0rem]">
+    <div class="flex-col relative lg:pt-[2rem]">
         <!-- logo panel // -->
         <div class="flex justify-center items-center">
             <img src="/images/icons/logo.png" width="150" alt="">
@@ -7,22 +7,22 @@
         <div class="flex justify-center items-center pt-6">
             <NuxtLink to="https://facebook.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="/images/icons/fb-logo.png" height="20" width="20">
+                    <img src="/images/icons/blue-facebook.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://twitter.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="/images/icons/twitter.png" height="20" width="20">
+                    <img src="/images/icons/blue-twitter.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://maps.google.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="/images/icons/map.png" height="20" width="20">
+                    <img src="/images/icons/blue-map.png" height="30" width="30">
                 </figure>
             </NuxtLink>
             <NuxtLink to="https://koha.com/" target="_blank">
                 <figure class="px-4">
-                    <img src="/images/icons/koha.png" height="15" width="15">
+                    <img src="/images/icons/blue-koha.png" height="26" width="26">
                 </figure>
             </NuxtLink>
         </div>
@@ -31,12 +31,12 @@
             <div class="grid grid-cols-2 gap-2 md:flex md:flex-row md:justify-around items-start w-11/12 lg:w-3/4 px-[1rem]">
                 <ul class="pb-[2rem] md:pb-0">
                     <li class="font-bold font-khula text-lg text-primary">LIBRARY LOCATION</li>
-                    <FooterListItem href="/#" class="cursor-default">
+                    <FooterListItem href="/#" class="cursor-default text-primary">
                         Valenzuela City Library, <br>
                         MXW9+54C, Llenado, <br>
                         Valenzuela, Metro Manila
                     </FooterListItem>
-                    <FooterListItem href="/about-us"
+                    <FooterListItem href="https://www.google.com/maps/place/Valenzuela+Academic+Center+for+Excellence+-+ValACE/@14.6924138,120.9655949,19.75z/data=!4m5!3m4!1s0x3397b58186049e65:0x3b293f197c2be1ab!8m2!3d14.6923974!4d120.9656303"
                                     :isLink="true"
                                     class="text-primary font-bold">
                         View Map
@@ -44,8 +44,8 @@
                 </ul>
                 <ul class="pb-[2rem] md:pb-0 pl-[2rem] md:pl-0">
                     <li class="font-bold font-khula text-lg text-primary">LIBRARY HOURS</li>
-                    <FooterListItem href="" class="cursor-default">Monday - Sunday</FooterListItem>
-                    <FooterListItem href="" class="cursor-default">9:00am - 2:00am</FooterListItem>
+                    <FooterListItem href="" class="cursor-default text-primary">Monday - Sunday</FooterListItem>
+                    <FooterListItem href="" class="cursor-default text-primary">9:00am - 2:00am</FooterListItem>
                     <FooterListItem href=""
                                     class="text-secondary text-bold">Closed on Holidays</FooterListItem>
                 </ul>
