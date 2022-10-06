@@ -9,7 +9,9 @@
                 </span>
             </div>
             <button class="ml-auto mr-[1rem] font-kulim text-gray-400 hover:text-primary duration-500">
-                Read More <i class="fa-solid fa-chevron-right"></i>
+                <NuxtLink :to="`/sister-cities/${sisterCityInfo.id}`">
+                    Read More <i class="fa-solid fa-chevron-right"></i>
+                </NuxtLink>
             </button>
         </div>
     </div>
@@ -35,7 +37,7 @@ export default {
 <style scoped>
 @media(min-width: 1024px) {
     .card-class {
-        padding: 0.5rem 12rem 0.5rem 12rem;
+        padding: 0.5rem 6rem 0.5rem 6rem;
     }
 }
 

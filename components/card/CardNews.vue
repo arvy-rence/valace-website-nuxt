@@ -13,7 +13,7 @@
             <div class="block overflow-hidden h-[10rem]">
                 <h1 class="font-bold text-xl text-black-100 py-2 text-left text-primary font-kulim overflow-hidden max-h-[4.3rem]">{{ newsInfo.news_title }}</h1>
                 <div class="text-[15px] text-black-100 text-left font-kulim">
-                    <p class="overflow-hidden">
+                    <p class="overflow-hidden text-primary">
                         {{ newsInfo.news_description }}
                     </p>
                 </div>
@@ -22,7 +22,7 @@
                 <NuxtLink :to="`/news/${newsInfo.id}`"
                           class="text-primary text-sm underline font-bold">
                     <button class="py-2">
-                        <span class="text-primary font-kulim text-xs hover:underline opacity-50">
+                        <span class="text-primary font-kulim text-md hover:underline opacity-50">
                             Read More
                         </span>
                     </button>

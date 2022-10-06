@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="inline-flex items-center mt-5 pb-5 w-full">
-                <NuxtLink :to="`/news/${sisterCityInfo.id}`"
+                <NuxtLink :to="`/sister-cities/${sisterCityInfo.id}`"
                           class="text-primary text-sm underline font-bold mx-auto">
                     <button class="py-2">
                         <span class="text-primary hover:underline">
