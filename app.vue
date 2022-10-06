@@ -20,7 +20,12 @@
             {
                 rel: "stylesheet",
                 href: "https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
-            }
+            },
+            // {
+            //     rel: "icon",
+            //     type: "image/x-icon",
+            //     href: "/favicon.png"
+            // }
         ],
 
         script: [
