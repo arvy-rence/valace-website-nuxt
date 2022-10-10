@@ -1,6 +1,6 @@
 <template>
     <div class="pt-[82.8px]"></div>
-    <SectionNewBookSelection/>
+    <Testing/>
 </template>
 
 <script>

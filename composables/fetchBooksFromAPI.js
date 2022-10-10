@@ -11,6 +11,7 @@ export const getTrendingBooks = async () => {
             i--;
             continue;
         }
+
         let bookImageURL = `https://covers.openlibrary.org/b/id/${books.data.works[randomDocIndex].cover_i}-L.jpg`;
         let bookTitle = books.data.works[randomDocIndex].title;
         let authorName = books.data.works[randomDocIndex].author_name;

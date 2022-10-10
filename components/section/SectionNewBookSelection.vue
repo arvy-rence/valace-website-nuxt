@@ -1,23 +1,37 @@
 <template>
-    <div class="cards">
-        <div class="card bg-white" data-card="0">
-            <div class="card__detail">
-                <img :src="book1.bookImageURL" class="h-full"/>
+    <div class="py-[4rem]">
+        <h1 class="font-kulim font-bold text-primary text-6xl text-center">BOOK SELECTION</h1>
+        <div class="cards">
+            <div class="card bg-white" data-card="0">
+                <div class="card__detail">
+                    <img :src="book1.bookImageURL" class="h-full"/>
+                </div>
+            </div>
+            <div class="card bg-white" data-card="1">
+                <div class="card__detail">
+                    <img :src="book2.bookImageURL" class="h-full"/>
+                </div>
+            </div>
+            <div class="card bg-white" data-card="2">
+                <div class="card__detail">
+                    <img :src="book3.bookImageURL" class="h-full"/>
+                </div>
             </div>
         </div>
-        <div class="card bg-white" data-card="1">
-            <div class="card__detail">
-                <img :src="book2.bookImageURL" class="h-full"/>
+        <div class="titles text-center">
+            <div class="title">
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{book1.bookTitle}}</h1>
+                <p class="text-2xl text-primary font-kulim" v-for="author in book1.bookAuthor">{{ author }}</p>
+            </div>
+            <div class="title">
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{book2.bookTitle}}</h1>
+                <p class="text-2xl text-primary font-kulim" v-for="author in book2.bookAuthor">{{ author }}</p>
+            </div>
+            <div class="title">
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{book3.bookTitle}}</h1>
+                <p class="text-2xl text-primary font-kulim" v-for="author in book3.bookAuthor">{{ author }}</p>
             </div>
         </div>
-        <div class="card bg-white" data-card="2">
-            <div class="card__detail">
-                <img :src="book3.bookImageURL" class="h-full"/>
-            </div>
-        </div>
-    </div>
-    <div class="titles">
-
     </div>
 </template>
 
@@ -58,6 +72,7 @@ export default {
             if (card == 0) {
                 cards[2].classList.add("card--left");
                 cards[1].classList.add("card--right");
+
             }
             if (card == 1) {
                 cards[0].classList.add("card--left");
@@ -67,7 +82,14 @@ export default {
                 cards[1].classList.add("card--left");
                 cards[0].classList.add("card--right");
             }
+
+            let titles = document.getElementsByClassName("title");
+            for (let i = 0; i < titles.length; i++) {
+                titles[i].style.display = "none";
+            }
+            titles[card].style.display = "block";
         }
+
 
         init();
     },
@@ -212,5 +234,9 @@ export default {
     .card--right {
         transform: scale(0.75) translate(120px, 0px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
     }
+}
+
+.hidden {
+    display: none;
 }
 </style>

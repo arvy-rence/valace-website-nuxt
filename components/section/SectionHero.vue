@@ -145,7 +145,7 @@
                     VALENZUELA CITY LIBRARY
                 </h1>
                 <p class="text-sm sm:text-lg text-primary pt-[1rem]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a ultricies tortor. In hac habitasse platea dictumst. Curabitur non justo lacinia mauris finibus fringilla. Cras accumsan nulla et erat varius, quis sagittis tellus congue.
+                    Discover the joy through reading by visiting our new City Public Library. Come and Visit now!
                 </p>
                 <p class="text-sm sm:text-lg text-primary pt-[1rem] pb-[1rem]">
                     #AklatanParaSaBawatValenzuelano
@@ -159,11 +159,11 @@
             </div>
 
             <div class="block relative overflow-hidden h-full z-0">
-                <img src="public/images/hero-3.png" alt="" class="hero lg:block hidden">
+                <img src="/images/hero-3.png" alt="" class="hero lg:block hidden">
 
-                <img src="public/images/mobile-hero-3.png" alt="" class="w-full hidden md:block lg:hidden">
+                <img src="/images/mobile-hero-3.png" alt="" class="w-full hidden md:block lg:hidden">
 
-                <img src="public/images/mobile-hero-3.png" alt="" class="w-full block md:hidden">
+                <img src="/images/mobile-hero-3.png" alt="" class="w-full block md:hidden">
             </div>
         </div>
     </div>

@@ -1,10 +1,10 @@
 <template>
-    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[4rem] px-[1rem]">KNOW MORE ABOUT OUR</h2>
+    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[2rem] md:pt-[4rem] px-[1rem]">KNOW MORE ABOUT OUR</h2>
     <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula px-[1rem]">VALENZUELA CITY LIBRARY</h1>
     <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-0 sm:pt-[2rem] lg:pt-[3rem] max-w-[calc(1500px)] mx-auto">
 
         <div class="w-full lg:w-[40rem]">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade relative" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
                 <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                     <button
                         type="button"
@@ -30,22 +30,22 @@
                 <div class="carousel-inner relative w-full overflow-hidden">
                     <div class="carousel-item active float-left w-full">
                         <img
-                            src="/images/valace-building.png"
-                            class="block w-full min-h-[16rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover "
+                            src="/images/library-info/1.png"
+                            class="block w-full min-h-[16rem] h-[20rem] sm:h-[30rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover"
                             alt="Wild Landscape"
                         />
                     </div>
                     <div class="carousel-item float-left w-full">
                         <img
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                            class="block w-full min-h-[16rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover"
+                            src="/images/library-info/2.jpg"
+                            class="block w-full min-h-[16rem] h-[20rem] sm:h-[30rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover"
                             alt="Camera"
                         />
                     </div>
                     <div class="carousel-item float-left w-full">
                         <img
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-                            class="block w-full min-h-[16rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover"
+                            src="/images/library-info/3.jpg"
+                            class="block w-full min-h-[16rem] h-[20rem] sm:h-[30rem] lg:min-h-[27rem] lg:h-[27rem] md:h-[30rem] object-cover"
                             alt="Exotic Fruits"
                         />
                     </div>

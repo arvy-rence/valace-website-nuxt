@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white-100 flex-col bg-img justify-center align-center px-[1rem]">
+    <div class="bg-white-100 flex-col bg-img justify-center align-center px-[1rem]  max-w-[calc(1500px)] mx-auto overflow-hidden">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>
             <h2 class="font-bold uppercase text-gray-400 opacity-50 text-lg sm:text-3xl font-khula text-center opacity-50">
