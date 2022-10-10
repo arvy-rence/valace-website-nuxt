@@ -12,7 +12,7 @@
                 <div class="flex flex-col items-center justify-center">
                     <img :src="cityData.image_link"/>
                     <h2 class="text-2xl text-primary opacity-50 font-khula font-bold">
-                        SISTER CITIES & VISITING CITIES' CORNER
+                        SISTER CITIES &amp; VISITING CITIES' CORNER
                     </h2>
                     <h1 class="tracking-[0.25rem] text-5xl text-primary font-khula font-bold uppercase ">
                         {{cityData.library_name}}

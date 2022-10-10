@@ -1,51 +1,67 @@
 <template>
-    <div class="pt-[82.8px]"></div>
-    <UtilVerticalSpacer :height="3" units="rem"/>
-    <div class="flex flex-col justify-start px-[2rem]">
-        <h1 class="text-center text-primary text-4xl font-bold font-khula">
-            {{ newsInfo.title }}
-        </h1>
-        <h2 class="text-gray-400 font-kulim text-center text-xl">
-            Posted on {{ newsInfo.newsDate }}
-        </h2>
-        <div class="flex flex-col py-6">
-            <figure class="w-1/2">
-                <img :src="newsInfo.newsImageURL" alt="">
-            </figure>
-            <p>
-                {{ newsInfo.body }}
-            </p>
+    <div></div>
+    <div class="flex justify-center items-center">
+        <div class="pt-[82.8px] w-3/5">
+            <NuxtLink to="/">
+                <h3 class="uppercase text-primary opacity-50 text-xl font-bold font-khula">
+                    <i class="fa-solid fa-chevron-left mr-2 text-lg"></i>
+                    Back
+                </h3>
+            </NuxtLink>
+            <Loader :isLoading="isLoading"/>
+            <article v-if="!isLoading">
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="text-2xl text-primary opacity-50 font-khula font-bold">
+                        VALENZUELA CITY LIBRARY
+                    </h2>
+                    <h1 class="tracking-[0.25rem] text-5xl text-primary font-khula font-bold uppercase ">
+                        NEWS AND ANNOUNCEMENTS
+                    </h1>
+                    <img :src="newsInfo.news_image_link" class="w-full">
+                    
+                </div>
+                <div class="flex flex-col items-start justify-start text-primary">
+                    <h2 class="font-khula opacity-50 mt-5">
+                        <i class="fa-regular fa-calendar"></i>
+                        {{ date }}
+                    </h2>
+                    <div class="font-bold font-khula text-xl my-[2rem]">
+                        {{ newsInfo.news_title }}
+                    </div>
+                    <div class="font-khula">
+                        {{ newsInfo.news_description }}
+                    </div>
+                </div>
+            </article>
         </div>
-        <NuxtLink to="/news/">
-            <button
-                class="bg-primary px-12 py-3 rounded-md text-white font-bold font-khula text-lg"
-            >
-                Go Back to All News
-            </button>
-        </NuxtLink>
     </div>
 </template>
 
 <script>
-import axios from "axios";
+import axios from "~/server/index";
 
 export default {
     name: "[id]",
     data() {
         return {
-            newsInfo: {}
+            newsInfo: {},
+            isLoading: true
         }
     },
     methods: {},
     async created() {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
-        this.newsInfo = response.data
-        this.newsInfo["newsDate"] = new Date().toDateString()
-        this.newsInfo["newsImageURL"] = "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+        const {data} = await axios.get(`/news/${this.$route.params.id}`)
+        this.newsInfo = data.newsDetails
+        this.isLoading = false
     },
     mounted() {
         checkReload()
     },
+    computed: {
+        date() {
+            return new Date(this.newsInfo.news_date).toLocaleDateString()
+        }
+    }
 }
 </script>
 
