@@ -1,6 +1,8 @@
 <template>
-    <div class="relative bg-white w-[21rem] h-[22rem] transparent">
-        <img src="/images/facility-card-bg.png" class="absolute bottom-0 z-0" alt=""/>
+    <div class="relative w-[21rem] h-[22rem] transparent">
+        <div class="bg-white w-[336px] h-[289px] absolute bottom-0 rounded-2xl z-0 shadow-lg ">
+            <img src="/images/facility-card-bg.png" class="opacity-20" alt=""/>
+        </div>
         <img :src="facilityInfo.image" class="absolute left-1/2 transform -translate-x-1/2 z-10" alt=""/>
         <h1 class="text-2xl w-full font-bold text-center absolute bottom-1/2">
             {{ facilityInfo.title }}

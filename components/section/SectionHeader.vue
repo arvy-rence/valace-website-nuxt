@@ -1,59 +1,9 @@
 <template>
-<!--    <nav class="flex justify-between items-center px-16 h-12">-->
-<!--        <NuxtLink to="/">-->
-<!--            <figure>-->
-<!--                <img src="/images/icons/logo.png" width="100" height="60" alt="">-->
-<!--            </figure>-->
-<!--        </NuxtLink>-->
-<!--        &lt;!&ndash; for small screens &ndash;&gt;-->
-<!--        <div class="lg:hidden space-y-2-->
-<!--            border border-2 border-gray-300 rounded-md-->
-<!--            py-1 px-1-->
-<!--            group hover:bg-primary cursor-pointer" @click="openMenu">-->
-<!--            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>-->
-<!--            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>-->
-<!--            <div class="w-8 h-0.5 bg-primary group-hover:bg-white"></div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; for large screens &ndash;&gt;-->
-<!--        <ul class="hidden lg:flex">-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/"-->
-<!--                          :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"-->
-<!--                          @click="changeActive(1)"-->
-<!--                >-->
-<!--                    HOME-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="border-t md:border-none">-->
-<!--                <NuxtLink to="https://opac-url.com"-->
-<!--                          class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula">-->
-<!--                    OPAC-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/about-us"-->
-<!--                          :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"-->
-<!--                          @click="changeActive(2)"-->
-<!--                >-->
-<!--                    ABOUT US-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/facilities"-->
-<!--                          :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"-->
-<!--                          @click="changeActive(3)"-->
-<!--                >-->
-<!--                    FACILITIES-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-
-
-
-    <nav class="nav flex flex-wrap items-center justify-between px-4">
+    <nav class="nav flex flex-wrap items-center justify-between px-4 bg-white">
         <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
-            <img src="/images/icons/logo.png" width="100" height="60" alt="">
+            <NuxtLink to="/">
+                <img src="/images/icons/logo.png" width="150" height="600" alt="">
+            </NuxtLink>
         </div>
 
         <input class="menu-btn hidden" type="checkbox" id="menu-btn">
@@ -62,26 +12,75 @@
         </label>
 
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
-            <li class="border-t md:border-none">
+            <li class="homedropdown border-t md:border-none">
                 <NuxtLink to="/" :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker"
-                          @click="changeActive(1)">HOME</NuxtLink>
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >HOME</NuxtLink>
+                <div class="homedropdown-content">
+                    <div class="flex flex-col">
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('shelf-section', '/')">TOPNOTCHERS' SHELF</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('sistercity-section', '/')">SISTER CITIES & VISITING CORNER</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('book-section', '/')">BOOK SELECTION</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('opac-section', '/')">OPAC</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('partners-section', '/')">PARTNERS AND LINKAGES</a>
+                        </button>
+                    </div>
+                </div>
             </li>
             <li class="border-t md:border-none">
-                <a class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula">OPAC</a>
+                <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl"
+                   href="http://192.168.68.103" target="_blank">
+                    OPAC
+                </a>
             </li>
-            <li class="border-t md:border-none">
-                <NuxtLink to="/about-us"
-                          class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          @click="changeActive(2)">ABOUT US
+            <li class="aboutus border-t md:border-none">
+                <NuxtLink to="/about-us" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >ABOUT US
                 </NuxtLink>
-            </li>
-            <li class="border-t md:border-none">
-                <NuxtLink to="/facilities"
-                          class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          @click="changeActive(3)">FACILITIES
 
+                <div class="aboutusdropdown-content">
+                    <div class="flex flex-col">
+                        <button class="dropdown-items">Library Programs</button>
+                        <button class="dropdown-items">Find Us</button>
+                        <button class="dropdown-items">Miscellaneous</button>
+                        <button class="dropdown-items">Meet the Team</button>
+                    </div>
+                </div>
+            </li>
+            <li class=" border-t md:border-none">
+                <NuxtLink to="/facilities" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
+                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                          >FACILITIES
                 </NuxtLink>
+
+<!--                <div class="facilitesdropdown-content">-->
+<!--                    <div class="flex flex-col">-->
+<!--                        <button class="dropdown-items">Hero</button>-->
+<!--                        <button class="dropdown-items">News & Announcements</button>-->
+<!--                        <button class="dropdown-items">Events and Activities</button>-->
+<!--                        <button class="dropdown-items">Topnotchers Shelf</button>-->
+<!--                        <button class="dropdown-items">Sister Cities</button>-->
+<!--                        <button class="dropdown-items">Book Selection</button>-->
+<!--                        <button class="dropdown-items">OPAC</button>-->
+<!--                        <button class="dropdown-items">Partners and Linkages</button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </li>
 
         </ul>
@@ -119,10 +118,26 @@ export default {
                 aboutUs: false,
                 facilities: false
             },
-            isMenuOpen: false
+            isMenuOpen: false,
+            route: this.$route.name
         }
     },
     methods: {
+        checkRoute() {
+            if (this.route === 'index') {
+                this.isActive.home = true
+                this.isActive.aboutUs = false
+                this.isActive.facilities = false
+            } else if (this.route === 'about-us') {
+                this.isActive.home = false
+                this.isActive.aboutUs = true
+                this.isActive.facilities = false
+            } else if (this.route === 'facilities') {
+                this.isActive.home = false
+                this.isActive.aboutUs = false
+                this.isActive.facilities = true
+            }
+        },
         changeActive(page) {
             switch (page) {
                 case 1:
@@ -142,9 +157,16 @@ export default {
                     break;
             }
         },
-        openMenu() {
-
+        async scrollToID(id, route) {
+            if (route !== this.$route.name) {
+               await this.$router.push(route)
+            }
+            let el = document.getElementById(id);
+            el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
         }
+    },
+    mounted() {
+        this.checkRoute()
     }
 }
 </script>
@@ -199,5 +221,52 @@ export default {
     .menu-btn:checked ~ .menu-icon .navicon::after {
         top: 0;
     }
+}
+
+.nav {
+    position:fixed; /* fixing the position takes it out of html flow - knows
+                     nothing about where to locate itself except by browser
+                     coordinates */
+    left:0;           /* top left corner should start at leftmost spot */
+    top:0;            /* top left corner should start at topmost spot */
+    width:100vw;      /* take up the full browser width */
+    z-index:200;  /* high z index so other content scrolls underneath */
+  }
+
+
+.homedropdown-content, .aboutusdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: row;
+}
+
+.homedropdown:hover .homedropdown-content {
+    display: block;
+}
+
+.aboutus:hover .aboutusdropdown-content {
+    display: block;
+}
+
+
+.dropdown-items {
+    width: 180px;
+    height: 40px;
+    padding-top: 6px;
+    background-color: #00104A;
+    line-height: 15px;
+    color: white;
+    margin: 1px 2px 1px 2px;
+    opacity: 50%;
+    font-family: Khula, sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-items:hover {
+    opacity: 100%;
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+    <div class="pt-[82.8px]"></div>
     <div class="bg-white-100 flex-col bg-img justify-center align-center">
         <UtilVerticalSpacer :height="2" units="rem"/>
         <div>
@@ -14,35 +15,31 @@
                 <CardNews :newsInfo="newsInfo"/>
             </div>
         </div>
+        <Loader :isLoading="isLoading"/>
     </div>
 </template>
 
 <script>
-import axios from "axios";
+import axios from "~/server/index";
 import CardNews from "../../components/card/CardNews";
 import {checkReload} from "../../composables/checkReload";
+import Loader from "../../components/Loader";
 
 export default {
     name: "index",
-    components: {CardNews},
+    components: {Loader, CardNews},
     data() {
         return {
-            newsData: []
+            newsData: [],
+            isLoading: true
         }
     },
     async created() {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-        console.log(response.data);
-        response.data.forEach((news) => {
-            this.newsData.push({
-                id: news.id,
-                newsTitle: news.title,
-                newsDate: new Date().toDateString(),
-                newsContent: news.body,
-                newsImageURL: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&w=1000&q=80",
-                newsLink: `/news/${news.id}`
-            })
-        })
+        console.log("low")
+        const {data} = await axios.get("/news");
+        console.log(data.newsUTC8)
+        this.newsData = data.newsUTC8;
+        this.isLoading = false;
     },
     mounted() {
         checkReload()

@@ -1,36 +1,25 @@
 <template>
-    <div>
-        <carousel-3d>
-            <slide :index="1">
-                123
-            </slide>
-            <slide :index="2">
-                123
-            </slide>
-            <slide :index="3">
-                123
-            </slide>
-        </carousel-3d>
+    <div class=" max-w-[calc(1500px)] mx-auto">
+        <div class="pt-[2rem]">
+            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">
+                Valenzuela City Library
+            </h2>
+            <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula">
+                LIBRARY PROGRAMS
+            </h1>
+        </div>
     </div>
 </template>
 
 <script>
-import Carousel3d from 'vue-carousel-3d';
-import Slide from 'vue-carousel-3d';
 
 export default {
-    name: "Testing",
-
-    components: {
-        Carousel3d,
-        Slide,
-    }
+    name: "Testing"
 }
+
+
 </script>
 
 <style scoped>
-
-
-
 
 </style>

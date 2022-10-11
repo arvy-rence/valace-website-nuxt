@@ -1,11 +1,14 @@
 <template>
     <div>
+        <div class="pt-[82.8px]"></div>
+        <SectionHero/>
         <SectionNews/>
+        <SectionEvents/>
         <SectionTopnotchers/>
         <SectionSisterCities/>
-        <SectionPartners/>
-        <SectionBookSelection :queryValues="generatedWords"/>
+        <SectionNewBookSelection/>
         <SectionKOHA/>
+        <SectionPartners/>
     </div>
 </template>
 
@@ -16,10 +19,20 @@ import SectionPartners from "../components/section/SectionPartners";
 import SectionSisterCities from "../components/section/SectionSisterCities";
 import SectionTopnotchers from "../components/section/SectionTopnotchers";
 import SectionNews from "../components/section/SectionNews";
+import SectionHero from "../components/section/SectionHero";
+import SectionEvents from "../components/section/SectionEvents";
 
 export default {
     name: "index",
-    components: {SectionNews, SectionTopnotchers, SectionSisterCities, SectionPartners, SectionKOHA},
+    components: {
+        SectionEvents,
+        SectionHero,
+        SectionNews,
+        SectionTopnotchers,
+        SectionSisterCities,
+        SectionPartners,
+        SectionKOHA
+    },
     data() {
         return {
             generatedWords: [],

@@ -1,28 +1,28 @@
 <template>
     <div class="w-[22rem] bg-gray mx-4 ">
-        <div class="bg-white-100 custom-bottom-shadow img-with-shadow my-[.7rem] px-[1.4rem] pt-4 min-h-[24rem]">
+        <div class="block bg-white-100 shadow-lg img-with-shadow my-[.7rem] px-[1.4rem] pt-4 h-[32rem]">
             <figure class="flex justify-center items-center py-[.5rem]">
-                <img src="/images/icons/logo.png" width="75" alt="">
+                <img src="/images/icons/logo.png" width="75" alt="" />
             </figure>
             <figure class="flex justify-center items-center">
-                <img :src="newsInfo.newsImageURL" width="340" alt=""/>
+                <img :src="newsInfo.news_image_link" alt="" class="w-[20rem] h-[12rem] object-cover"/>
             </figure>
             <div class="text-gray-400 font-kulim pt-4">
-                <i class="fa-solid fa-clock"></i> {{ dummyDateString }}
+                <i class="fa-regular fa-calendar"></i> {{ convertToMoment(newsInfo.news_date) }}
             </div>
-
-            <h1 class="font-bold text-xl text-black-100 py-2 text-left font-kulim">{{ newsInfo.newsTitle }}</h1>
-            <div class="text-[15px] text-black-100 text-left font-kulim">
-                <p>
-                    {{ newsInfo.newsContent }}
-                </p>
+            <div class="block overflow-hidden h-[10rem]">
+                <h1 class="font-bold text-xl text-black-100 py-2 text-left text-primary font-kulim overflow-hidden max-h-[4.3rem]">{{ newsInfo.news_title }}</h1>
+                <div class="text-[15px] text-black-100 text-left font-kulim">
+                    <p class="overflow-hidden text-primary">
+                        {{ newsInfo.news_description }}
+                    </p>
+                </div>
             </div>
             <div class="inline-flex items-center mt-5 pb-5">
-                <NuxtLink :to="newsInfo.newsLink"
+                <NuxtLink :to="`/news/${newsInfo.id}`"
                           class="text-primary text-sm underline font-bold">
                     <button class="py-2">
-                        <span class="text-primary hover:underline">
-                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        <span class="text-primary font-kulim text-md hover:underline opacity-50">
                             Read More
                         </span>
                     </button>
@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import {convertToMoment} from "../../composables/convertToMoment";
+
 export default {
     name: "CardNews",
     data() {
