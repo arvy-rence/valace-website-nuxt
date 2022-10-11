@@ -21,13 +21,7 @@
                 rel: "stylesheet",
                 href: "https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
             },
-            // {
-            //     rel: "icon",
-            //     type: "image/x-icon",
-            //     href: "/favicon.png"
-            // }
         ],
-
         script: [
             {
                 src: "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"
