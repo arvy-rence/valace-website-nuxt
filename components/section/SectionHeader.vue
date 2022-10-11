@@ -12,25 +12,75 @@
         </label>
 
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
-            <li class="border-t md:border-none">
+            <li class="homedropdown border-t md:border-none">
                 <NuxtLink to="/" :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"
                           class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >HOME</NuxtLink>
+                <div class="homedropdown-content">
+                    <div class="flex flex-col">
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('shelf-section', '/')">TOPNOTCHERS' SHELF</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('sistercity-section', '/')">SISTER CITIES & VISITING CORNER</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('book-section', '/')">BOOK SELECTION</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('opac-section', '/')">OPAC</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('partners-section', '/')">PARTNERS AND LINKAGES</a>
+                        </button>
+                    </div>
+                </div>
             </li>
             <li class="border-t md:border-none">
-                <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl">OPAC</a>
+                <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl"
+                   href="http://192.168.68.103" target="_blank">
+                    OPAC
+                </a>
             </li>
-            <li class="border-t md:border-none">
+            <li class="aboutus border-t md:border-none">
                 <NuxtLink to="/about-us" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
                           class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >ABOUT US
                 </NuxtLink>
+
+                <div class="aboutusdropdown-content">
+                    <div class="flex flex-col">
+                        <button class="dropdown-items">Library Programs</button>
+                        <button class="dropdown-items">Find Us</button>
+                        <button class="dropdown-items">Miscellaneous</button>
+                        <button class="dropdown-items">Meet the Team</button>
+                    </div>
+                </div>
             </li>
-            <li class="border-t md:border-none">
+            <li class=" border-t md:border-none">
                 <NuxtLink to="/facilities" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
                           class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >FACILITIES
                 </NuxtLink>
+
+<!--                <div class="facilitesdropdown-content">-->
+<!--                    <div class="flex flex-col">-->
+<!--                        <button class="dropdown-items">Hero</button>-->
+<!--                        <button class="dropdown-items">News & Announcements</button>-->
+<!--                        <button class="dropdown-items">Events and Activities</button>-->
+<!--                        <button class="dropdown-items">Topnotchers Shelf</button>-->
+<!--                        <button class="dropdown-items">Sister Cities</button>-->
+<!--                        <button class="dropdown-items">Book Selection</button>-->
+<!--                        <button class="dropdown-items">OPAC</button>-->
+<!--                        <button class="dropdown-items">Partners and Linkages</button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </li>
 
         </ul>
@@ -107,6 +157,13 @@ export default {
                     break;
             }
         },
+        async scrollToID(id, route) {
+            if (route !== this.$route.name) {
+               await this.$router.push(route)
+            }
+            let el = document.getElementById(id);
+            el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        }
     },
     mounted() {
         this.checkRoute()
@@ -175,4 +232,41 @@ export default {
     width:100vw;      /* take up the full browser width */
     z-index:200;  /* high z index so other content scrolls underneath */
   }
+
+
+.homedropdown-content, .aboutusdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: row;
+}
+
+.homedropdown:hover .homedropdown-content {
+    display: block;
+}
+
+.aboutus:hover .aboutusdropdown-content {
+    display: block;
+}
+
+
+.dropdown-items {
+    width: 180px;
+    height: 40px;
+    padding-top: 6px;
+    background-color: #00104A;
+    line-height: 15px;
+    color: white;
+    margin: 1px 2px 1px 2px;
+    opacity: 50%;
+    font-family: Khula, sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-items:hover {
+    opacity: 100%;
+}
 </style>

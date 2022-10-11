@@ -15,7 +15,7 @@
             </h1>
             <div class="pl-0 text-primary">
                 <h2 class="text-2xl">Monday - Sunday</h2>
-                <h2 class="text-2xl">9:00AM - 2:00AM</h2>
+                <h2 class="text-2xl">9:00AM - 12:00AM</h2>
                 <h2 class="text-2xl text-secondary font-bold">Closed on Holidays</h2>
             </div>
 

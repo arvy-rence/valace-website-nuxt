@@ -1,5 +1,5 @@
 <template>
-    <div class="py-[4rem]">
+    <div class="py-[4rem]" id="book-section">
         <h1 class="font-kulim font-bold text-primary text-6xl text-center">BOOK SELECTION</h1>
         <div class="cards">
             <div class="card bg-white" data-card="0">

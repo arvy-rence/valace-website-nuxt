@@ -1,6 +1,5 @@
 <template>
-    <UtilVerticalSpacer :height="2" units="rem"/>
-    <div class="w-full bg-[url(/images/sisters-bg.png)]">
+    <div class="w-full bg-[url(/images/sisters-bg.png)]" id="partners-section">
         <div class="flex-col px-[1rem] lg:px-[6rem] pt-[4rem] pb-[2rem] flex-wrap overflow-auto justify-around items-center max-w-[calc(1500px)] mx-auto">
             <div class="text-center">
                 <h2 class="font-bold text-lg sm:text-3xl text-gray-400 py-2 opacity-50">VALENZUELA CITY LIBRARY</h2>

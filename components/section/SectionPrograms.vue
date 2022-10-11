@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <div class="pb-[2rem]">
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
+    <div class=" max-w-[calc(1500px)] mx-auto" id="library-programs">
+        <div class="pt-[2rem]">
+            <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center">
                 Valenzuela City Library
             </h2>
-            <h1 class="font-bold text-4xl text-primary text-center font-khula">
+            <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula">
                 LIBRARY PROGRAMS
             </h1>
         </div>
@@ -54,11 +54,13 @@
                 </div>
             </div>
             <div class="flex flex-col-reverse lg:flex-row pt-[10rem] justify-center pl-[4rem] lg:pl-0 lg:w-9/12 mx-auto">
-
-                <img src="/images/topnochers-shelf.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                <div class="relative">
+                    <img src="/images/topnochers-shelf.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                    <button class="absolute bottom-0 left-0 z-10 bg-primary w-[12rem] h-[3rem] text-white text-xl font-semibold">Read More</button>
+                </div>
                 <div class="w-5/6 lg:w-1/2 lg:pt-[2rem] m-auto lg:m-0">
                     <h3 class="font-khula text-left text-primary title">
-                        TOP NOTCHER’S SHELF
+                        TOPNOTCHERS’ SHELF
                     </h3>
                     <p class="font-kulim text-primary description">
                         The Valenzuela City Library is dedicating a special space for our city's Board Exam Topnotchers entitled the Topnotchers' Shelf. It aims to highlight the academic excellence of Valenzuela City residents. This unique space will feature Valenzuelano Topnotchers together with select resources that they used for the exam and other reading materials which inspired them to do well in their studies.
@@ -78,10 +80,10 @@
 
         <div class="flex flex-row justify-center px-[1rem] lg:px-[6rem] pb-[4rem]">
             <div class="mx-auto relative">
-                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute -left-[3rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 gradient-color-circle">
+                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute -left-[3rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 gradient-color-circle-3">
                     <img src="/images/icons/valace-directory/arts.png" width="120px" height="120px"/>
                 </div>
-                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-[1rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 top-[8rem] gradient-color-line">
+                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-[1rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 top-[8rem] gradient-color-line-3">
 
                 </div>
             </div>
@@ -109,22 +111,28 @@
                         #ValenzuelaCity
                     </h2>
                 </div>
-                <img src="/images/GAWAD.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:ml-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                <div class="relative">
+                    <img src="/images/GAWAD.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:ml-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                    <button class="absolute bottom-0 left-[2rem] z-10 bg-primary w-[12rem] h-[3rem] text-white text-xl font-semibold">Read More</button>
+                </div>
             </div>
         </div>
 
         <div class="flex flex-row justify-center px-[1rem] lg:px-[6rem] pb-[4rem]">
             <div class="mx-auto relative">
-                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute -left-[3rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 gradient-color-circle-2">
+                <div class="rounded-full flex items-center justify-center w-[10rem] z-10 h-[10rem] absolute -left-[3rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 gradient-color-circle-4">
                     <img src="/images/icons/valace-directory/arts.png" width="120px" height="120px"/>
                 </div>
-                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-[1rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 top-[8rem] gradient-color-line-2">
+                <div class="rounded-full -mt-[2rem] flex w-[2rem] h-full mx-auto z-0 absolute left-[1rem] lg:left-1/2 lg:transform lg:-translate-x-1/2 top-[8rem] gradient-color-line-4">
 
                 </div>
             </div>
             <div class="flex flex-col-reverse lg:flex-row pt-[10rem] justify-center pl-[4rem] lg:pl-0 lg:w-9/12 mx-auto">
 
-                <img src="/images/sister-cities.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                <div class="relative">
+                    <img src="/images/sister-cities.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[2rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                    <button class="absolute bottom-0 left-0 z-10 bg-primary w-[12rem] h-[3rem] text-white text-xl font-semibold">Read More</button>
+                </div>
                 <div class="w-5/6 lg:w-1/2 lg:pt-[2rem] m-auto lg:m-0">
                     <h3 class="font-khula text-primary title text-left">
                         Sister Cities & Visiting Cities’ Corner
