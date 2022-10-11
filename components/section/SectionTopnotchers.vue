@@ -13,18 +13,24 @@
                 The Valenzuela City Library is dedicating a special space for our city's Board Exam Topnotchers entitled the Topnotchers' Shelf. It aims to highlight the academic excellence of Valenzuela City residents. This unique space will feature Valenzuelano Topnotchers together with select resources that they used for the exam and other reading materials which inspired them to do well in their studies.
             </p>
         </div>
-        <div class="flex flex-col items-center lg:items-end w-full md:w-2/5 ">
-            <div class="flex flex-col items-center justify-center ">
-                <img :src="topnotchers[index].image" class="img-with-shadow w-full md:w-[16rem]">
-                <div class="w-full flex justify-evenly mt-3">
-                    <button class="w-1/4 bg-primary text-white rounded-sm" @click="cycleIndexBackward">
+        <div class="flex flex-col items-center justify-center lg:items-end w-full md:w-2/5 ">
+            <div class="flex flex-col items-center">
+                <div class="flex gap-4">
+                    <button class="text-2xl text-primary" @click="cycleIndexBackward">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="w-1/4 bg-primary text-white rounded-sm" @click="cycleIndexForward">
+                    <img :src="topnotchers[index].image" class="img-with-shadow w-full md:w-[16rem]">
+                    <button class="text-2xl text-primary" @click="cycleIndexForward">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
+                <div>
+                    <span class="dot" :class="[index === 0 ? 'isActive' : '']" @click="changeIndex(0)"></span>
+                    <span class="dot" :class="[index === 1 ? 'isActive' : '']" @click="changeIndex(1)"></span>
+                    <span class="dot" :class="[index === 2 ? 'isActive' : '']" @click="changeIndex(2)"></span>
+                </div>
             </div>
+            
             <h1 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-2xl">{{ topnotchers[index].name }}</h1>
             <h2 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-md italic">{{ topnotchers[index].title }}</h2>
             <span class="text-primary font-khula italic">
