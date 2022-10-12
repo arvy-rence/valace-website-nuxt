@@ -1,6 +1,6 @@
 <template>
     <UtilVerticalSpacer :height="3" units="rem"/>
-    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[12rem] max-w-[calc(1500px)] mx-auto py-[7rem] w-full" id="shelf-section">
+    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[12rem] max-w-[calc(1500px)] mx-auto py-[7rem] w-full bg-primary overflow-hidden" id="shelf-section">
         <div class="flex flex-col pt-[1rem] lg:pt-0 md:pr-[2rem] w-full md:w-3/5">
             <h1 class="text-4xl text-primary font-khula font-bold md:text-6xl lg:text-6xl">
                 TOPNOTCHERS'
