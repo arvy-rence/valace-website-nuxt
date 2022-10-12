@@ -45,23 +45,25 @@
                 <ul class="pb-[2rem] md:pb-0 pl-[2rem] md:pl-0">
                     <li class="font-bold font-khula text-lg text-primary">LIBRARY HOURS</li>
                     <FooterListItem href="" class="cursor-default text-primary">Monday - Sunday</FooterListItem>
-                    <FooterListItem href="" class="cursor-default text-primary">9:00am - 12:00am</FooterListItem>
+                    <FooterListItem href="" class="cursor-default text-primary uppercase">9:00am - 12:00mn</FooterListItem>
                     <FooterListItem href=""
                                     class="text-secondary text-bold">Closed on Holidays</FooterListItem>
                 </ul>
                 <ul>
                     <li class="font-bold font-khula text-lg text-primary">CONTACT US</li>
-                    <FooterListItem href="/about-us"
-                                    :isLink="true">
-                        <i class="fa-solid fa-phone text-primary"></i>
-                        8-352-1000
-                    </FooterListItem>
-                    <FooterListItem href="/about-us"
-                                    :isLink="true">
-                        <i class="fa-regular fa-envelope text-primary"></i>
-                        valenzuelacitylibrary@gmail.com
-                    </FooterListItem>
-                    <FooterListItem href="/about-us"
+                    <div>
+                        <a href="tel:8-352-1000" class="font-kulim hover:underline">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            8-352-1000
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:valenzuelacitylibrary@gmail.com" class="font-kulim hover:underline">
+                            <i class="fa-regular fa-envelope text-primary"></i>
+                            valenzuelacitylibrary@gmail.com
+                        </a>
+                    </div>
+                    <FooterListItem href="https://library.valenzuela.gov.ph"
                                     :isLink="true">
                         <i class="fa-solid fa-globe text-primary"></i>
                         library.valenzuela.gov.ph
