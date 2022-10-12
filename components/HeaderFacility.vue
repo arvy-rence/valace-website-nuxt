@@ -75,9 +75,6 @@
 <script>
 export default {
     name: "Header",
-    data() {
-        
-    },
     methods: {
         async scrollToID(id, route) {
             if (route !== this.$route.name) {
