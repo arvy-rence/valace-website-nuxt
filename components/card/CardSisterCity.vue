@@ -46,7 +46,7 @@
             <div class="block overflow-hidden h-[10rem]">
                 <h1 class="font-bold text-xl text-black-100 py-2 text-center text-primary font-kulim overflow-hidden max-h-[4.3rem]">{{ sisterCityInfo.library_name }}</h1>
                 <div class="text-[15px] text-black-100 text-center font-kulim pt-2">
-                    <p class="overflow-hidden text-center px-[1rem]">
+                    <p class="overflow-hidden text-center px-[1rem] text-primary">
                         {{ sisterCityInfo.library_description }}
                     </p>
                 </div>

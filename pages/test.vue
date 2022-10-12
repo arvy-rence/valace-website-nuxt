@@ -1,6 +1,6 @@
 <template>
     <div class="pt-[82.8px]"></div>
-    <SectionProgramsSisterCities/>
+    <SectionNewHeader/>
 </template>
 
 <script>
@@ -10,10 +10,10 @@ import SectionEvents from "../components/section/SectionEvents";
 import SectionNewBookSelection from "../components/section/SectionNewBookSelection";
 import SectionPrograms from "../components/section/SectionPrograms";
 import SectionProgramsSisterCities from "../components/section/SectionProgramsSisterCities";
-
+import SectionNewHeader from "../components/section/SectionNewHeader.vue"
 
 export default {
-    components: {SectionPrograms, SectionNewBookSelection, SectionEvents, SectionTopnotchers, Testing, SectionProgramsSisterCities}
+    components: {SectionNewHeader}
 }
 </script>
 
