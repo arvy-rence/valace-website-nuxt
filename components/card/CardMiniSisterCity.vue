@@ -1,6 +1,6 @@
 <template>
     <div class="card-class py-2">
-        <div class="bg-white border border-gray-300 flex items-center justify-start px-3 py-3 h-[6rem] shadow-lg">
+        <div class="bg-white border border-gray-300 flex items-center justify-start px-3 py-3 h-[6rem] hover:shadow-lg">
             <img :src="sisterCityInfo.image_link" alt="" class="py-2 ml-[1rem] w-[4rem] object-cover" width="100">
             <div class="flex flex-col">
                 <span class="pl-5 font-khula text-md md:text-xl font-bold text-primary city-text">{{ sisterCityInfo.library_name }}</span>

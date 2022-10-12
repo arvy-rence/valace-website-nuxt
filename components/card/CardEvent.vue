@@ -1,6 +1,6 @@
 <template>
     <div :data-month="numericMonth" class="pl-[10rem] text-primary text-4xl uppercase font-bold"></div>
-    <div class="flex flex-col md:flex-row relative bg-white items-center justify-start px-3 py-3 mx-auto w-5/6 my-[.5rem] shadow-lg overflow-hidden">
+    <div class="flex flex-col md:flex-row relative bg-white items-center justify-start px-3 py-3 mx-auto w-5/6 my-[.5rem] hover:shadow-lg overflow-hidden">
         <img :src="eventData.event_image_link" alt="" class="mx-2 w-full md:w-[9rem] md:h-[6rem] object-cover mt-[2.2rem] md:mt-0" width="">
         <div class="flex flex-col">
             <span class="md:pl-5 text-center md:text-left font-khula text-2xl md:text-xl font-bold text-primary city-text w-full md:w-[calc(100%-90px)]">{{
