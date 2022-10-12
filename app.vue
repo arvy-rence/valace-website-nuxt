@@ -1,6 +1,5 @@
 <template>
-    <div class="">
-        <SectionHeader/>
+    <div>
         <NuxtPage/>
         <SectionFooter/>
     </div>
