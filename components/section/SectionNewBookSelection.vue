@@ -1,6 +1,6 @@
 <template>
     <div class="py-[4rem]" id="book-section">
-        <h1 class="font-kulim font-bold text-primary text-6xl text-center">BOOK SELECTION</h1>
+        <h1 class="font-bold text-4xl md:text-6xl text-primary text-center font-khula">BOOK SELECTION</h1>
         <div class="cards">
             <div class="card bg-white" data-card="0">
                 <div class="card__detail">
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div class="titles text-center">
+        <div class="titles">
             <div class="title">
                 <h1 class="text-3xl font-bold text-primary font-kulim">{{book1.bookTitle}}</h1>
                 <p class="text-2xl text-primary font-kulim" v-for="author in book1.bookAuthor">{{ author }}</p>
@@ -186,6 +186,11 @@ export default {
     justify-content: center;
 }
 
+.titles {
+    text-align: center;
+    margin-top: 0;
+}
+
 @media only screen and (max-width: 736px) {
     .cards {
         flex-direction: column;
@@ -209,6 +214,9 @@ export default {
     .card--right {
         transform: scale(0.75) translate(220px, 0px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
     }
+    .titles {
+        margin-top: 0rem;
+    }
 }
 
 @media only screen and (max-width: 490px) {
@@ -221,6 +229,7 @@ export default {
         display: flex;
         width: 50%;
         height: 50%;
+        top: 30px;
     }
 
     .card--left {
@@ -233,6 +242,9 @@ export default {
 
     .card--right {
         transform: scale(0.75) translate(120px, 0px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
+    }
+    .titles {
+        margin-top: -10rem;
     }
 }
 

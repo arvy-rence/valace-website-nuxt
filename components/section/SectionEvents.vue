@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100 md:py-[4rem]" id="events-section">
+    <div class="bg-gray-100 pt-[2rem] md:py-[4rem]" id="events-section">
 
         <div class="flex-col bg-img justify-center align-center max-w-[calc(1500px)] mx-auto">
             <div class="px-[1rem]">

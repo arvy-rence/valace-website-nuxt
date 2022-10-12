@@ -69,42 +69,9 @@
                           >FACILITIES
                 </NuxtLink>
 
-<!--                <div class="facilitesdropdown-content">-->
-<!--                    <div class="flex flex-col">-->
-<!--                        <button class="dropdown-items">Hero</button>-->
-<!--                        <button class="dropdown-items">News & Announcements</button>-->
-<!--                        <button class="dropdown-items">Events and Activities</button>-->
-<!--                        <button class="dropdown-items">Topnotchers Shelf</button>-->
-<!--                        <button class="dropdown-items">Sister Cities</button>-->
-<!--                        <button class="dropdown-items">Book Selection</button>-->
-<!--                        <button class="dropdown-items">OPAC</button>-->
-<!--                        <button class="dropdown-items">Partners and Linkages</button>-->
-<!--                    </div>-->
-<!--                </div>-->
             </li>
 
         </ul>
-
-<!--        <ul class="hidden lg:flex">-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/" :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']" @click="changeActive(1)">HOME</NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="border-t md:border-none">-->
-<!--                <NuxtLink to="https://opac-url.com" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula">OPAC</NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/about-us"-->
-<!--                          :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"-->
-<!--                          @click="changeActive(2)">ABOUT US-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--            <li class="mr-5">-->
-<!--                <NuxtLink to="/facilities"-->
-<!--                          :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"-->
-<!--                          @click="changeActive(3)">FACILITIES-->
-<!--                </NuxtLink>-->
-<!--            </li>-->
-<!--        </ul>-->
     </nav>
 </template>
 
@@ -246,6 +213,17 @@ export default {
 
 .homedropdown:hover .homedropdown-content {
     display: block;
+    animation: fadeIn 500ms ease-in forwards;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .aboutus:hover .aboutusdropdown-content {
