@@ -1,14 +1,29 @@
 <template>
     <div>
+        <HeaderHome/>
         <div class="pt-[82.8px]"></div>
         <SectionHero/>
-        <SectionNews/>
-        <SectionEvents/>
-        <SectionTopnotchers/>
-        <SectionSisterCities/>
-        <SectionNewBookSelection/>
-        <SectionKOHA/>
-        <SectionPartners/>
+        <FadeView>
+            <SectionNews/>
+        </FadeView>
+        <FadeView>
+            <SectionEvents/>
+        </FadeView>
+        <FadeView>
+            <SectionTopnotchers/>
+        </FadeView>
+        <FadeView>
+            <SectionSisterCities/>
+        </FadeView>
+        <FadeView>
+            <SectionNewBookSelection/>
+        </FadeView>
+        <FadeView>
+            <SectionKOHA/>
+        </FadeView>
+        <FadeView>
+            <SectionPartners/>
+        </FadeView>
     </div>
 </template>
 

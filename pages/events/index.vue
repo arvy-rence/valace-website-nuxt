@@ -4,7 +4,7 @@
         <div class="uppercase font-khula text-primary opacity-50 text-xl font-bold">
             Valenzuela City Library
         </div>
-        <div class="uppercase font-khula font-bold text-primary text-4xl">
+        <div class="uppercase font-khula font-bold text-primary text-6xl">
             Events and Activities
         </div>
     </div>
@@ -43,20 +43,6 @@
                 </form>
             </div>
         </div>
-<!--        <div class="px-[1rem] flex flex-col items-start gap-2">-->
-<!--            <button class="font-kulim text-primary hover:font-bold" >January</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(1)">February</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(2)">March</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(3)">April</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(4)">May</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(5)">June</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(6)">July</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(7)">August</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(8)">September</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(9)">October</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(10)">November</button>-->
-<!--            <button class="font-kulim text-primary hover:font-bold" @click="toggleActive(11)">December</button>-->
-<!--        </div>-->
         <div class="flex flex-col w-full max-h-[25rem] text-primary overflow-y-scroll">
             <div v-if="isActive[0]">
                 <div class="text-primary font-bold font-khula text-xl">January Events</div>

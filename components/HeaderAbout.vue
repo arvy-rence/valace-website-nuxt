@@ -13,8 +13,8 @@
 
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
             <li class="homedropdown border-t md:border-none">
-                <NuxtLink to="/" :class="[isActive.home ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                <NuxtLink to="/"
+                          class="block font-khula text-primary md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >HOME</NuxtLink>
                 <div class="homedropdown-content">
                     <div class="flex flex-col">
@@ -49,11 +49,10 @@
                 </a>
             </li>
             <li class="aboutus border-t md:border-none">
-                <NuxtLink to="/about-us" :class="[isActive.aboutUs ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                <NuxtLink to="/about-us"
+                          class="block font-khula font-bold md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >ABOUT US
                 </NuxtLink>
-
                 <div class="aboutusdropdown-content">
                     <div class="flex flex-col">
                         <button class="dropdown-items">Library Programs</button>
@@ -64,13 +63,11 @@
                 </div>
             </li>
             <li class=" border-t md:border-none">
-                <NuxtLink to="/facilities" :class="[isActive.facilities ? ['text-primary', 'font-bold'] : '', 'font-khula']"
-                          class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
+                <NuxtLink to="/facilities"
+                          class="block md:inline-block px-8 font-khula py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
                           >FACILITIES
                 </NuxtLink>
-
             </li>
-
         </ul>
     </nav>
 </template>
@@ -78,52 +75,7 @@
 <script>
 export default {
     name: "Header",
-    data() {
-        return {
-            isActive: {
-                home: true,
-                aboutUs: false,
-                facilities: false
-            },
-            isMenuOpen: false,
-            route: this.$route.name
-        }
-    },
     methods: {
-        checkRoute() {
-            if (this.route === 'index') {
-                this.isActive.home = true
-                this.isActive.aboutUs = false
-                this.isActive.facilities = false
-            } else if (this.route === 'about-us') {
-                this.isActive.home = false
-                this.isActive.aboutUs = true
-                this.isActive.facilities = false
-            } else if (this.route === 'facilities') {
-                this.isActive.home = false
-                this.isActive.aboutUs = false
-                this.isActive.facilities = true
-            }
-        },
-        changeActive(page) {
-            switch (page) {
-                case 1:
-                    this.isActive.home = true;
-                    this.isActive.aboutUs = false;
-                    this.isActive.facilities = false;
-                    break;
-                case 2:
-                    this.isActive.aboutUs = true;
-                    this.isActive.home = false;
-                    this.isActive.facilities = false;
-                    break;
-                case 3:
-                    this.isActive.facilities = true;
-                    this.isActive.home = false;
-                    this.isActive.aboutUs = false;
-                    break;
-            }
-        },
         async scrollToID(id, route) {
             if (route !== this.$route.name) {
                await this.$router.push(route)
@@ -132,9 +84,6 @@ export default {
             el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
         }
     },
-    mounted() {
-        this.checkRoute()
-    }
 }
 </script>
 
@@ -213,17 +162,6 @@ export default {
 
 .homedropdown:hover .homedropdown-content {
     display: block;
-    animation: fadeIn 500ms ease-in forwards;
-
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .aboutus:hover .aboutusdropdown-content {

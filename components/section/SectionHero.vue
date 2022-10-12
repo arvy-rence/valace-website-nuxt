@@ -145,7 +145,7 @@
                     VALENZUELA CITY LIBRARY
                 </h1>
                 <p class="text-sm sm:text-lg text-primary pt-[1rem]">
-                    Discover the joy through reading by visiting our new City Public Library. Come and Visit now!
+                    Discover the joy through reading by visiting our new City Library. Come and Visit now!
                 </p>
                 <p class="text-sm sm:text-lg text-primary pt-[1rem] pb-[1rem]">
                     #AklatanParaSaBawatValenzuelano

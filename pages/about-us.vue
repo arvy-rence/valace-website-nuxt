@@ -1,11 +1,18 @@
 <template>
     <div class="pt-[82.8px]"></div>
     <div>
+        <HeaderAbout/>
         <img src="/images/about-banner.png" alt="" class="w-screen opacity-50">
         <SectionLibraryInfo id="map"/>
-        <SectionContactInfo/>
-        <SectionOthers/>
-        <SectionMeetTheTeam/>
+        <FadeView>
+            <SectionContactInfo/>
+        </FadeView>
+        <FadeView>
+            <SectionOthers/>
+        </FadeView>
+        <FadeView>
+            <SectionMeetTheTeam/>
+        </FadeView>
     </div>
 </template>
 
