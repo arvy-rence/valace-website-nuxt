@@ -1,6 +1,11 @@
 <template>
     <div class="pt-[82.8px]"></div>
-    <SectionProgramsSisterCities/>
+    <FadeView>
+        <SectionEvents/>
+    </FadeView>
+    <FadeView>
+        <SectionNews/>
+    </FadeView>
 </template>
 
 <script>

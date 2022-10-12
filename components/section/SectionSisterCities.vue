@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[url(/images/sisters-bg.png)] flex-col bg-img justify-center align-center md:py-[4rem]" id="sistercity-section">
-        <div class="max-w-[calc(1500px)] mx-auto">
+        <div class="max-w-[calc(1500px)] mx-auto pt-[2rem] md:pt-0">
             <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center opacity-50">Valenzuela City Library</h2>
             <h1 class="font-bold text-4xl md:text-6xl text-primary text-center font-khula px-[1rem]">SISTER CITIES<br>
                 VISITING CITIES' CORNER

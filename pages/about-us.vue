@@ -3,9 +3,15 @@
     <div>
         <img src="/images/about-banner.png" alt="" class="w-screen opacity-50">
         <SectionLibraryInfo id="map"/>
-        <SectionContactInfo/>
-        <SectionOthers/>
-        <SectionMeetTheTeam/>
+        <FadeView>
+            <SectionContactInfo/>
+        </FadeView>
+        <FadeView>
+            <SectionOthers/>
+        </FadeView>
+        <FadeView>
+            <SectionMeetTheTeam/>
+        </FadeView>
     </div>
 </template>
 
