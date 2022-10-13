@@ -6,7 +6,7 @@
             <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
                 Valenzuela City Library
             </h2>
-            <h1 class="font-bold text-4xl text-primary text-center font-khula">
+            <h1 class="font-bold text-6xl text-primary text-center font-khula">
                 SISTER CITIES VISITING CITIES' CORNER
             </h1>
         </div>

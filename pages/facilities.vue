@@ -1,5 +1,6 @@
 <template>
     <div class="pt-[82.8px]"></div>
+    <HeaderFacility/>
     <div>
         <img src="/images/facilities-banner.png" alt="" class="w-screen">
         <SectionValACEDirectory/>
