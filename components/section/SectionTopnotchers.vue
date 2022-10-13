@@ -19,7 +19,7 @@
                     <button class="text-2xl text-primary" @click="cycleIndexBackward">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <img :src="topnotchers[index].image" class="img-with-shadow w-full md:w-[16rem]">
+                    <img :src="topnotchers[index].image_link" class="img-with-shadow w-full md:w-[16rem]">
                     <button class="text-2xl text-primary" @click="cycleIndexForward">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -31,10 +31,10 @@
                 </div>
             </div>
             
-            <h1 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-2xl">{{ topnotchers[index].name }}</h1>
-            <h2 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-md italic">{{ topnotchers[index].title }}</h2>
+            <h1 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-2xl">{{ topnotchers[index].topnotcher_name }}</h1>
+            <h2 class="font-kulim text-primary w-full sm:w-[40rem] text-center lg:text-right text-md italic">{{ topnotchers[index].topnotcher_title }}</h2>
             <span class="text-primary font-khula italic">
-                <i class="fa-solid fa-clock"></i> {{ topnotchers[index].date }}
+                <i class="fa-solid fa-clock"></i> {{ new Date(topnotchers[index].date_uploaded).toLocaleDateString() }}
             </span>
         </div>
     </div>
@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import axios from '~/server/index'
+
 export default {
     name: "SectionTopnotchers",
     data() {
@@ -68,6 +70,11 @@ export default {
             ],
             index: 0
         }
+    },
+    async created(){
+        const {data} = await axios.get('/topnotchers/latest')
+        this.topnotchers = data.recentTopnotchers
+        console.log(this.topnotchers)
     },
     methods: {
         changeIndex(index) {
