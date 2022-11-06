@@ -14,8 +14,9 @@
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
             <li class="homedropdown border-t md:border-none">
                 <NuxtLink to="/"
-                          class="block font-khula text-primary font-bold md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >HOME</NuxtLink>
+                          class="block font-khula text-primary md:inline-block px-8 py-3 no-underline font-bold text-2xl"
+                >HOME
+                </NuxtLink>
                 <div class="homedropdown-content">
                     <div class="flex flex-col">
                         <button class="dropdown-items">
@@ -43,29 +44,37 @@
                 </div>
             </li>
             <li class="border-t md:border-none">
-                <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl"
+                <a class="block md:inline-block px-8 py-3 no-underline text-primary font-khula text-2xl"
                    href="http://192.168.68.103" target="_blank">
                     OPAC
                 </a>
             </li>
             <li class="aboutus border-t md:border-none">
                 <NuxtLink to="/about-us"
-                          class="block font-khula md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >ABOUT US
+                          class="block text-primary font-khula md:inline-block px-8 py-3 no-underline hover:text-grey-darker text-2xl"
+                >ABOUT US
                 </NuxtLink>
                 <div class="aboutusdropdown-content">
                     <div class="flex flex-col">
-                        <button class="dropdown-items">Library Programs</button>
-                        <button class="dropdown-items">Find Us</button>
-                        <button class="dropdown-items">Miscellaneous</button>
-                        <button class="dropdown-items">Meet the Team</button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('find-us', '/about-us')">Find Us</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('misc', '/about-us')">Guidelines</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('meet-the-team', '/about-us')">Meet the Team</a>
+                        </button>
                     </div>
                 </div>
             </li>
             <li class=" border-t md:border-none">
                 <NuxtLink to="/facilities"
-                          class="block md:inline-block px-8 font-khula py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >FACILITIES
+                          class="block md:inline-block px-8 font-khula py-3 no-underline text-primary text-2xl"
+                >FACILITIES
                 </NuxtLink>
             </li>
         </ul>

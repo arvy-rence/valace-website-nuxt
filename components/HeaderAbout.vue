@@ -14,8 +14,9 @@
         <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
             <li class="homedropdown border-t md:border-none">
                 <NuxtLink to="/"
-                          class="block font-khula text-primary md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >HOME</NuxtLink>
+                          class="block font-khula text-primary md:inline-block px-8 py-3 no-underline text-2xl"
+                >HOME
+                </NuxtLink>
                 <div class="homedropdown-content">
                     <div class="flex flex-col">
                         <button class="dropdown-items">
@@ -43,29 +44,37 @@
                 </div>
             </li>
             <li class="border-t md:border-none">
-                <a class="block md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker font-khula text-2xl"
+                <a class="block md:inline-block px-8 py-3 no-underline text-primary font-khula text-2xl"
                    href="http://192.168.68.103" target="_blank">
                     OPAC
                 </a>
             </li>
             <li class="aboutus border-t md:border-none">
                 <NuxtLink to="/about-us"
-                          class="block font-khula font-bold md:inline-block px-8 py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >ABOUT US
+                          class="block text-primary font-khula font-bold md:inline-block px-8 py-3 no-underline text-2xl"
+                >ABOUT US
                 </NuxtLink>
                 <div class="aboutusdropdown-content">
                     <div class="flex flex-col">
-                        <button class="dropdown-items">Library Programs</button>
-                        <button class="dropdown-items">Find Us</button>
-                        <button class="dropdown-items">Miscellaneous</button>
-                        <button class="dropdown-items">Meet the Team</button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('find-us', '/about-us')">Find Us</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('misc', '/about-us')">Guidelines</a>
+                        </button>
+                        <button class="dropdown-items">
+                            <a @click="scrollToID('meet-the-team', '/about-us')">Meet the Team</a>
+                        </button>
                     </div>
                 </div>
             </li>
             <li class=" border-t md:border-none">
                 <NuxtLink to="/facilities"
-                          class="block md:inline-block px-8 font-khula py-3 no-underline text-grey-darkest hover:text-grey-darker text-2xl"
-                          >FACILITIES
+                          class="block md:inline-block px-8 font-khula py-3 no-underline text-primary text-2xl"
+                >FACILITIES
                 </NuxtLink>
             </li>
         </ul>
@@ -78,7 +87,7 @@ export default {
     methods: {
         async scrollToID(id, route) {
             if (route !== this.$route.name) {
-               await this.$router.push(route)
+                await this.$router.push(route)
             }
             let el = document.getElementById(id);
             el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
@@ -140,14 +149,15 @@ export default {
 }
 
 .nav {
-    position:fixed; /* fixing the position takes it out of html flow - knows
-                     nothing about where to locate itself except by browser
-                     coordinates */
-    left:0;           /* top left corner should start at leftmost spot */
-    top:0;            /* top left corner should start at topmost spot */
-    width:100vw;      /* take up the full browser width */
-    z-index:200;  /* high z index so other content scrolls underneath */
-  }
+    position: fixed;
+    /* fixing the position takes it out of html flow - knows
+                        nothing about where to locate itself except by browser
+                        coordinates */
+    left: 0; /* top left corner should start at leftmost spot */
+    top: 0; /* top left corner should start at topmost spot */
+    width: 100vw; /* take up the full browser width */
+    z-index: 200; /* high z index so other content scrolls underneath */
+}
 
 
 .homedropdown-content, .aboutusdropdown-content {
@@ -155,7 +165,7 @@ export default {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     flex-direction: row;
 }
