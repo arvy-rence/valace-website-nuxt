@@ -17,6 +17,7 @@
             </div>
         </div>
     </div>
+    <SectionFooter/>
 </template>
 
 <script>
@@ -42,6 +43,7 @@ export default {
     },
     mounted() {
         checkReload()
+
     }
 }
 </script>

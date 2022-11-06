@@ -17,6 +17,7 @@
         </div>
         <Loader :isLoading="isLoading"/>
     </div>
+    <SectionFooter/>
 </template>
 
 <script>
@@ -35,11 +36,13 @@ export default {
         }
     },
     async created() {
-        console.log("low")
-        const {data} = await axios.get("/news");
-        console.log(data.newsUTC8)
-        this.newsData = data.newsUTC8;
-        this.isLoading = false;
+        try {
+            const {data} = await axios.get("/news");
+            this.newsData = data.newsUTC8;
+            this.isLoading = false;
+        } catch (e) {
+            console.log("failed to fetch news")
+        }
     },
     mounted() {
         checkReload()

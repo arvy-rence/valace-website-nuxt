@@ -118,6 +118,7 @@
             </div>
         </div>
     </div>
+    <SectionFooter/>
 </template>
 
 
@@ -183,11 +184,15 @@ export default {
         },
     },
     async created() {
-        const {data} = await axios.get('/events')
-        data.eventsUTC8.forEach(event => {
-            this.months[event.event_month - 1].push(event)
-        });
-        this.isLoading = false
+        try {
+            const {data} = await axios.get('/events')
+            data.eventsUTC8.forEach(event => {
+                this.months[event.event_month - 1].push(event)
+            });
+            this.isLoading = false
+        } catch (e) {
+            console.log("failed to fetch news")
+        }
     },
 }
 </script>
