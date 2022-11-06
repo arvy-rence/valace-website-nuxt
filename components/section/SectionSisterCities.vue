@@ -52,9 +52,14 @@ export default {
         }
     },
     async created() {
-        const {data} = await axios.get("/sisterCity")
-        this.sisterCitiesData = data.sisterCities
-        this.isLoading = false
+        try {
+            const {data} = await axios.get("/sisterCity")
+            this.sisterCitiesData = data.sisterCities
+            this.isLoading = false
+            this.$emit("complete-sister-city-load", this.isLoading)
+        } catch (e) {
+            console.log("failed to fetch sister 1")
+        }
     },
 }
 </script>

@@ -103,11 +103,15 @@ export default {
     },
 
     async created() {
-        this.books = await getTrendingBooks()
-        this.book1 = this.books[0];
-        this.book2 = this.books[1];
-        this.book3 = this.books[2];
-        // console.log(this.books)
+        try {
+            this.books = await getTrendingBooks()
+            this.book1 = this.books[0];
+            this.book2 = this.books[1];
+            this.book3 = this.books[2];
+            // console.log(this.books)
+        } catch (e) {
+            console.log("failed to fetch books")
+        }
     }
 }
 </script>

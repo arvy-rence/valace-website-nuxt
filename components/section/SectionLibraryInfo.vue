@@ -1,5 +1,5 @@
 <template>
-    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[2rem] md:pt-[4rem] px-[1rem]">KNOW MORE ABOUT OUR</h2>
+    <h2 class="font-bold text-lg sm:text-3xl text-gray-400 font-khula text-center pt-[2rem] md:pt-[4rem] px-[1rem]" id="library-info">KNOW MORE ABOUT OUR</h2>
     <h1 class="font-bold text-4xl sm:text-6xl text-primary text-center font-khula px-[1rem]">VALENZUELA CITY LIBRARY</h1>
     <div class="flex flex-col lg:flex-row px-[2rem] lg:px-[6rem] pt-0 sm:pt-[2rem] lg:pt-[3rem] max-w-[calc(1500px)] mx-auto">
 

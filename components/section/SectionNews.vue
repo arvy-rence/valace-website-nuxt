@@ -42,10 +42,18 @@ export default {
         }
     },
     async created() {
-        const {data} = await axios.get("/news/latestNews")
-        this.newsData = data.latestNews
-        this.isLoading = false
-    }
+        try {
+            const {data} = await axios.get("/news/latestNews")
+            this.newsData = data.latestNews
+            this.isLoading = false
+            this.$emit('complete-news-load', this.isLoading)
+        } catch (e) {
+            console.log("failed to fetch news")
+        }
+    },
+    emits: [
+
+    ]
 }
 </script>
 

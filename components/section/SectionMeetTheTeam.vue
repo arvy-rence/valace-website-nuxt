@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center items-center bg-[url(/images/team-bg.png)] py-[3rem] bg-cover">
+    <div class="flex flex-col justify-center items-center bg-[url(/images/team-bg.png)] py-[3rem] bg-cover" id="meet-the-team">
         <div class="max-w-[calc(1500px)] mx-auto">
             <h1 class="font-bold text-4xl text-center text-primary">MEET THE TEAM</h1>
             <UtilVerticalSpacer :height="2" units="rem"/>
