@@ -13,7 +13,9 @@
         <FadeView>
             <SectionMeetTheTeam/>
         </FadeView>
+        <SectionFooter/>
     </div>
+
 </template>
 
 <script>

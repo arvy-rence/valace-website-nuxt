@@ -33,10 +33,12 @@
             </article>
         </div>
     </div>
+    <SectionFooter/>
 </template>
 
 <script>
 import axios from '~/server/index';
+import {checkReload} from "../../composables/checkReload";
 export default {
     name: "[id]",
     data() {

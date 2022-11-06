@@ -33,6 +33,7 @@
             </article>
         </div>
     </div>
+    <SectionFooter/>
 </template>
 
 <script>

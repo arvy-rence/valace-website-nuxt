@@ -5,6 +5,7 @@
         <img src="/images/facilities-banner.png" alt="" class="w-screen">
         <SectionValACEDirectory/>
     </div>
+    <SectionFooter/>
 </template>
 
 <script>
