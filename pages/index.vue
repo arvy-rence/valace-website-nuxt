@@ -1,29 +1,31 @@
 <template>
-    <div>
+    <Loading v-if="!isLoaded"/>
+    <div :class="[isLoaded ? ['visible'] : ['collapse']]">
         <HeaderHome/>
         <div class="pt-[82.8px]"></div>
         <SectionHero/>
-<!--        <FadeView>-->
-<!--            <SectionNews/>-->
-<!--        </FadeView>-->
-<!--        <FadeView>-->
-<!--            <SectionEvents/>-->
-<!--        </FadeView>-->
         <FadeView>
-            <SectionTopnotchers/>
+            <SectionNews @complete-news-load="completeNewsLoad"/>
         </FadeView>
-<!--        <FadeView>-->
-<!--            <SectionSisterCities/>-->
-<!--        </FadeView>-->
-<!--        <FadeView>-->
-<!--            <SectionNewBookSelection/>-->
-<!--        </FadeView>-->
-<!--        <FadeView>-->
-<!--            <SectionKOHA/>-->
-<!--        </FadeView>-->
-<!--        <FadeView>-->
-<!--            <SectionPartners/>-->
-<!--        </FadeView>-->
+        <FadeView>
+            <SectionEvents @complete-event-load="completeEventLoad"/>
+        </FadeView>
+        <FadeView>
+            <SectionTopnotchers @complete-topnotcher-load="completeTopnotcherLoad"/>
+        </FadeView>
+        <FadeView>
+            <SectionSisterCities @complete-sister-city-load="completeSisterCityLoad"/>
+        </FadeView>
+        <FadeView>
+            <SectionNewBookSelection/>
+        </FadeView>
+        <FadeView>
+            <SectionKOHA/>
+        </FadeView>
+        <FadeView>
+            <SectionPartners/>
+        </FadeView>
+        <SectionFooter/>
     </div>
 </template>
 
@@ -36,10 +38,12 @@ import SectionTopnotchers from "../components/section/SectionTopnotchers";
 import SectionNews from "../components/section/SectionNews";
 import SectionHero from "../components/section/SectionHero";
 import SectionEvents from "../components/section/SectionEvents";
+import Loading from "../components/util/Loading";
 
 export default {
     name: "index",
     components: {
+        Loading,
         SectionEvents,
         SectionHero,
         SectionNews,
@@ -51,20 +55,41 @@ export default {
     data() {
         return {
             generatedWords: [],
+            isLoading: {
+                news: true,
+                events: true,
+                topnotchers: true,
+                sisterCity: true,
+            },
+            isLoaded: false
         }
     },
     methods: {
-        // generateRandomWordQuery() {
-        //     /**
-        //      * Function to generate and push 3 random words from the in the wordlist to the
-        //      * generatedWords array
-        //      */
-        //     while (this.generatedWords.length < 4) {
-        //         let randomWord = words[Math.floor(Math.random() * words.length)];
-        //
-        //         this.generatedWords.push(randomWord);
-        //     }
-        // }
+        async completeNewsLoad(status) {
+            this.isLoading.news = status
+            this.removeLoadingPage()
+            console.log('news load complete')
+        },
+        async completeEventLoad(status) {
+            this.isLoading.events = status
+            this.removeLoadingPage()
+            console.log('event load complete')
+        },
+        async completeTopnotcherLoad(status) {
+            this.isLoading.topnotchers = status
+            this.removeLoadingPage()
+            console.log('topnotcher load complete')
+        },
+        async completeSisterCityLoad(status) {
+            this.isLoading.sisterCity = status
+            this.removeLoadingPage()
+            console.log('sister city load complete')
+        },
+        removeLoadingPage() {
+            if (this.isLoading.news === false && this.isLoading.events === false && this.isLoading.topnotchers === false && this.isLoading.sisterCity === false) {
+                this.isLoaded = true
+            }
+        }
     },
     created() {
         this.generatedWords = [];
