@@ -1,6 +1,6 @@
 <template>
     <NuxtLink :to="linkDestination">
-        <li class="font-kulim" :class="isLink ? 'hover:underline' : ''">
+        <li class="font-kulim text-primary" :class="isLink ? 'hover:underline' : ''">
             <slot/>
         </li>
     </NuxtLink>
@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         test() {
-            console.log(this.linkDestination)
+
         }
     },
     computed: {

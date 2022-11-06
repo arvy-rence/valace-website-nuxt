@@ -1,14 +1,11 @@
 <template>
-    <div class="pt-[82.8px]"></div>
+    <div class="w-screen h-screen flex justify-center items-center">
+        <img src="/images/loading/flipPageTry.gif" alt="" class="block w-[150px]">
+    </div>
 </template>
 
 <script>
-export default {
-    
-}
 </script>
 
 <style scoped>
-
-
 </style>
