@@ -79,14 +79,15 @@
                 <!--                        Academic Center for Excellence (ValACE) building.-->
                 <!--                    </p>-->
                 <!--                </Popup>-->
-                <button class="btn btn-1"></button>
-                <button class="btn btn-2"></button>
-                <button class="btn btn-3"></button>
-                <button class="btn btn-4"></button>
-                <button class="btn btn-5"></button>
-                <button class="btn btn-6"></button>
-                <button class="btn btn-7"></button>
-                <button class="btn btn-8"></button>
+                <button class="btn btn-360officeA"></button>
+                <button class="btn btn-360officeB"></button>
+                <button class="btn btn-360officeC"></button>
+                <button class="btn btn-valspedTransitionA"></button>
+                <button class="btn btn-valspedTransitionB"></button>
+                <button class="btn btn-valspedAssesment"></button>
+                <button class="btn btn-restroom"></button>
+                <button class="btn btn-GPTA"></button>
+                <button class="btn btn-fire"></button>
             </div>
             <div>
 
@@ -146,67 +147,74 @@ export default {
 .btn {
     position: absolute;
 
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: .3rem solid #00104A;
+    border: .2rem solid #00104A;
     cursor: pointer;
     z-index: 1;
 }
 
-.btn-1 {
-    top: 31%;
-    left: 62%;
+.btn-360officeA {
+    top: 32%;
+    left: 65%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-2 {
-    top: 45%;
-    left: 62%;
+.btn-360officeB {
+    top: 43%;
+    left: 65%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-3 {
-    top: 60%;
+.btn-360officeC {
+    top: 54%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn-valspedTransitionA {
+    top: 51%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn-valspedTransitionB {
+    top: 52.5%;
+    left: 24.8%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn-valspedAssesment {
+    top: 34.5%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn-restroom {
+    top: 22.5%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn-GPTA {
+    top: 21.5%;
     left: 61%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-4 {
-    top: 58.5%;
-    left: 12.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-5 {
-    top: 56.2%;
-    left: 35.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-6 {
-    top: 34.5%;
-    left: 35.4%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-7 {
-    top: 17.7%;
-    left: 44%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-8 {
-    top: 8.5%;
-    left: 69%;
+.btn-fire {
+    top: 15.7%;
+    left: 71%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }

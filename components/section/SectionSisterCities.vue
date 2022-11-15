@@ -57,6 +57,7 @@ export default {
             this.sisterCitiesData = data.sisterCities
             this.isLoading = false
             this.$emit("complete-sister-city-load", this.isLoading)
+            this.$emit("sister-city-data", this.sisterCitiesData)
         } catch (e) {
             console.log("failed to fetch sister 1")
         }

@@ -1,5 +1,7 @@
 <template>
-    <SectionFloor5/>
+    <div>
+        <SectionFloor5/>
+    </div>
 </template>
 
 <script>

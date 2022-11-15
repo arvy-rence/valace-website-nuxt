@@ -20,15 +20,15 @@
         </div>
         <div class="titles">
             <div class="title">
-                <h1 class="text-3xl font-bold text-primary font-kulim">{{book1.bookTitle}}</h1>
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{ book1.bookTitle }}</h1>
                 <p class="text-2xl text-primary font-kulim" v-for="author in book1.bookAuthor">{{ author }}</p>
             </div>
             <div class="title">
-                <h1 class="text-3xl font-bold text-primary font-kulim">{{book2.bookTitle}}</h1>
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{ book2.bookTitle }}</h1>
                 <p class="text-2xl text-primary font-kulim" v-for="author in book2.bookAuthor">{{ author }}</p>
             </div>
             <div class="title">
-                <h1 class="text-3xl font-bold text-primary font-kulim">{{book3.bookTitle}}</h1>
+                <h1 class="text-3xl font-bold text-primary font-kulim">{{ book3.bookTitle }}</h1>
                 <p class="text-2xl text-primary font-kulim" v-for="author in book3.bookAuthor">{{ author }}</p>
             </div>
         </div>
@@ -41,77 +41,93 @@ import {getTrendingBooks} from "../../composables/fetchBooksFromAPI";
 export default {
     name: "SectionNewBookSelection",
 
-    mounted() {
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(init, 1)
-        }, true);
+    async mounted() {
+        if (localStorage.getItem("bookData") === null) {
+            console.log('no item')
+            try {
+                this.books = await getTrendingBooks()
+                this.book1 = this.books[0];
+                this.book2 = this.books[1];
+                this.book3 = this.books[2];
 
-        function init(e) {
-            if (document.querySelector(".cards")) {
-                let cards = document.querySelector(".cards");
-                cards.addEventListener('click', clicked, false);
-                document.querySelectorAll(".cards .card")[1].click();
+                this.$emit('book-data', this.books)
+
+                loadStart();
+                // console.log(this.books)
+            } catch (e) {
+                console.log("failed to fetch books")
             }
+        } else {
+            console.log('has item')
+            const pageData = JSON.parse(localStorage.getItem('pageData'))
+            this.books = pageData.books;
+            loadStart();
         }
+        function loadStart() {
+            window.addEventListener('DOMContentLoaded', () => {
+                setTimeout(init, 1)
+            }, true);
 
-        function clicked(e) {
-            let card = e.target;
-            if (card.getAttribute("data-card")) {
-                rearrange(card.getAttribute("data-card"));
+            function init(e) {
+                if (document.querySelector(".cards")) {
+                    let cards = document.querySelector(".cards");
+                    cards.addEventListener('click', clicked, false);
+                    document.querySelectorAll(".cards .card")[1].click();
+                }
             }
+
+            function clicked(e) {
+                let card = e.target;
+                if (card.getAttribute("data-card")) {
+                    rearrange(card.getAttribute("data-card"));
+                }
+            }
+
+            function rearrange(card) {
+                let cards = document.querySelectorAll(".cards .card");
+                for (let n = 0; n < cards.length; n++) {
+                    cards[n].classList.remove("card--left");
+                    cards[n].classList.remove("card--center");
+                    cards[n].classList.remove("card--right");
+                }
+                cards[card].classList.add("card--center");
+                if (card == 0) {
+                    cards[2].classList.add("card--left");
+                    cards[1].classList.add("card--right");
+
+                }
+                if (card == 1) {
+                    cards[0].classList.add("card--left");
+                    cards[2].classList.add("card--right");
+                }
+                if (card == 2) {
+                    cards[1].classList.add("card--left");
+                    cards[0].classList.add("card--right");
+                }
+
+                let titles = document.getElementsByClassName("title");
+                for (let i = 0; i < titles.length; i++) {
+                    titles[i].style.display = "none";
+                }
+                titles[card].style.display = "block";
+            }
+
+
+            init();
         }
-
-        function rearrange(card) {
-            let cards = document.querySelectorAll(".cards .card");
-            for (let n = 0; n < cards.length; n++) {
-                cards[n].classList.remove("card--left");
-                cards[n].classList.remove("card--center");
-                cards[n].classList.remove("card--right");
-            }
-            cards[card].classList.add("card--center");
-            if (card == 0) {
-                cards[2].classList.add("card--left");
-                cards[1].classList.add("card--right");
-
-            }
-            if (card == 1) {
-                cards[0].classList.add("card--left");
-                cards[2].classList.add("card--right");
-            }
-            if (card == 2) {
-                cards[1].classList.add("card--left");
-                cards[0].classList.add("card--right");
-            }
-
-            let titles = document.getElementsByClassName("title");
-            for (let i = 0; i < titles.length; i++) {
-                titles[i].style.display = "none";
-            }
-            titles[card].style.display = "block";
-        }
-
-
-        init();
     },
     data() {
         return {
             books: [],
             book1: {},
             book2: {},
-            book3: {}
+            book3: {},
+            loaded: false
         }
     },
 
-    async created() {
-        try {
-            this.books = await getTrendingBooks()
-            this.book1 = this.books[0];
-            this.book2 = this.books[1];
-            this.book3 = this.books[2];
-            // console.log(this.books)
-        } catch (e) {
-            console.log("failed to fetch books")
-        }
+    created() {
+
     }
 }
 </script>
@@ -218,6 +234,7 @@ export default {
     .card--right {
         transform: scale(0.75) translate(220px, 0px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
     }
+
     .titles {
         margin-top: 0rem;
     }
@@ -247,6 +264,7 @@ export default {
     .card--right {
         transform: scale(0.75) translate(120px, 0px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
     }
+
     .titles {
         margin-top: -10rem;
     }

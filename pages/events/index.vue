@@ -1,124 +1,126 @@
 <template>
-    <div class="pt-[82.8px]"></div>
-    <div class="flex flex-col justify-center items-center py-[2rem]">
-        <div class="uppercase font-khula text-primary opacity-50 text-xl font-bold">
-            Valenzuela City Library
+    <div>
+        <div class="pt-[82.8px]"></div>
+        <div class="flex flex-col justify-center items-center py-[2rem]">
+            <div class="uppercase font-khula text-primary opacity-50 text-xl font-bold">
+                Valenzuela City Library
+            </div>
+            <div class="uppercase font-khula font-bold text-primary text-6xl">
+                Events and Activities
+            </div>
         </div>
-        <div class="uppercase font-khula font-bold text-primary text-6xl">
-            Events and Activities
-        </div>
-    </div>
-    <Loader :isLoading="isLoading"/>
-    <div class="flex flex-col px-[5rem]" v-if="!isLoading">
-        <div class="paren">
-            <div id="form-wrapper">
-                <form action="" method="GET">
-                    <div id="month-slider">
-                        <input type="radio" name="month" id="1" value="1" required @click="toggleActive(0)">
-                        <label for="1" data-month="JAN"></label>
-                        <input type="radio" name="month" id="2" value="2" required @click="toggleActive(1)">
-                        <label for="2" data-month="FEB"></label>
-                        <input type="radio" name="month" id="3" value="3" required @click="toggleActive(2)">
-                        <label for="3" data-month="MAR"></label>
-                        <input type="radio" name="month" id="4" value="4" required @click="toggleActive(3)">
-                        <label for="4" data-month="APR"></label>
-                        <input type="radio" name="month" id="5" value="5" required @click="toggleActive(4)">
-                        <label for="5" data-month="MAY"></label>
-                        <input type="radio" name="month" id="6" value="6" required @click="toggleActive(5)">
-                        <label for="6" data-month="JUN"></label>
-                        <input type="radio" name="month" id="7" value="7" required @click="toggleActive(6)">
-                        <label for="7" data-month="JUL"></label>
-                        <input type="radio" name="month" id="8" value="8" required @click="toggleActive(7)">
-                        <label for="8" data-month="AUG"></label>
-                        <input type="radio" name="month" id="9" value="9" required @click="toggleActive(8)">
-                        <label for="9" data-month="SEPT"></label>
-                        <input type="radio" name="month" id="10" value="10" required @click="toggleActive(9)">
-                        <label for="10" data-month="OCT"></label>
-                        <input type="radio" name="month" id="11" value="11" required @click="toggleActive(10)">
-                        <label for="11" data-month="NOV"></label>
-                        <input type="radio" name="month" id="12" value="12" required @click="toggleActive(11)">
-                        <label for="12" data-month="DEC"></label>
-                        <div id="month-pos"></div>
+        <Loader :isLoading="isLoading"/>
+        <div class="flex flex-col px-[5rem]" v-if="!isLoading">
+            <div class="paren">
+                <div id="form-wrapper">
+                    <form action="" method="GET">
+                        <div id="month-slider">
+                            <input type="radio" name="month" id="1" value="1" required @click="toggleActive(0)">
+                            <label for="1" data-month="JAN"></label>
+                            <input type="radio" name="month" id="2" value="2" required @click="toggleActive(1)">
+                            <label for="2" data-month="FEB"></label>
+                            <input type="radio" name="month" id="3" value="3" required @click="toggleActive(2)">
+                            <label for="3" data-month="MAR"></label>
+                            <input type="radio" name="month" id="4" value="4" required @click="toggleActive(3)">
+                            <label for="4" data-month="APR"></label>
+                            <input type="radio" name="month" id="5" value="5" required @click="toggleActive(4)">
+                            <label for="5" data-month="MAY"></label>
+                            <input type="radio" name="month" id="6" value="6" required @click="toggleActive(5)">
+                            <label for="6" data-month="JUN"></label>
+                            <input type="radio" name="month" id="7" value="7" required @click="toggleActive(6)">
+                            <label for="7" data-month="JUL"></label>
+                            <input type="radio" name="month" id="8" value="8" required @click="toggleActive(7)">
+                            <label for="8" data-month="AUG"></label>
+                            <input type="radio" name="month" id="9" value="9" required @click="toggleActive(8)">
+                            <label for="9" data-month="SEPT"></label>
+                            <input type="radio" name="month" id="10" value="10" required @click="toggleActive(9)">
+                            <label for="10" data-month="OCT"></label>
+                            <input type="radio" name="month" id="11" value="11" required @click="toggleActive(10)">
+                            <label for="11" data-month="NOV"></label>
+                            <input type="radio" name="month" id="12" value="12" required @click="toggleActive(11)">
+                            <label for="12" data-month="DEC"></label>
+                            <div id="month-pos"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="flex flex-col w-full max-h-[25rem] text-primary overflow-y-scroll">
+                <div v-if="isActive[0]">
+                    <div class="text-primary font-bold font-khula text-xl">January Events</div>
+                    <div v-for="event in months[0]" :key="event.id">
+                        <CardEventItem :event="event"/>
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="flex flex-col w-full max-h-[25rem] text-primary overflow-y-scroll">
-            <div v-if="isActive[0]">
-                <div class="text-primary font-bold font-khula text-xl">January Events</div>
-                <div v-for="event in months[0]" :key="event.id">
-                    <CardEventItem :event="event"/>
                 </div>
-            </div>
-            <div v-if="isActive[1]">
-                <div class="text-primary font-bold font-khula text-xl">February Events</div>
-                <div v-for="event in months[1]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[1]">
+                    <div class="text-primary font-bold font-khula text-xl">February Events</div>
+                    <div v-for="event in months[1]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[2]">
-                <div class="text-primary font-bold font-khula text-xl">March Events</div>
-                <div v-for="event in months[2]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[2]">
+                    <div class="text-primary font-bold font-khula text-xl">March Events</div>
+                    <div v-for="event in months[2]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[3]">
-                <div class="text-primary font-bold font-khula text-xl">April Events</div>
-                <div v-for="event in months[3]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[3]">
+                    <div class="text-primary font-bold font-khula text-xl">April Events</div>
+                    <div v-for="event in months[3]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[4]">
-                <div class="text-primary font-bold font-khula text-xl">May Events</div>
-                <div v-for="event in months[4]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[4]">
+                    <div class="text-primary font-bold font-khula text-xl">May Events</div>
+                    <div v-for="event in months[4]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[5]">
-                <div class="text-primary font-bold font-khula text-xl">June Events</div>
-                <div v-for="event in months[5]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[5]">
+                    <div class="text-primary font-bold font-khula text-xl">June Events</div>
+                    <div v-for="event in months[5]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[6]">
-                <div class="text-primary font-bold font-khula text-xl">July Events</div>
-                <div v-for="event in months[6]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[6]">
+                    <div class="text-primary font-bold font-khula text-xl">July Events</div>
+                    <div v-for="event in months[6]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[7]">
-                <div class="text-primary font-bold font-khula text-xl">August Events</div>
-                <div v-for="event in months[7]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[7]">
+                    <div class="text-primary font-bold font-khula text-xl">August Events</div>
+                    <div v-for="event in months[7]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[8]">
-                <div class="text-primary font-bold font-khula text-xl">September Events</div>
-                <div v-for="event in months[8]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[8]">
+                    <div class="text-primary font-bold font-khula text-xl">September Events</div>
+                    <div v-for="event in months[8]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[9]">
-                <div class="text-primary font-bold font-khula text-xl">October Events</div>
-                <div v-for="event in months[9]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[9]">
+                    <div class="text-primary font-bold font-khula text-xl">October Events</div>
+                    <div v-for="event in months[9]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[10]">
-                <div class="text-primary font-bold font-khula text-xl">November Events</div>
-                <div v-for="event in months[10]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[10]">
+                    <div class="text-primary font-bold font-khula text-xl">November Events</div>
+                    <div v-for="event in months[10]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
-            </div>
-            <div v-if="isActive[11]">
-                <div class="text-primary font-bold font-khula text-xl">December Events</div>
-                <div v-for="event in months[11]" :key="event.id">
-                    <CardEventItem :event="event"/>
+                <div v-if="isActive[11]">
+                    <div class="text-primary font-bold font-khula text-xl">December Events</div>
+                    <div v-for="event in months[11]" :key="event.id">
+                        <CardEventItem :event="event"/>
+                    </div>
                 </div>
             </div>
         </div>
+        <SectionFooter/>
     </div>
-    <SectionFooter/>
 </template>
 
 

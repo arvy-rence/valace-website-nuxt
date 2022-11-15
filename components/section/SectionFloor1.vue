@@ -77,7 +77,7 @@
             <div class="container-class">
                 <img src="/images/floor/GROUND-FLOOR.png" alt="" class="floor-img">
                 <Popup :topLoc="62" :leftLoc="56.1" :up="false">
-                    <img src="/images/bg.png" alt="">
+                    <img src="/images/sisters-bg.png" alt="">
                     <p class="text-white text-xs leading-3">
                         A space that welcome you near the entrance of Valenzuela
                         Academic Center for Excellence (ValACE) building.

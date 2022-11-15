@@ -1,23 +1,25 @@
 <template>
-    <div class="pt-[82.8px]"></div>
-    <div class="bg-white-100 flex-col bg-img justify-center align-center">
-        <UtilVerticalSpacer :height="2" units="rem"/>
-        <div>
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
-                Valenzuela City Library
-            </h2>
-            <h1 class="font-bold text-6xl text-primary text-center font-khula">
-                SISTER CITIES VISITING CITIES' CORNER
-            </h1>
-        </div>
-        <Loader :isLoading="isLoading"/>
-        <div class="flex justify-center flex-wrap">
-            <div v-for="(info, index) in sisterCitiesData" :key="index">
-                <CardSisterCity :sisterCityInfo="info"/>
+    <div>
+        <div class="pt-[82.8px]"></div>
+        <div class="bg-white-100 flex-col bg-img justify-center align-center">
+            <UtilVerticalSpacer :height="2" units="rem"/>
+            <div>
+                <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
+                    Valenzuela City Library
+                </h2>
+                <h1 class="font-bold text-6xl text-primary text-center font-khula">
+                    SISTER CITIES VISITING CITIES' CORNER
+                </h1>
+            </div>
+            <Loader :isLoading="isLoading"/>
+            <div class="flex justify-center flex-wrap">
+                <div v-for="(info, index) in sisterCitiesData" :key="index">
+                    <CardSisterCity :sisterCityInfo="info"/>
+                </div>
             </div>
         </div>
+        <SectionFooter/>
     </div>
-    <SectionFooter/>
 </template>
 
 <script>
@@ -42,8 +44,7 @@ export default {
         this.isLoading = false
     },
     mounted() {
-        checkReload()
-
+        // checkReload()
     }
 }
 </script>

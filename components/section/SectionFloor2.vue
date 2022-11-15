@@ -71,10 +71,10 @@
 <!--                        Academic Center for Excellence (ValACE) building.-->
 <!--                    </p>-->
 <!--                </Popup>-->
-                <button class="btn btn-1"></button>
-                <button class="btn btn-2"></button>
-                <button class="btn btn-3"></button>
-                <button class="btn btn-4"></button>
+                <button class="btn btn-study"></button>
+                <button class="btn btn-bucheon"></button>
+                <button class="btn btn-restroom"></button>
+                <button class="btn btn-fire"></button>
             </div>
             <div>
 
@@ -134,41 +134,41 @@ export default {
 .btn {
     position: absolute;
 
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: .3rem solid #00104A;
+    border: .2rem solid #00104A;
     cursor: pointer;
     z-index: 1;
 }
 
-.btn-1 {
-    top: 38%;
-    left: 38%;
+.btn-study {
+    top: 39%;
+    left: 43%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-2 {
-    top: 77%;
-    left: 19%;
+.btn-bucheon {
+    top: 66%;
+    left: 28.2%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-3 {
-    top: 20%;
-    left: 36.3%;
+.btn-restroom {
+    top: 24.2%;
+    left: 42.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 
 
-.btn-4 {
-    top: 9%;
-    left: 68%;
+.btn-fire {
+    top: 16%;
+    left: 69%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }

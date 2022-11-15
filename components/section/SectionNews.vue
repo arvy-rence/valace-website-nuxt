@@ -47,6 +47,7 @@ export default {
             this.newsData = data.latestNews
             this.isLoading = false
             this.$emit('complete-news-load', this.isLoading)
+            this.$emit('news-data', this.newsData)
         } catch (e) {
             console.log("failed to fetch news")
         }

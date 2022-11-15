@@ -91,15 +91,15 @@
                 <!--                        Academic Center for Excellence (ValACE) building.-->
                 <!--                    </p>-->
                 <!--                </Popup>-->
-                <button class="btn btn-1"></button>
-                <button class="btn btn-2"></button>
-                <button class="btn btn-3"></button>
-                <button class="btn btn-4"></button>
-                <button class="btn btn-5"></button>
-                <button class="btn btn-6"></button>
-                <button class="btn btn-7"></button>
-                <button class="btn btn-8"></button>
-                <button class="btn btn-9"></button>
+                <button class="btn btn-lobby"></button>
+                <button class="btn btn-training4A"></button>
+                <button class="btn btn-training4B"></button>
+                <button class="btn btn-storage"></button>
+                <button class="btn btn-admin"></button>
+                <button class="btn btn-livestudio"></button>
+                <button class="btn btn-liveoffice"></button>
+                <button class="btn btn-restroom"></button>
+                <button class="btn btn-fire"></button>
             </div>
             <div>
 
@@ -159,74 +159,74 @@ export default {
 .btn {
     position: absolute;
 
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: .3rem solid #00104A;
+    border: .2rem solid #00104A;
     cursor: pointer;
     z-index: 1;
 }
 
-.btn-1 {
-    top: 77.5%;
-    left: 34%;
+.btn-lobby {
+    top: 67.5%;
+    left: 40%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-2 {
-    top: 45.5%;
-    left: 14.3%;
+.btn-training4A {
+    top: 43.5%;
+    left: 24.3%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-3 {
-    top: 44.5%;
-    left: 34.2%;
+.btn-training4B {
+    top: 42.5%;
+    left: 40.2%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-4 {
-    top: 24.2%;
-    left: 50%;
+.btn-storage {
+    top: 27.4%;
+    left: 52.7%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-5 {
-    top: 53.5%;
-    left: 50%;
+.btn-admin {
+    top: 56%;
+    left: 52.6%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-6 {
-    top: 50%;
-    left: 64%;
+.btn-livestudio {
+    top: 47%;
+    left: 63.7%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-7 {
-    top: 29%;
-    left: 65.5%;
+.btn-liveoffice {
+    top: 31%;
+    left: 64.7%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-8 {
-    top: 18.2%;
-    left: 43.8%;
+.btn-restroom {
+    top: 23%;
+    left: 47.8%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-9 {
-    top: 9.2%;
-    left: 68.5%;
+.btn-fire {
+    top: 16%;
+    left: 68%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }

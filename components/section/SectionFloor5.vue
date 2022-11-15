@@ -84,13 +84,13 @@
                 <!--                        Academic Center for Excellence (ValACE) building.-->
                 <!--                    </p>-->
                 <!--                </Popup>-->
-                <button class="btn btn-1"></button>
-                <button class="btn btn-2"></button>
-                <button class="btn btn-3"></button>
-                <button class="btn btn-4"></button>
-                <button class="btn btn-5"></button>
-                <button class="btn btn-6"></button>
-                <button class="btn btn-7"></button>
+                <button class="btn btn-conference5A"></button>
+                <button class="btn btn-conference5B"></button>
+                <button class="btn btn-training5A"></button>
+                <button class="btn btn-training5B"></button>
+                <button class="btn btn-training5C"></button>
+                <button class="btn btn-restroom"></button>
+                <button class="btn btn-fire"></button>
             </div>
             <div>
 
@@ -150,59 +150,59 @@ export default {
 .btn {
     position: absolute;
 
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 9999px;
     background-color: white;
-    border: .3rem solid #00104A;
+    border: .2rem solid #00104A;
     cursor: pointer;
     z-index: 1;
 }
 
-.btn-1 {
-    top: 34%;
-    left: 63.7%;
+.btn-conference5A {
+    top: 36%;
+    left: 65%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-2 {
-    top: 56.2%;
-    left: 61.8%;
+.btn-conference5B {
+    top: 52.2%;
+    left: 64%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-3 {
+.btn-training5A {
     top: 43.8%;
-    left: 13.8%;
+    left: 25.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-4 {
-    top: 56%;
-    left: 36%;
+.btn-training5B {
+    top: 53%;
+    left: 43.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-5 {
-    top: 34%;
-    left: 36%;
+.btn-training5C {
+    top: 36%;
+    left: 43.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-6 {
-    top: 15.2%;
-    left: 44.2%;
+.btn-restroom {
+    top: 22.8%;
+    left: 43%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
-.btn-7 {
-    top: 6%;
+.btn-fire {
+    top: 16%;
     left: 71.2%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);

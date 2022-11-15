@@ -1,5 +1,7 @@
 <template>
-    <SectionFloor2/>
+    <div>
+        <SectionFloor2/>
+    </div>
 </template>
 
 <script>
