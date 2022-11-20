@@ -87,7 +87,11 @@ export default {
     methods: {
         async scrollToID(id, route) {
             if (route !== this.$route.name) {
-                await this.$router.push(route)
+                try {
+                    await this.$router.push(route)
+                } catch (e) {
+                    console.log('cant redirect')
+                }
             }
             let el = document.getElementById(id);
             el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});

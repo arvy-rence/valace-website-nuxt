@@ -130,8 +130,8 @@ export default {
         },
         getBookSelection(data) {
             this.pageData = {...this.pageData, books: data}
-            localStorage.setItem("bookData", JSON.stringify(this.pageData))
-            console.log(this.pageData)
+            // localStorage.setItem("bookData", JSON.stringify(this.pageData))
+            // console.log(this.pageData)
         },
 
     },
@@ -145,12 +145,12 @@ export default {
         // this.generateRandomWordQuery()
         // if (process.client) {
             console.log("Called")
-            localStorage.removeItem("bookData")
+            // localStorage.removeItem("bookData")
         // }
     },
 
     mounted() {
-        console.log(localStorage.getItem("bookData"))
+        // console.log(localStorage.getItem("bookData"))
         // console.log(localStorage.getItem("pageData"))
         // console.log(localStorage.getItem("pageData"))
         // if (localStorage.getItem("pageData") !== null) {

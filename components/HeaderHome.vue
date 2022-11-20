@@ -54,22 +54,22 @@
                           class="block text-primary font-khula md:inline-block px-8 py-3 no-underline hover:text-grey-darker text-2xl"
                 >ABOUT US
                 </NuxtLink>
-                <div class="aboutusdropdown-content">
-                    <div class="flex flex-col">
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('find-us', '/about-us')">Find Us</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('misc', '/about-us')">Guidelines</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('meet-the-team', '/about-us')">Meet the Team</a>
-                        </button>
-                    </div>
-                </div>
+<!--                <div class="aboutusdropdown-content">-->
+<!--                    <div class="flex flex-col">-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('find-us', '/about-us')">Find Us</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('misc', '/about-us')">Guidelines</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('meet-the-team', '/about-us')">Meet the Team</a>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </li>
             <li class=" border-t md:border-none">
                 <NuxtLink to="/facilities"

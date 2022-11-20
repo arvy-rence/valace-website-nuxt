@@ -1,13 +1,13 @@
 <template>
     <div class="bg-[url(/images/directory-bg.png)] w-full">
         <div class="flex flex-col justify-center items-center max-w-[calc(1500px)] mx-auto pb-[4rem]">
-            <div class="relative w-full">
-                <h1 class="py-[2rem] px-[2rem] md:text-[3rem] text-[2.5rem] items-start font-khula font-bold text-center text-primary">
+            <div class="w-full flex-col items-center justify-center">
+                <h1 class="pt-[2rem] px-[2rem] md:text-[3rem] text-[2.5rem] items-start font-khula font-bold text-center text-primary">
                     VALACE DIRECTORY
                 </h1>
-                <NuxtLink to="/floor-directory" class="absolute right-[1rem] md:right-[3rem] h-[84px] top-2 md:top-[50px]">
-                    <h3 class="uppercase text-primary text-lg md:text-2xl font-bold font-khula">
-                        Visit
+                <NuxtLink to="/floor-directory" class="">
+                    <h3 class="uppercase text-primary text-lg md:text-2xl font-bold font-khula text-center pb-[1.5rem] opacity-70">
+                        Visit Floor Directory
                         <i class="fa-solid fa-chevron-right ml-0 md:ml-2 text-lg md:text-2xl"></i>
                     </h3>
                 </NuxtLink>
