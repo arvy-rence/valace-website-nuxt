@@ -151,7 +151,7 @@
                     #AklatanParaSaBawatValenzuelano
                 </p>
                 <button class="bg-primary h-[3rem] w-[16rem] sm:h-[3rem] sm:w-[15rem]">
-                    <a href="/about" class="text-lg sm:text-lg font-bold text-white font-khula">
+                    <a href="http://192.168.68.103" class="text-lg sm:text-lg font-bold text-white font-khula">
                         Visit Public Access Catalog
                     </a>
                 </button>

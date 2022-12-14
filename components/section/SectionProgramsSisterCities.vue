@@ -12,7 +12,7 @@
         <div class="flex flex-row justify-center px-[1rem] lg:px-[6rem] pb">
 
             <div class="flex flex-col-reverse lg:flex-row pt-[2rem] justify-center lg:pl-[4rem] lg:pl-0 mx-auto">
-                <img src="/images/topnochers-shelf.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[10rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
+                <img src="/images/sister-cities.png" class="object-scale w-5/6 lg:object-scale-down m-auto lg:m-0 lg:w-96 lg:mr-[10rem] pt-[1rem] lg:pt-[1rem] shadow-lg"/>
                 <div class="w-5/6 lg:w-1/2 lg:pt-[2rem] m-auto lg:m-0">
                     <h3 class="font-khula text-left text-primary subtitle">
                         LIBRARY PERSONNEL DEVELOPMENT AND SUPPORT PROGRAM

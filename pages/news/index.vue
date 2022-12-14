@@ -1,21 +1,31 @@
 <template>
-    <div class="pt-[82.8px]"></div>
-    <div class="bg-white-100 flex-col bg-img justify-center align-center">
-        <UtilVerticalSpacer :height="2" units="rem"/>
-        <div>
-            <h2 class="font-bold text-lg text-gray-400 font-khula text-center uppercase">
-                Valenzuela City Library
-            </h2>
-            <h1 class="font-bold text-6xl text-primary text-center font-khula">
-                NEWS & ANNOUNCEMENTS
-            </h1>
-        </div>
-        <div class="flex justify-center flex-wrap">
-            <div v-for="newsInfo in newsData" :key="newsInfo.id">
-                <CardNews :newsInfo="newsInfo"/>
+    <div>
+        <div class="pt-[82.8px]"></div>
+        <div class="bg-white-100 flex-col bg-img justify-center align-center">
+            <div class="px-[10%]">
+                <NuxtLink to="/">
+                    <h3 class="uppercase text-primary text-2xl font-bold font-khula opacity-50">
+                        <i class="fa-solid fa-chevron-left mr-2 text-lg"></i>
+                        Back
+                    </h3>
+                </NuxtLink>
             </div>
+            <div>
+                <h2 class="font-bold text-lg text-gray-400 font-khula text-center uppercase">
+                    Valenzuela City Library
+                </h2>
+                <h1 class="font-bold text-6xl text-primary text-center font-khula">
+                    NEWS & ANNOUNCEMENTS
+                </h1>
+            </div>
+            <div class="flex justify-center flex-wrap">
+                <div v-for="newsInfo in newsData" :key="newsInfo.id">
+                    <CardNews :newsInfo="newsInfo"/>
+                </div>
+            </div>
+            <Loader :isLoading="isLoading"/>
         </div>
-        <Loader :isLoading="isLoading"/>
+        <SectionFooter/>
     </div>
 </template>
 
@@ -35,15 +45,15 @@ export default {
         }
     },
     async created() {
-        console.log("low")
-        const {data} = await axios.get("/news");
-        console.log(data.newsUTC8)
-        this.newsData = data.newsUTC8;
-        this.isLoading = false;
+        try {
+            const {data} = await axios.get("/news");
+            this.newsData = data.newsUTC8;
+            this.isLoading = false;
+        } catch (e) {
+            console.log("failed to fetch news")
+        }
     },
-    mounted() {
-        checkReload()
-    },
+    // mounted() {checkReload()},
 }
 </script>
 

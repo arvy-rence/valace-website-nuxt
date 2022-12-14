@@ -50,10 +50,19 @@ export default {
             isLoading: true
         }
     },
+    props: {
+
+    },
     async created() {
-        const {data} = await axios.get("/events/upcomingEvents")
-        this.events = data.upcomingEvents
-        this.isLoading = false
+        try {
+            const {data} = await axios.get("/events/upcomingEvents")
+            this.events = data.upcomingEvents
+            this.isLoading = false
+            this.$emit("complete-event-load", this.isLoading)
+            this.$emit("events-data", this.events)
+        } catch (e) {
+            console.log("failed to fetch events")
+        }
     }
 }
 </script>

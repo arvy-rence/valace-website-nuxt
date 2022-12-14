@@ -52,13 +52,13 @@
                 <ul>
                     <li class="font-bold font-khula text-lg text-primary">CONTACT US</li>
                     <div>
-                        <a href="tel:8-352-1000" class="font-kulim hover:underline">
+                        <a href="tel:8-352-1000" class="font-kulim hover:underline text-primary">
                             <i class="fa-solid fa-phone text-primary"></i>
                             8-352-1000
                         </a>
                     </div>
                     <div>
-                        <a href="mailto:valenzuelacitylibrary@gmail.com" class="font-kulim hover:underline">
+                        <a href="mailto:valenzuelacitylibrary@gmail.com" class="font-kulim hover:underline text-primary">
                             <i class="fa-regular fa-envelope text-primary"></i>
                             valenzuelacitylibrary@gmail.com
                         </a>

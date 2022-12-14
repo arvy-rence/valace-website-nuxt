@@ -1,9 +1,12 @@
 <template>
-    <div class="pt-[82.8px]"></div>
-    <HeaderFacility/>
     <div>
-        <img src="/images/facilities-banner.png" alt="" class="w-screen">
-        <SectionValACEDirectory/>
+        <div class="pt-[82.8px]"></div>
+        <HeaderFacility/>
+        <div>
+            <img src="/images/facilities-banner.png" alt="" class="w-screen">
+            <SectionValACEDirectory/>
+        </div>
+        <SectionFooter/>
     </div>
 </template>
 
@@ -15,7 +18,7 @@ export default {
     name: "facilities",
     components: {SectionValACEDirectory},
     mounted() {
-        checkReload()
+        // checkReload()
     },
 }
 </script>

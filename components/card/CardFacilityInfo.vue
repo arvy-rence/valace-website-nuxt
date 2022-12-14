@@ -1,18 +1,17 @@
 <template>
     <div class="relative w-[21rem] h-[22rem] transparent">
-        <div class="bg-white w-[336px] h-[289px] absolute bottom-0 rounded-2xl z-0 shadow-lg ">
+        <div class="bg-white w-[336px] absolute rounded-2xl z-0 shadow-lg ">
             <img src="/images/facility-card-bg.png" class="opacity-20" alt=""/>
         </div>
-        <img :src="facilityInfo.image" class="absolute left-1/2 transform -translate-x-1/2 z-10" alt=""/>
-        <h1 class="text-2xl w-full font-bold text-center absolute bottom-1/2">
-            {{ facilityInfo.title }}
-        </h1>
-        <p class="text-xl w-full text-center absolute bottom-[4rem] px-[1rem]">
-            {{ facilityInfo.description }}
-        </p>
-        <h2 class="absolute pl-[2rem] bottom-2 text-primary font-kulim z-20">
+
+        <img :src="facilityInfo.image" class="absolute left-1/2 transform top-[1rem] -translate-x-1/2 z-10" alt=""/>
+        <h2 class="text-xl w-full text-center absolute top-[10rem] opacity-50 text-primary">
             {{ facilityInfo.floorInfo }}
         </h2>
+        <h1 class="text-2xl w-full font-bold text-center absolute top-[12rem] bottom-1/2 text-primary font-khula">
+            {{ facilityInfo.title }}
+        </h1>
+
     </div>
 </template>
 
