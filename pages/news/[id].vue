@@ -3,7 +3,7 @@
         <div class="flex justify-center items-center">
             <div class="pt-[82.8px] w-3/5">
                 <NuxtLink to="/">
-                    <h3 class="uppercase text-primary text-2xl font-bold font-khula">
+                    <h3 class="uppercase text-primary text-2xl font-bold font-khula opacity-50">
                         <i class="fa-solid fa-chevron-left mr-2 text-lg"></i>
                         Back
                     </h3>

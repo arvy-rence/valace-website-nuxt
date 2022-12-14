@@ -2,7 +2,14 @@
     <div>
         <div class="pt-[82.8px]"></div>
         <div class="bg-white-100 flex-col bg-img justify-center align-center">
-            <UtilVerticalSpacer :height="2" units="rem"/>
+            <div class="px-[10%]">
+                <NuxtLink to="/">
+                    <h3 class="uppercase text-primary text-2xl font-bold font-khula opacity-50">
+                        <i class="fa-solid fa-chevron-left mr-2 text-lg"></i>
+                        Back
+                    </h3>
+                </NuxtLink>
+            </div>
             <div>
                 <h2 class="font-bold text-lg text-gray-400 font-khula text-center">
                     Valenzuela City Library
