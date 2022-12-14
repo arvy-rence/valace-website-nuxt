@@ -2,7 +2,7 @@
     <div class="flex flex-row h-screen lg:h-auto">
 <!--        Left Navigation-->
         <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
-            <NuxtLink to="/">
+            <NuxtLink to="/facilities">
                 <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
                     <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
                     Back
