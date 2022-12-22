@@ -42,21 +42,9 @@
             <h2 class="text-3xl sm:text-4xl text-primary pt-[12rem] pb-4 text-center">FLOOR DIRECTORY</h2>
 
             <div class="accordions w-full lg:w-[25rem]">
-                <Accordion title="Quiet Study Hall" bg-opacity="bg-opacity-10" class="mb-2">
-                    <img src="/images/bg.png" alt="">
-                    <p class="text-sm leading-4">A space that welcome you near the entrance of Valenzuela Academic Center for Excellence (ValACE) building.</p>
-                </Accordion>
-
-                <Accordion title="Bucheon (Special Collection)" bg-opacity="bg-opacity-10" class="mb-2">
-                    12311232
-                </Accordion>
-
-                <Accordion title="Restroom" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Fire Exit" bg-opacity="bg-opacity-30" bg-color="bg-red-600" class="mb-2">
-                    aiyuuuuuuuuyad
+                <Accordion v-for="item in sections" :title="item.title" :bg-opacity="item.bg_opacity" :bg-color="item.bg_color" class="mb-2">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-sm leading-4">{{item.description}}</p>
                 </Accordion>
             </div>
         </div>
@@ -64,17 +52,12 @@
         <div class="hidden lg:flex lg:flex-col lg:w-3/5">
             <div class="container-class">
                 <img src="/images/floor/SECOND-FLOOR.png" alt="" class="floor-img">
-<!--                <Popup :topLoc="37" :leftLoc="54.2">-->
-<!--                    <img src="/images/bg.png" alt="">-->
-<!--                    <p class="text-white text-xs leading-3">-->
-<!--                        A space that welcome you near the entrance of Valenzuela-->
-<!--                        Academic Center for Excellence (ValACE) building.-->
-<!--                    </p>-->
-<!--                </Popup>-->
-                <button class="btn btn-study"></button>
-                <button class="btn btn-bucheon"></button>
-                <button class="btn btn-restroom"></button>
-                <button class="btn btn-fire"></button>
+                <Popup v-for="item in sections" :topLoc="item.topLoc" :leftLoc="item.leftLoc" :up="item.up">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-white text-xs leading-3">
+                        {{item.description}}
+                    </p>
+                </Popup>
             </div>
             <div>
 
@@ -90,6 +73,49 @@ import Popup from "../util/Popup";
 export default {
     name: "SectionFloor2",
     components: {Popup, Accordion},
+    data() {
+        return {
+            sections : [
+                {
+                    title: "Quiet Study Hall",
+                    imageLink: "/images/directory_images/2nd_quiet.JPG",
+                    description: "A space to study and do your research with focus.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 39,
+                    leftLoc: 43,
+                    up: true
+                },
+                {
+                    title: "Bucheon (Special Collection)",
+                    imageLink: "/images/directory_images/2nd_bucheon.JPG",
+                    description: "Bucheon, Korea is a sister city of Valenzuela. Find resources relevant to Bucheon here.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 66,
+                    leftLoc: 28.2,
+                    up: false
+                },
+                {
+                    title: "Restroom",
+                    imageLink: "/images/directory_images/restroom.JPG",
+                    description: "Restroom / Comfort Room for: PWD / Male / Female",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 24.2,
+                    leftLoc: 42.5,
+                    up: true
+                },
+                {
+                    title: "Fire Exit",
+                    imageLink: "/images/directory_images/fireexit.JPG",
+                    description: "A designated emergency exit of Valenzuela City Academic Center for Excellence (ValACE).",
+                    bg_opacity: "bg-opacity-30",
+                    bg_color: "bg-red-600",
+                    topLoc: 16,
+                    leftLoc: 69,
+                    up: true
+                },
+            ]
+        }
+    },
 }
 </script>
 
@@ -129,47 +155,5 @@ export default {
 .floor-img {
     width: 80%;
     height: auto;
-}
-
-.btn {
-    position: absolute;
-
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 9999px;
-    background-color: white;
-    border: .2rem solid #00104A;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.btn-study {
-    top: 39%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-bucheon {
-    top: 66%;
-    left: 28.2%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-restroom {
-    top: 24.2%;
-    left: 42.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-
-
-.btn-fire {
-    top: 16%;
-    left: 69%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
 }
 </style>
