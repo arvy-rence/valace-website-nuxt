@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="h-screen overflow-y-hidden anim">
         <SectionFloor3/>
     </div>
 </template>
@@ -11,5 +11,13 @@ export default {
 </script>
 
 <style scoped>
+@keyframes intro {
+    from {top: 100vh;}
+    to {top: 0vh;}
+}
 
+.anim {
+    animation: intro .5s;
+    position: relative;
+}
 </style>

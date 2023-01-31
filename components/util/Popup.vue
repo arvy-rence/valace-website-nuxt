@@ -40,7 +40,7 @@ export default {
     computed: {
         containerLocation: function() {
             return {
-                top: this.top + '%',
+                top: (this.top + 3.6) + '%', //this.top for default
                 left: this.left + '%'
             }
         }
@@ -72,7 +72,7 @@ export default {
     z-index: 1;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    top: 0;
+    top: -30px; /* 0 for default */
     left: 0;
 }
 
@@ -103,6 +103,7 @@ export default {
 .triangle-2 {
     width: 0;
     height: 0;
+    margin-top: -30px; /* Remove for default */
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 70px solid #00104A;

@@ -134,7 +134,7 @@
 <!--    </div>-->
 
 
-    <div class="w-full bg-white">
+    <div class="w-full bg-[rgba(242,243,246,255)]">
         <div class="block relative overflow-hidden h-auto lg:h-[calc(647px)] max-w-[calc(1519.2px)] mx-auto">
             <!--    <div class="block relative overflow-hidden h-auto lg:h-[calc(100vh-63.2px)]">-->
             <div class="w-full px-[2rem] lg:px-0 lg:w-[34rem] z-10 absolute top-[calc(45%)] lg:top-[calc(17%)] lg:left-[5rem] pt-[2rem]">
@@ -152,7 +152,7 @@
                 </p>
                 <button class="bg-primary h-[3rem] w-[16rem] sm:h-[3rem] sm:w-[15rem]">
                     <a href="http://192.168.68.103" class="text-lg sm:text-lg font-bold text-white font-khula">
-                        Visit Public Access Catalog
+                        REGISTER NOW!
                     </a>
                 </button>
 

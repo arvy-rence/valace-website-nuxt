@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row">
         <!--        Left Navigation-->
-        <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
+        <!-- <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
             <NuxtLink to="/">
                 <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
                     <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
@@ -29,7 +29,8 @@
                     <li class="floor-list">6</li>
                 </NuxtLink>
             </ul>
-        </div>
+        </div> -->
+        <FloorDirectoryButtons/>
         <!--        Accordion-->
         <div class="px-4 w-screen lg:w-[432px]">
             <div class="w-full">
@@ -42,34 +43,9 @@
             <h2 class="text-3xl sm:text-4xl text-primary pt-[12rem] pb-4 text-center">FLOOR DIRECTORY</h2>
 
             <div class="accordions w-full lg:w-[25rem]">
-                <Accordion title="Conference Room 5A" bg-opacity="bg-opacity-10" class="mb-2">
-                    <img src="/images/bg.png" alt="">
-                    <p class="text-sm leading-4">A space that welcome you near the entrance of Valenzuela Academic Center for Excellence (ValACE) building.</p>
-                </Accordion>
-
-                <Accordion title="Conference Room 5B" bg-opacity="bg-opacity-10" class="mb-2">
-                    <img src="/images/bg.png" alt="">
-                    <p class="text-sm leading-4">A space that welcome you near the entrance of Valenzuela Academic Center for Excellence (ValACE) building.</p>
-                </Accordion>
-
-                <Accordion title="Teacher Training Hall 5A" bg-opacity="bg-opacity-10" class="mb-2">
-                    12311232
-                </Accordion>
-
-                <Accordion title="Teacher Training Hall 5B" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Teacher Training Hall 5C" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Restroom" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Fire Exit" bg-opacity="bg-opacity-30" bg-color="bg-red-600" class="mb-2">
-                    aiyuuuuuuuuyad
+                <Accordion v-for="item in sections" :title="item.title" :bg-opacity="item.bg_opacity" :bg-color="item.bg_color" class="mb-2">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-sm leading-4">{{item.description}}</p>
                 </Accordion>
             </div>
         </div>
@@ -77,20 +53,12 @@
         <div class="hidden lg:flex lg:flex-col lg:w-3/5">
             <div class="container-class">
                 <img src="/images/floor/FIFTH-FLOOR.png" alt="" class="floor-img">
-                <!--                <Popup :topLoc="37" :leftLoc="54.2">-->
-                <!--                    <img src="/images/bg.png" alt="">-->
-                <!--                    <p class="text-white text-xs leading-3">-->
-                <!--                        A space that welcome you near the entrance of Valenzuela-->
-                <!--                        Academic Center for Excellence (ValACE) building.-->
-                <!--                    </p>-->
-                <!--                </Popup>-->
-                <button class="btn btn-conference5A"></button>
-                <button class="btn btn-conference5B"></button>
-                <button class="btn btn-training5A"></button>
-                <button class="btn btn-training5B"></button>
-                <button class="btn btn-training5C"></button>
-                <button class="btn btn-restroom"></button>
-                <button class="btn btn-fire"></button>
+                <Popup v-for="item in sections" :topLoc="item.topLoc" :leftLoc="item.leftLoc" :up="item.up">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-white text-xs leading-3">
+                        {{item.description}}
+                    </p>
+                </Popup>
             </div>
             <div>
 
@@ -102,10 +70,81 @@
 <script>
 import Popup from "../util/Popup";
 import Accordion from "../util/Accordion";
+import FloorDirectoryButtons from "../util/FloorDirectoryButtons";
 
 export default {
     name: "SectionFloor5",
-    components: {Popup, Accordion},
+    components: {Popup, Accordion, FloorDirectoryButtons},
+    data() {
+        return {
+            sections : [
+                {
+                    title: "Conference Room 5A",
+                    imageLink: "/images/directory_images/5th_conference.JPG",
+                    description: "Small group meeting and discussion area.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 36,
+                    leftLoc: 65,
+                    up: true
+                },
+                {
+                    title: "Conference Room 5B",
+                    imageLink: "/images/directory_images/5th_conference.JPG",
+                    description: "Small group meeting and discussion area.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 52.2,
+                    leftLoc: 64,
+                    up: false
+                },
+                {
+                    title: "Teacher Training Hall 5A",
+                    imageLink: "/images/directory_images/5th_5a.JPG",
+                    description: "Meetings, trainings, and workshops are done here.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 43.8,
+                    leftLoc: 25.5,
+                    up: false
+                },
+                {
+                    title: "Teacher Training Hall 5B",
+                    imageLink: "/images/directory_images/5th_5b.JPG",
+                    description: "Meetings, trainings, and workshops are done here.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 53,
+                    leftLoc: 43.5,
+                    up: false
+                },
+                {
+                    title: "Teacher Training Hall 5C",
+                    imageLink: "/images/directory_images/5th_5c.JPG",
+                    description: "Meetings, trainings, and workshops are done here.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 36,
+                    leftLoc: 43.5,
+                    up: true
+                },
+                {
+                    title: "Restroom",
+                    imageLink: "/images/directory_images/restroom.JPG",
+                    description: "Restroom / Comfort Room for: PWD / Male / Female",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 22.8,
+                    leftLoc: 43,
+                    up: true
+                },
+                {
+                    title: "Fire Exit",
+                    imageLink: "/images/directory_images/fireexit.JPG",
+                    description: "A designated emergency exit of Valenzuela City Academic Center for Excellence (ValACE).",
+                    bg_opacity: "bg-opacity-30",
+                    bg_color: "bg-red-600",
+                    topLoc: 16,
+                    leftLoc: 71.2,
+                    up: true
+                },
+            ]
+        }
+    },
 }
 </script>
 
@@ -145,66 +184,5 @@ export default {
 .floor-img {
     width: 80%;
     height: auto;
-}
-
-.btn {
-    position: absolute;
-
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 9999px;
-    background-color: white;
-    border: .2rem solid #00104A;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.btn-conference5A {
-    top: 36%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-conference5B {
-    top: 52.2%;
-    left: 64%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-training5A {
-    top: 43.8%;
-    left: 25.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-training5B {
-    top: 53%;
-    left: 43.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-training5C {
-    top: 36%;
-    left: 43.5%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-restroom {
-    top: 22.8%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.btn-fire {
-    top: 16%;
-    left: 71.2%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row">
         <!--        Left Navigation-->
-        <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
+        <!-- <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
             <NuxtLink to="/">
                 <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
                     <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
@@ -29,7 +29,8 @@
                     <li class="floor-list">6</li>
                 </NuxtLink>
             </ul>
-        </div>
+        </div> -->
+        <FloorDirectoryButtons/>
         <!--        Accordion-->
         <div class="px-4 w-screen lg:w-[432px]">
             <div class="w-full">
@@ -42,29 +43,9 @@
             <h2 class="text-3xl sm:text-4xl text-primary pt-[12rem] pb-4 text-center">FLOOR DIRECTORY</h2>
 
             <div class="accordions w-full lg:w-[25rem]">
-                <Accordion title="Education 360° Office" bg-opacity="bg-opacity-10" class="mb-2">
-                    <img src="/images/bg.png" alt="">
-                    <p class="text-sm leading-4">A space that welcome you near the entrance of Valenzuela Academic Center for Excellence (ValACE) building.</p>
-                </Accordion>
-
-                <Accordion title="Val-SPED Transition Room" bg-opacity="bg-opacity-10" class="mb-2">
-                    12311232
-                </Accordion>
-
-                <Accordion title="Val-SPED Assessment Room" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Restroom" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="GPTA Office" bg-opacity="bg-opacity-10" class="mb-2">
-                    akhkkjad
-                </Accordion>
-
-                <Accordion title="Fire Exit" bg-opacity="bg-opacity-30" bg-color="bg-red-600" class="mb-2">
-                    aiyuuuuuuuuyad
+                <Accordion v-for="item in sections" :title="item.title" :bg-opacity="item.bg_opacity" :bg-color="item.bg_color" class="mb-2">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-sm leading-4">{{item.description}}</p>
                 </Accordion>
             </div>
         </div>
@@ -72,22 +53,13 @@
         <div class="hidden lg:flex lg:flex-col lg:w-3/5">
             <div class="container-class">
                 <img src="/images/floor/SIXTH-FLOOR.png" alt="" class="floor-img">
-                <!--                <Popup :topLoc="37" :leftLoc="54.2">-->
-                <!--                    <img src="/images/bg.png" alt="">-->
-                <!--                    <p class="text-white text-xs leading-3">-->
-                <!--                        A space that welcome you near the entrance of Valenzuela-->
-                <!--                        Academic Center for Excellence (ValACE) building.-->
-                <!--                    </p>-->
-                <!--                </Popup>-->
-                <button class="btn btn-360officeA"></button>
-                <button class="btn btn-360officeB"></button>
-                <button class="btn btn-360officeC"></button>
-                <button class="btn btn-valspedTransitionA"></button>
-                <button class="btn btn-valspedTransitionB"></button>
-                <button class="btn btn-valspedAssesment"></button>
-                <button class="btn btn-restroom"></button>
-                <button class="btn btn-GPTA"></button>
-                <button class="btn btn-fire"></button>
+
+                <Popup v-for="item in sections2" :topLoc="item.topLoc" :leftLoc="item.leftLoc" :up="item.up">
+                    <img :src="item.imageLink" alt="">
+                    <p class="text-white text-xs leading-3">
+                        {{item.description}}
+                    </p>
+                </Popup>
             </div>
             <div>
 
@@ -99,10 +71,105 @@
 <script>
 import Popup from "../util/Popup";
 import Accordion from "../util/Accordion";
+import FloorDirectoryButtons from "../util/FloorDirectoryButtons";
 
 export default {
     name: "SectionFloor6",
-    components: {Popup, Accordion},
+    components: {Popup, Accordion, FloorDirectoryButtons},
+    data() {
+        return {
+            sections : [
+                {
+                    title: "Education 360° Office",
+                    imageLink: "/images/directory_images/6th_edukasyon.JPG",
+                    description: "Office in charge of the Education 360 Degrees Investment Program  which is a holistic and systematic approach for quality basic education.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 32,
+                    leftLoc: 65,
+                    up: true
+                },
+                {
+                    title: "Val-SPED Transition Room",
+                    imageLink: "/images/directory_images/6th_sped.JPG",
+                    description: "Learner-centered learning environment for functionally literate and holistically developed learners with disabilities.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 51,
+                    leftLoc: 43,
+                    up: false
+                },
+                {
+                    title: "Val-SPED Assessment Room",
+                    imageLink: "/images/directory_images/6th_sped.JPG",
+                    description: "Learner-centered learning environment for functionally literate and holistically developed learners with disabilities.",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 34.5,
+                    leftLoc: 43,
+                    up: true
+                },
+                {
+                    title: "GPTA Office",
+                    imageLink: "/images/directory_images/6th_gpta.JPG",
+                    description: "General Parents-Teachers Association (GPTA) Office",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 21.5,
+                    leftLoc: 61,
+                    up: true
+                },
+                {
+                    title: "Restroom",
+                    imageLink: "/images/directory_images/restroom.JPG",
+                    description: "Restroom / Comfort Room for: PWD / Male / Female",
+                    bg_opacity: "bg-opacity-10",
+                    topLoc: 22.5,
+                    leftLoc: 43,
+                    up: true
+                },
+                {
+                    title: "Fire Exit",
+                    imageLink: "/images/directory_images/fireexit.JPG",
+                    description: "A designated emergency exit of Valenzuela City Academic Center for Excellence (ValACE).",
+                    bg_opacity: "bg-opacity-30",
+                    bg_color: "bg-red-600",
+                    topLoc: 15.7,
+                    leftLoc: 71,
+                    up: true
+                },
+            ],
+            sections2 : [],
+        }
+    },
+    mounted() {
+        this.sections2 = [...this.sections]
+        this.sections2.push(
+            {
+                title: "Education 360° Office",
+                imageLink: "/images/directory_images/6th_edukasyon.JPG",
+                description: "Office in charge of the Education 360 Degrees Investment Program  which is a holistic and systematic approach for quality basic education.",
+                bg_opacity: "bg-opacity-10",
+                topLoc: 43,
+                leftLoc: 65,
+                up: false
+            },
+            {
+                title: "Education 360° Office",
+                imageLink: "/images/directory_images/6th_edukasyon.JPG",
+                description: "Office in charge of the Education 360 Degrees Investment Program  which is a holistic and systematic approach for quality basic education.",
+                bg_opacity: "bg-opacity-10",
+                topLoc: 54,
+                leftLoc: 64,
+                up: false
+            },
+            {
+                title: "Val-SPED Transition Room",
+                imageLink: "/images/directory_images/6th_sped.JPG",
+                description: "Learner-centered learning environment for functionally literate and holistically developed learners with disabilities.",
+                bg_opacity: "bg-opacity-10",
+                topLoc: 52.5,
+                leftLoc: 24.8,
+                up: false
+            },
+        )
+    }
 }
 </script>
 

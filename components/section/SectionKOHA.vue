@@ -16,7 +16,9 @@
                 </NuxtLink>
             </div>
             <div class="w-full lg:w-5/12">
-                <img src="/images/sample-vid.png" class="w-full" alt=""/>
+                <video class="w-full" controls>
+                    <source src="/videos/opac-final.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
