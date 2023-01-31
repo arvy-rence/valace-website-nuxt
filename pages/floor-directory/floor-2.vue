@@ -1,15 +1,39 @@
 <template>
-    <div>
+    <div class="h-screen overflow-y-hidden anim">
         <SectionFloor2/>
     </div>
 </template>
 
 <script>
 export default {
-    name: "floor-2"
+    name: "floor-2",
+    data() {
+        
+    },
+    mounted() {
+    }
 }
 </script>
 
 <style scoped>
+@keyframes intro {
+    from {top: 100vh;}
+    to {top: 0vh;}
+}
 
+.anim {
+    animation: intro .5s;
+    position: relative;
+}
+
+@keyframes outro {
+    from {top: 0vh;}
+    to {top: -100vh;}
+}
+
+.animout {
+    animation: outro .5s;
+    position: relative;
+    
+}
 </style>

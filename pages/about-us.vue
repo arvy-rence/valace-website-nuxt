@@ -4,7 +4,7 @@
         <div>
             <HeaderAbout/>
             <img src="/images/about-banner.png" alt="" class="w-screen opacity-50">
-            <SectionLibraryInfo id="map"/>
+            <!-- <SectionLibraryInfo id="map"/> -->
             <FadeView>
                 <SectionContactInfo/>
             </FadeView>

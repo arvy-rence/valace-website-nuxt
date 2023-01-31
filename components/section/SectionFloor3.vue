@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-row">
         <!--        Left Navigation-->
-        <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
+        <!-- <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
             <NuxtLink to="/">
                 <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
                     <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
@@ -29,7 +29,8 @@
                     <li class="floor-list">6</li>
                 </NuxtLink>
             </ul>
-        </div>
+        </div> -->
+        <FloorDirectoryButtons/>
         <!--        Accordion-->
         <div class="px-4 w-screen lg:w-[432px]">
             <div class="w-full">
@@ -69,10 +70,11 @@
 <script>
 import Popup from "../util/Popup";
 import Accordion from "../util/Accordion";
+import FloorDirectoryButtons from "../util/FloorDirectoryButtons";
 
 export default {
     name: "SectionFloor3",
-    components: {Popup, Accordion},
+    components: {Popup, Accordion, FloorDirectoryButtons},
     data() {
         return {
             sections : [

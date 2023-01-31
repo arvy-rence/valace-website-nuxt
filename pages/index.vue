@@ -4,14 +4,14 @@
             <HeaderHome/>
             <div class="pt-[82.8px]"></div>
             <SectionHero/>
-            <FadeView>
+            <!-- <FadeView>
                 <SectionNews @complete-news-load="completeNewsLoad"
                              @news-data="getNewsData"/>
-            </FadeView>
-            <FadeView>
+            </FadeView> -->
+            <!-- <FadeView>
                 <SectionEvents @complete-event-load="completeEventLoad"
                                @events-data="getEventsData"/>
-            </FadeView>
+            </FadeView> -->
             <FadeView>
                 <SectionTopnotchers @complete-topnotcher-load="completeTopnotcherLoad"
                                     @topnotcher-data="getTopnotchers"/>
@@ -41,18 +41,18 @@ import SectionKOHA from "../components/section/SectionKOHA";
 import SectionPartners from "../components/section/SectionPartners";
 import SectionSisterCities from "../components/section/SectionSisterCities";
 import SectionTopnotchers from "../components/section/SectionTopnotchers";
-import SectionNews from "../components/section/SectionNews";
+// import SectionNews from "../components/section/SectionNews";
 import SectionHero from "../components/section/SectionHero";
-import SectionEvents from "../components/section/SectionEvents";
+// import SectionEvents from "../components/section/SectionEvents";
 import Loading from "../components/util/Loading";
 
 export default {
     name: "index",
     components: {
         Loading,
-        SectionEvents,
+        // SectionEvents,
         SectionHero,
-        SectionNews,
+        // SectionNews,
         SectionTopnotchers,
         SectionSisterCities,
         SectionPartners,
@@ -61,8 +61,8 @@ export default {
     data() {
         return {
             isLoading: {
-                news: true,
-                events: true,
+                // news: true,
+                // events: true,
                 topnotchers: true,
                 sisterCity: true,
             },
@@ -79,16 +79,16 @@ export default {
         }
     },
     methods: {
-        completeNewsLoad(status) {
-            this.isLoading.news = status
-            this.removeLoadingPage()
-            // console.log('news load complete')
-        },
-        completeEventLoad(status) {
-            this.isLoading.events = status
-            this.removeLoadingPage()
-            // console.log('event load complete')
-        },
+        // completeNewsLoad(status) {
+        //     this.isLoading.news = status
+        //     this.removeLoadingPage()
+        //     // console.log('news load complete')
+        // },
+        // completeEventLoad(status) {
+        //     this.isLoading.events = status
+        //     this.removeLoadingPage()
+        //     // console.log('event load complete')
+        // },
         completeTopnotcherLoad(status) {
             this.isLoading.topnotchers = status
             this.removeLoadingPage()
@@ -101,23 +101,23 @@ export default {
         },
         removeLoadingPage() {
             // this.isLoading.topnotchers === false && this.isLoading.sisterCity === false
-            if (this.isLoading.news === false && this.isLoading.events === false) {
+            // if (this.isLoading.news === false) {
                 this.isLoaded = true
-            }
+            // }
         },
 
 
         // get section data
-        getNewsData(data) {
-            this.pageData = {...this.pageData, news: data}
+        // getNewsData(data) {
+        //     this.pageData = {...this.pageData, news: data}
             // localStorage.setItem("pageData", JSON.stringify(this.pageData))
             // console.log(this.pageData)
-        },
-        getEventsData(data) {
-            this.pageData = {...this.pageData, events: data}
-            // localStorage.setItem("pageData", JSON.stringify(this.pageData))
-            // console.log(this.pageData)
-        },
+        // },
+        // getEventsData(data) {
+        //     this.pageData = {...this.pageData, events: data}
+        //     // localStorage.setItem("pageData", JSON.stringify(this.pageData))
+        //     // console.log(this.pageData)
+        // },
         getSisterCityData(data) {
             this.pageData = {...this.pageData, sisterCity: data}
             // localStorage.setItem("pageData", JSON.stringify(this.pageData))

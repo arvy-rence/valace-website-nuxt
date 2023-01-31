@@ -72,7 +72,7 @@
 
 <!--            <img src="/images/valace-building.png" class="w-full object-contain">-->
         </div>
-        <div class="w-full lg:w-3/5 px-2 lg:px-[6rem] mt-[1rem] lg:mt-0 flex flex-col">
+        <!-- <div class="w-full lg:w-3/5 px-2 lg:px-[6rem] mt-[1rem] lg:mt-0 flex flex-col">
             <div class="my-auto flex flex-col h-full">
                 <h1 class="font-bold text-gray-400 text-4xl pb-2">
                     LIBRARY PROGRAMS
@@ -86,7 +86,7 @@
                 
             </div>
 
-        </div>
+        </div> -->
     </div>
 </template>
 
