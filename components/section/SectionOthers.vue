@@ -11,7 +11,7 @@
         </div>
         <!-- px-[6rem]  -->
         <div class="flex w-full my-[1rem]">
-            <div class="px-[20%]">
+            <div class="px-[10%] md:px-[20%]">
                 <ul class="list-panuntunan-a font-kulim">
 
                 <p>1. Library visitors must have a valid ID (government issued ID, school ID, company ID, etc.) to avail of the Valenzuela City Library services.</p>
@@ -40,27 +40,34 @@
             </div>
             <h1 class="font-khula pt-1">Mission and Vision</h1>
         </div>
+
         <div class="flex w-full my-[1rem]">
-            <div class="px-[20%]">
+            <div class="px-[10%] md:px-[20%]">
                 <h1 class="font-bold text-lg">Mission</h1>
-                Lead and engage in a dynamic advocacy of literacy and lifelong learning chiefly amongst
-                Valenzuelanos by sustaining and providing quality access to community relevant resources and
-                through the delivery of effective and meaningful programs.
+                <p class="px-[2%]">
+                  Lead and engage in a dynamic advocacy of literacy and lifelong learning chiefly amongst
+                  Valenzuelanos by sustaining and providing quality access to community relevant resources and
+                  through the delivery of effective and meaningful programs.
+                </p>
 
                 <h1 class="font-bold text-lg pt-5">Vision</h1>
-                To be a leading public library system which caters to the literacy needs and lifelong learning
-                of Valenzuela City constituents and the general public.
+                <p class="px-[2%]">
+                  To be a leading public library system which caters to the literacy needs and lifelong learning
+                  of Valenzuela City constituents and the general public.
+                </p>
             </div>
         </div>
-        
+
+
         <div class="w-full bg-primary bg-opacity-20 flex items-center px-[15%]">
             <div class="flex w-14 h-14 mr-2">
                 <img src="/images/guidelines/faq.png" class="object-scale-down" alt="">
             </div>
             <h1 class="font-khula pt-1">Frequently Asked Questions (FAQs)</h1>
         </div>
+
         <div class="flex w-full my-[1rem]">
-            <div class="px-[20%]">
+            <div class="px-[10%] md:px-[20%]">
                 <h1 class="font-bold text-lg">Where is the Valenzuela City Library located?</h1>
                 Valenzuela City Library is located at: MacArthur Highway, Corner A. Pablo Street, Malinta, Valenzuela City
 
