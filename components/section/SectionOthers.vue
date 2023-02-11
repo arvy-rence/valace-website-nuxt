@@ -1,5 +1,5 @@
 <template>
-    <div class="font-khula relative" id="misc">
+    <div class="font-khula relative pb-[2rem]" id="misc">
         <div class="w-full h-full absolute -z-10 bg-white"></div>
 
         <div class="w-full bg-primary bg-opacity-20 flex items-center px-[15%]">
