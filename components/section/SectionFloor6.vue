@@ -54,7 +54,7 @@
             <div class="container-class">
                 <img src="/images/floor/SIXTH-FLOOR.png" alt="" class="floor-img">
 
-                <Popup v-for="item in sections2" :topLoc="item.topLoc" :leftLoc="item.leftLoc" :up="item.up">
+                <Popup v-for="item in sections2" :topLoc="item.topLoc" :leftLoc="item.leftLoc" :up="item.up" ref="triggerPopup" @triggerParent="handleParentCall">
                     <img :src="item.imageLink" alt="">
                     <p class="text-white text-xs leading-3">
                         {{item.description}}
@@ -76,6 +76,13 @@ import FloorDirectoryButtons from "../util/FloorDirectoryButtons";
 export default {
     name: "SectionFloor6",
     components: {Popup, Accordion, FloorDirectoryButtons},
+    methods: {
+        handleParentCall() {
+            for (let i = 0; i < this.$refs.triggerPopup.length; i++) {
+                this.$refs.triggerPopup[i].destroyPopups()
+            }
+        },
+    },
     data() {
         return {
             sections : [

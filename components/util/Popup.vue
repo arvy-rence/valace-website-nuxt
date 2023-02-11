@@ -47,6 +47,9 @@ export default {
     },
     methods: {
         hoverPopup() {
+            if (!this.popupIsHovered) {
+                this.$emit("triggerParent")
+            }
             console.log(this.top + ' ' + this.left)
             this.popupIsHovered = !this.popupIsHovered
             // if (this.popupIsHovered === false) {
@@ -56,6 +59,9 @@ export default {
             //     this.popLeft = this.canvasSizeX * (this.leftLoc / 100) - (this.$refs.box.clientWidth / 2) + 34
             //     this.popTop = (this.canvasSizeY * (this.topLoc / 100)) - this.$refs.box.clientHeight - 14
             // }
+        },
+        destroyPopups() {
+            this.popupIsHovered = false;
         },
     }
 }
