@@ -17,9 +17,18 @@ import SectionValACEDirectory from "../components/section/SectionValACEDirectory
 export default {
     name: "facilities",
     components: {SectionValACEDirectory},
-    mounted() {
-        // checkReload()
+    created() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     },
+    mounted() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 }
 </script>
 

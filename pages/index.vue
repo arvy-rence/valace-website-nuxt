@@ -54,9 +54,7 @@ export default {
             startLoad: false,
             isAnimating: true,
 
-            pageData: {
-
-            },
+            pageData: {},
 
             localBooks: null
         }
@@ -72,46 +70,54 @@ export default {
         },
         removeLoadingPage() {
             if (this.isLoaded.topnotchers === true && this.isLoaded.sisterCity === true) {
-              this.startLoad = true;
+                this.startLoad = true;
             }
         },
 
 
-
         storeSisterCityData(data) {
-          if (process.client) {
-              window.localStorage.setItem("sistercity-data", JSON.stringify(data))
-          }
+            if (process.client) {
+                window.localStorage.setItem("sistercity-data", JSON.stringify(data))
+            }
         },
         storeTopNotchersData(data) {
-          if (process.client) {
-            window.localStorage.setItem("topnotchers-data", JSON.stringify(data))
-          }
+            if (process.client) {
+                window.localStorage.setItem("topnotchers-data", JSON.stringify(data))
+            }
         },
         storeBookSelection(data) {
-          if (process.client) {
-            window.localStorage.setItem("bookselection-data", JSON.stringify(data))
-          }
+            if (process.client) {
+                window.localStorage.setItem("bookselection-data", JSON.stringify(data))
+            }
         },
 
     },
     created() {
         if (process.client) {
-          window.addEventListener('beforeunload', function(event) {
-            window.localStorage.removeItem("sistercity-data")
-            window.localStorage.removeItem("topnotchers-data")
-            window.localStorage.removeItem("bookselection-data")
-          })
+            window.addEventListener('beforeunload', function (event) {
+                window.localStorage.removeItem("sistercity-data")
+                window.localStorage.removeItem("topnotchers-data")
+                window.localStorage.removeItem("bookselection-data")
+            })
         }
         this.removeLoadingPage()
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     },
 
     mounted() {
-      if (process.client) {
-        if (window.localStorage.getItem("sistercity-data") != null && window.localStorage.getItem("topnotchers-data") != null && window.localStorage.getItem("bookselection-data") != null) {
-          this.startLoad = true;
+
+        if (process.client) {
+            if (window.localStorage.getItem("sistercity-data") != null && window.localStorage.getItem("topnotchers-data") != null && window.localStorage.getItem("bookselection-data") != null) {
+                this.startLoad = true;
+            }
         }
-      }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     },
 }
 </script>

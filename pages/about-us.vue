@@ -29,9 +29,18 @@ import SectionLibraryInfo from "../components/section/SectionLibraryInfo";
 export default {
     name: "about-us",
     components: {SectionLibraryInfo, SectionContactInfo, SectionMeetTheTeam, SectionOthers},
-    mounted() {
-        // checkReload()
+    created() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     },
+    mounted() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 }
 </script>
 
