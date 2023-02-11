@@ -22,7 +22,6 @@
                     <CardMiniSisterCity :sisterCityInfo="info"/>
                 </div>
             </div>
-            <Loader :isLoading="isLoading"/>
             <UtilVerticalSpacer :height="2" units="rem"/>
             <div class="flex justify-center items-center">
                 <NuxtLink to="/sister-cities/">
@@ -44,21 +43,27 @@ import CardMiniSisterCity from "../card/CardMiniSisterCity";
 
 export default {
     name: "SectionSisterCities",
+    emits: ["complete-sister-city-load", "sister-city-data"],
     components: {CardMiniSisterCity},
     data() {
         return {
             sisterCitiesData: [],
-            isLoading: true
+            isLoaded: false
         }
     },
     async created() {
         try {
+            if (window.localStorage.getItem("sistercity-data") != null) {
+              this.sisterCitiesData = JSON.parse(window.localStorage.getItem("sistercity-data"))
+              return;
+            }
             const {data} = await axios.get("/sisterCity")
             this.sisterCitiesData = data.sisterCities
-            this.isLoading = false
-            this.$emit("complete-sister-city-load", this.isLoading)
-            this.$emit("sister-city-data", this.sisterCitiesData)
+            this.isLoaded = true
+            this.$emit("complete-sister-city-load", this.isLoaded)
+            this.$emit("sister-city-data", data.sisterCities)
         } catch (e) {
+            console.log(e)
             console.log("failed to fetch sister 1")
         }
     },

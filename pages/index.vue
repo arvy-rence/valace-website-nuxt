@@ -1,27 +1,19 @@
 <template>
     <div>
-        <div :class="[isLoaded ? ['visible', 'fade-in-css'] : ['collapse']]">
+        <div :class="[startLoad ? ['visible', 'fade-in-css'] : ['collapse']]">
             <HeaderHome/>
             <div class="pt-[82.8px]"></div>
             <SectionHero/>
-            <!-- <FadeView>
-                <SectionNews @complete-news-load="completeNewsLoad"
-                             @news-data="getNewsData"/>
-            </FadeView> -->
-            <!-- <FadeView>
-                <SectionEvents @complete-event-load="completeEventLoad"
-                               @events-data="getEventsData"/>
-            </FadeView> -->
             <FadeView>
                 <SectionTopnotchers @complete-topnotcher-load="completeTopnotcherLoad"
-                                    @topnotcher-data="getTopnotchers"/>
+                                    @topnotcher-data="storeTopNotchersData"/>
             </FadeView>
             <FadeView>
                 <SectionSisterCities @complete-sister-city-load="completeSisterCityLoad"
-                                     @sister-city-data="getSisterCityData"/>
+                                     @sister-city-data="storeSisterCityData"/>
             </FadeView>
             <FadeView>
-                <SectionNewBookSelection @book-data="getBookSelection"/>
+                <SectionNewBookSelection @book-data="storeBookSelection"/>
             </FadeView>
             <FadeView>
                 <SectionKOHA/>
@@ -31,28 +23,23 @@
             </FadeView>
             <SectionFooter/>
         </div>
-        <Loading v-if="!isLoaded"/>
+        <Loading v-if="!startLoad"/>
     </div>
 </template>
 
 <script>
-import {checkReload} from "../composables/checkReload";
 import SectionKOHA from "../components/section/SectionKOHA";
 import SectionPartners from "../components/section/SectionPartners";
 import SectionSisterCities from "../components/section/SectionSisterCities";
 import SectionTopnotchers from "../components/section/SectionTopnotchers";
-// import SectionNews from "../components/section/SectionNews";
 import SectionHero from "../components/section/SectionHero";
-// import SectionEvents from "../components/section/SectionEvents";
 import Loading from "../components/util/Loading";
 
 export default {
     name: "index",
     components: {
         Loading,
-        // SectionEvents,
         SectionHero,
-        // SectionNews,
         SectionTopnotchers,
         SectionSisterCities,
         SectionPartners,
@@ -60,17 +47,13 @@ export default {
     },
     data() {
         return {
-            isLoading: {
-                // news: true,
-                // events: true,
-                topnotchers: true,
-                sisterCity: true,
+            isLoaded: {
+                topnotchers: false,
+                sisterCity: false,
             },
-            isLoaded: false,
+            startLoad: false,
             isAnimating: true,
 
-
-            //
             pageData: {
 
             },
@@ -79,109 +62,56 @@ export default {
         }
     },
     methods: {
-        // completeNewsLoad(status) {
-        //     this.isLoading.news = status
-        //     this.removeLoadingPage()
-        //     // console.log('news load complete')
-        // },
-        // completeEventLoad(status) {
-        //     this.isLoading.events = status
-        //     this.removeLoadingPage()
-        //     // console.log('event load complete')
-        // },
         completeTopnotcherLoad(status) {
-            this.isLoading.topnotchers = status
+            this.isLoaded.topnotchers = status
             this.removeLoadingPage()
-            // console.log('topnotcher load complete')
         },
         completeSisterCityLoad(status) {
-            this.isLoading.sisterCity = status
+            this.isLoaded.sisterCity = status
             this.removeLoadingPage()
-            // console.log('sister city load complete')
         },
         removeLoadingPage() {
-            // this.isLoading.topnotchers === false && this.isLoading.sisterCity === false
-            // if (this.isLoading.news === false) {
-                this.isLoaded = true
-            // }
+            if (this.isLoaded.topnotchers === true && this.isLoaded.sisterCity === true) {
+              this.startLoad = true;
+            }
         },
 
 
-        // get section data
-        // getNewsData(data) {
-        //     this.pageData = {...this.pageData, news: data}
-            // localStorage.setItem("pageData", JSON.stringify(this.pageData))
-            // console.log(this.pageData)
-        // },
-        // getEventsData(data) {
-        //     this.pageData = {...this.pageData, events: data}
-        //     // localStorage.setItem("pageData", JSON.stringify(this.pageData))
-        //     // console.log(this.pageData)
-        // },
-        getSisterCityData(data) {
-            this.pageData = {...this.pageData, sisterCity: data}
-            // localStorage.setItem("pageData", JSON.stringify(this.pageData))
-            // console.log(this.pageData)
+
+        storeSisterCityData(data) {
+          if (process.client) {
+              window.localStorage.setItem("sistercity-data", JSON.stringify(data))
+          }
         },
-        getTopnotchers(data) {
-            this.pageData = {...this.pageData, topnotcher: data}
-            // localStorage.setItem("pageData", JSON.stringify(this.pageData))
-            // console.log(this.pageData)
+        storeTopNotchersData(data) {
+          if (process.client) {
+            window.localStorage.setItem("topnotchers-data", JSON.stringify(data))
+          }
         },
-        getBookSelection(data) {
-            this.pageData = {...this.pageData, books: data}
-            // localStorage.setItem("bookData", JSON.stringify(this.pageData))
-            // console.log(this.pageData)
+        storeBookSelection(data) {
+          if (process.client) {
+            window.localStorage.setItem("bookselection-data", JSON.stringify(data))
+          }
         },
 
     },
     created() {
-        // console.log("Created")
-        // if(process.client) {
-        //     localStorage.removeItem("pageData")
-        // }
-        // console.log(this.pageData)
-
-        // this.generateRandomWordQuery()
-        // if (process.client) {
-            console.log("Called")
-            // localStorage.removeItem("bookData")
-        // }
+        if (process.client) {
+          window.addEventListener('beforeunload', function(event) {
+            window.localStorage.removeItem("sistercity-data")
+            window.localStorage.removeItem("topnotchers-data")
+            window.localStorage.removeItem("bookselection-data")
+          })
+        }
+        this.removeLoadingPage()
     },
 
     mounted() {
-        // console.log(localStorage.getItem("bookData"))
-        // console.log(localStorage.getItem("pageData"))
-        // console.log(localStorage.getItem("pageData"))
-        // if (localStorage.getItem("pageData") !== null) {
-        //     // console.log("Has item")
-        //
-        //     const pageData = JSON.parse(localStorage.getItem('pageData'));
-        //
-        //     // console.log(pageData)
-        //
-        //     // set item for news
-        //
-        //     // set item for events
-        //
-        //     // set item for topnotchers
-        //
-        //     // set item for bookselection
-        //
-        //     console.log(pageData.books)
-        //     // this.localBooks = pageData.books
-        //
-        //     // set item for sister city
-        //
-        //
-        //
-        //     this.isLoaded = true;
-        //
-        // } else {
-        //     console.log("Asd")
-        // }
-        // checkReload()
-        // localStorage.setItem("items", JSON.stringify())
+      if (process.client) {
+        if (window.localStorage.getItem("sistercity-data") != null && window.localStorage.getItem("topnotchers-data") != null && window.localStorage.getItem("bookselection-data") != null) {
+          this.startLoad = true;
+        }
+      }
     },
 }
 </script>

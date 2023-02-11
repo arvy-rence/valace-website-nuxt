@@ -1,7 +1,6 @@
 <template>
     <UtilVerticalSpacer :height="3" units="rem"/>
-    <Loader :isLoading="isLoading"/>
-    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[12rem] max-w-[calc(1500px)] mx-auto py-0 md:py-[7rem] w-full overflow-hidden" id="shelf-section" v-show="!isLoading">
+    <div class="flex flex-col-reverse md:flex-row px-[2rem] lg:px-[12rem] max-w-[calc(1500px)] mx-auto py-0 md:py-[7rem] w-full overflow-hidden" id="shelf-section">
         <div class="flex flex-col pt-[1rem] lg:pt-0 md:pr-[2rem] w-full md:w-3/5">
             <h1 class="text-4xl text-primary font-khula font-bold text-center md:text-left md:text-6xl lg:text-6xl">
                 TOPNOTCHERS'
@@ -47,6 +46,7 @@ import axios from '~/server/index'
 
 export default {
     name: "SectionTopnotchers",
+    emits: ["complete-topnotcher-load", "topnotcher-data"],
     data() {
         return {
             topnotchers: [
@@ -70,16 +70,20 @@ export default {
                 }
             ],
             index: 0,
-            isLoading: true
+            isLoaded: false
         }
     },
     async created(){
         try {
+            if (window.localStorage.getItem("topnotchers-data") != null) {
+              this.topnotchers = JSON.parse(window.localStorage.getItem("topnotchers-data"))
+              return;
+            }
             const {data} = await axios.get('/topnotchers/latest')
             this.topnotchers = data.recentTopnotchers
-            this.isLoading = false
-            this.$emit('complete-topnotcher-load', this.isLoading)
-            this.$emit('topnotchers-data', this.topnotchers)
+            this.isLoaded = true
+            this.$emit("complete-topnotcher-load", this.isLoaded)
+            this.$emit("topnotcher-data", this.topnotchers)
         } catch (e) {
             console.log("cant fetch topnotchers")
         }

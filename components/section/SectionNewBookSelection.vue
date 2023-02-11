@@ -42,26 +42,27 @@ export default {
     name: "SectionNewBookSelection",
 
     async mounted() {
-        if (localStorage.getItem("bookData") === null) {
-            console.log('no item')
-            try {
-                this.books = await getTrendingBooks()
-                this.book1 = this.books[0];
-                this.book2 = this.books[1];
-                this.book3 = this.books[2];
-
-                this.$emit('book-data', this.books)
-
-                loadStart();
-                // console.log(this.books)
-            } catch (e) {
-                console.log("failed to fetch books")
-            }
+        if (window.localStorage.getItem("bookselection-data") != null) {
+          this.books = JSON.parse(window.localStorage.getItem("bookselection-data"));
+          this.book1 = this.books[0];
+          this.book2 = this.books[1];
+          this.book3 = this.books[2];
+          const delay = ms => new Promise(res => setTimeout(res, ms));
+          await delay(500);
+          loadStart();
         } else {
-            console.log('has item')
-            const pageData = JSON.parse(localStorage.getItem('pageData'))
-            this.books = pageData.books;
+          try {
+            this.books = await getTrendingBooks()
+            this.book1 = this.books[0];
+            this.book2 = this.books[1];
+            this.book3 = this.books[2];
+
+            this.$emit('book-data', this.books)
+
             loadStart();
+          } catch (e) {
+            console.log("failed to fetch books")
+          }
         }
         function loadStart() {
             window.addEventListener('DOMContentLoaded', () => {
