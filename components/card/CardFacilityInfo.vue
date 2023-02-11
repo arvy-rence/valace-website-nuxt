@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-[21rem] h-[22rem] transparent">
+    <div class="relative w-[21rem] h-[19rem] transparent">
         <div class="bg-white w-[336px] absolute rounded-2xl z-0 shadow-lg ">
             <img src="/images/facility-card-bg.png" class="opacity-20" alt=""/>
         </div>

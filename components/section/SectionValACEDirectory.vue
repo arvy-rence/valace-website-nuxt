@@ -13,7 +13,7 @@
                 </NuxtLink>
             </div>
 
-            <div class="flex justify-center flex-wrap gap-[5rem]">
+            <div class="flex justify-center flex-wrap gap-[2rem] lg:gap-[5rem]">
                 <div v-for="(item, index) in facilityInfoArray" :key="index">
                     <CardFacilityInfo :facilityInfo="item"/>
                 </div>
