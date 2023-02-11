@@ -17,31 +17,31 @@
                           class="block font-khula text-primary md:inline-block px-8 py-3 no-underline text-2xl"
                 >HOME
                 </NuxtLink>
-                <div class="homedropdown-content">
-                    <div class="flex flex-col">
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('shelf-section', '/')">TOPNOTCHERS' SHELF</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('sistercity-section', '/')">SISTER CITIES & VISITING CORNER</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('book-section', '/')">BOOK SELECTION</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('opac-section', '/')">OPAC</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('partners-section', '/')">PARTNERS AND LINKAGES</a>
-                        </button>
-                    </div>
-                </div>
+<!--                <div class="homedropdown-content">-->
+<!--                    <div class="flex flex-col">-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('shelf-section', '/')">TOPNOTCHERS' SHELF</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('sistercity-section', '/')">SISTER CITIES & VISITING CORNER</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('book-section', '/')">BOOK SELECTION</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('opac-section', '/')">OPAC</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('partners-section', '/')">PARTNERS AND LINKAGES</a>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
             </li>
             <li class="border-t md:border-none">
                 <a class="block md:inline-block px-8 py-3 no-underline text-primary font-khula text-2xl"
@@ -56,9 +56,9 @@
                 </NuxtLink>
                 <div class="aboutusdropdown-content">
                     <div class="flex flex-col">
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>
-                        </button>
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('library-info', '/about-us')">Library Programs</a>-->
+<!--                        </button>-->
                         <button class="dropdown-items">
                             <a @click="scrollToID('find-us', '/about-us')">Find Us</a>
                         </button>

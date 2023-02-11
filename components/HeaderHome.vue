@@ -19,12 +19,12 @@
                 </NuxtLink>
                 <div class="homedropdown-content">
                     <div class="flex flex-col">
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>
-                        </button>
-                        <button class="dropdown-items">
-                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>
-                        </button>
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('news-section', '/')">NEWS & ANNOUNCEMENT</a>-->
+<!--                        </button>-->
+<!--                        <button class="dropdown-items">-->
+<!--                            <a @click="scrollToID('events-section', '/')">EVENTS & ACTIVITIES</a>-->
+<!--                        </button>-->
                         <button class="dropdown-items">
                             <a @click="scrollToID('shelf-section', '/')">TOPNOTCHERS' SHELF</a>
                         </button>
