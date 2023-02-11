@@ -37,7 +37,7 @@
                     </h2>
                 </NuxtLink>
             </div>
-            <div class="hidden lg:block w-[5rem] bg-red-500">
+            <div class="hidden lg:block w-[5rem]">
 
             </div>
             <div class="w-full lg:w-5/12">
