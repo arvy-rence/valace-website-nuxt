@@ -1,29 +1,29 @@
 <template>
-    <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
+    <div class="bg-primary bg-opacity-50 w-[6rem] md:w-[10rem] pb-[2rem] h-screen fixed">
         <NuxtLink to="/facilities">
             <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
                 <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
                 Back
             </h3>
         </NuxtLink>
-        <h1 class="pt-[6rem] px-2 text-lg md:text-2xl text-white text-center">PRESS BUTTON</h1>
+        <h1 class="pt-[3rem] md:pt-[6rem] px-2 text-sm md:text-2xl text-white text-center">PRESS BUTTON</h1>
         <ul>
-            <NuxtLink id="floor-1" to="/floor-directory" @click="callAHelp">
+            <NuxtLink id="floor-1" to="" @click="scrollToID('floor-directory-1', '/floor-directory')">
                 <li class="floor-list">1</li>
             </NuxtLink>
-            <NuxtLink id="floor-2" to="/floor-directory/floor-2" @click="callAHelp">
+            <NuxtLink id="floor-2" to="" @click="scrollToID('floor-directory-2', '/floor-directory')">
                 <li class="floor-list">2</li>
             </NuxtLink>
-            <NuxtLink id="floor-3" to="/floor-directory/floor-3" @click="callAHelp">
+            <NuxtLink id="floor-3" to="" @click="scrollToID('floor-directory-3', '/floor-directory')">
                 <li class="floor-list">3</li>
             </NuxtLink>
-            <NuxtLink id="floor-4" to="/floor-directory/floor-4" @click="callAHelp">
+            <NuxtLink id="floor-4" to="" @click="scrollToID('floor-directory-4', '/floor-directory')">
                 <li class="floor-list">4</li>
             </NuxtLink>
-            <NuxtLink id="floor-5" to="/floor-directory/floor-5" @click="callAHelp">
+            <NuxtLink id="floor-5" to="" @click="scrollToID('floor-directory-5', '/floor-directory')">
                 <li class="floor-list">5</li>
             </NuxtLink>
-            <NuxtLink id="floor-6" to="/floor-directory/floor-6" @click="callAHelp">
+            <NuxtLink id="floor-6" to="" @click="scrollToID('floor-directory-6', '/floor-directory')">
                 <li class="floor-list">6</li>
             </NuxtLink>
         </ul>
@@ -35,15 +35,25 @@
 export default {
     name: "FloorDirectoryButtons",
     methods: {
+      async scrollToID(id, route) {
+        console.log(route)
+        if (route !== this.$route.name) {
+          console.log(this.$route.name)
+          await this.$router.push(route)
+        }
+        let el = document.getElementById(id);
+        el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      },
         callAHelp(floor) {
-            if (floor > 1) {
-                this.movement = "up";
-                setTimeout(() => {
-                    this.$router.push(`/floor-directory/floor-${floor}`)
-                }, 250)
-            } else {
-                this.movement = "down";
-            }
+          // scrollToID('book-section', '/');
+            // if (floor > 1) {
+            //     this.movement = "up";
+            //     setTimeout(() => {
+            //         this.$router.push(`/floor-directory/floor-${floor}`)
+            //     }, 250)
+            // } else {
+            //     this.movement = "down";
+            // }
         }
     },
     data() {

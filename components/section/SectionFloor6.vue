@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row">
+    <div class="flex flex-row min-h-screen">
         <!--        Left Navigation-->
         <!-- <div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
             <NuxtLink to="/">
@@ -30,7 +30,7 @@
                 </NuxtLink>
             </ul>
         </div> -->
-        <FloorDirectoryButtons/>
+<!--        <FloorDirectoryButtons/>-->
         <!--        Accordion-->
         <div class="px-4 w-screen lg:w-[432px]">
             <div class="w-full">

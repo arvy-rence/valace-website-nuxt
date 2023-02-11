@@ -1,45 +1,45 @@
 <template>
-    <div class="flex flex-row h-screen lg:h-auto animin" :class="[movement === 'up' ? ['animout-up'] :  movement === 'down' ? ['animout-down'] : ['']]">
+    <div class="flex flex-row min-h-screen">
 <!--        Left Navigation-->
-<div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">
-        <NuxtLink to="/facilities">
-            <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">
-                <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>
-                Back
-            </h3>
-        </NuxtLink>
-        <h1 class="pt-[6rem] px-2 text-lg md:text-2xl text-white text-center">PRESS BUTTON</h1>
-        <ul>
-            <!-- <NuxtLink id="floor-1" to="/floor-directory" @click="callAHelp"> -->
-                <li class="floor-list">1</li>
-            <!-- </NuxtLink> -->
-            <div @click="callAHelp(2)">
-                <!-- <NuxtLink id="floor-2" to="/floor-directory/floor-2"> -->
-                    <li class="floor-list">2</li>
-                <!-- </NuxtLink> -->
-            </div>
-            <div @click="callAHelp(3)">
-                <!-- <NuxtLink id="floor-3" to="/floor-directory/floor-3"> -->
-                    <li class="floor-list">3</li>
-                <!-- </NuxtLink> -->
-            </div>
-            <div @click="callAHelp(4)">
-                <!-- <NuxtLink id="floor-4" to="/floor-directory/floor-4"> -->
-                    <li class="floor-list">4</li>
-                <!-- </NuxtLink> -->
-            </div>
-            <div @click="callAHelp(5)">
-                <!-- <NuxtLink id="floor-5" to="/floor-directory/floor-5"> -->
-                    <li class="floor-list">5</li>
-                <!-- </NuxtLink> -->
-            </div>
-            <div @click="callAHelp(6)">
-                <!-- <NuxtLink id="floor-6" to="/floor-directory/floor-6"> -->
-                    <li class="floor-list">6</li>
-                <!-- </NuxtLink> -->
-            </div>
-        </ul>
-    </div>
+<!--<div class="bg-primary bg-opacity-50 w-[10rem] pb-[2rem]">-->
+<!--        <NuxtLink to="/facilities">-->
+<!--            <h3 class="uppercase text-white font-khula text-lg md:text-2xl pt-[3rem] text-center">-->
+<!--                <i class="fa-solid fa-chevron-left mr-0 md:mr-2 text-2xl"></i>-->
+<!--                Back-->
+<!--            </h3>-->
+<!--        </NuxtLink>-->
+<!--        <h1 class="pt-[6rem] px-2 text-lg md:text-2xl text-white text-center">PRESS BUTTON</h1>-->
+<!--        <ul>-->
+<!--            &lt;!&ndash; <NuxtLink id="floor-1" to="/floor-directory" @click="callAHelp"> &ndash;&gt;-->
+<!--                <li class="floor-list">1</li>-->
+<!--            &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            <div @click="callAHelp(2)">-->
+<!--                &lt;!&ndash; <NuxtLink id="floor-2" to="/floor-directory/floor-2"> &ndash;&gt;-->
+<!--                    <li class="floor-list">2</li>-->
+<!--                &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div @click="callAHelp(3)">-->
+<!--                &lt;!&ndash; <NuxtLink id="floor-3" to="/floor-directory/floor-3"> &ndash;&gt;-->
+<!--                    <li class="floor-list">3</li>-->
+<!--                &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div @click="callAHelp(4)">-->
+<!--                &lt;!&ndash; <NuxtLink id="floor-4" to="/floor-directory/floor-4"> &ndash;&gt;-->
+<!--                    <li class="floor-list">4</li>-->
+<!--                &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div @click="callAHelp(5)">-->
+<!--                &lt;!&ndash; <NuxtLink id="floor-5" to="/floor-directory/floor-5"> &ndash;&gt;-->
+<!--                    <li class="floor-list">5</li>-->
+<!--                &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div @click="callAHelp(6)">-->
+<!--                &lt;!&ndash; <NuxtLink id="floor-6" to="/floor-directory/floor-6"> &ndash;&gt;-->
+<!--                    <li class="floor-list">6</li>-->
+<!--                &lt;!&ndash; </NuxtLink> &ndash;&gt;-->
+<!--            </div>-->
+<!--        </ul>-->
+<!--    </div>-->
         <!-- <FloorDirectoryButtons/> -->
 <!--        Accordion-->
         <div class="px-4 w-screen lg:w-[432px]">
@@ -128,7 +128,7 @@ export default {
                     description: "Read books, do your research, and connect with your community here.",
                     bg_opacity: "bg-opacity-10",
                     topLoc: 39,
-                    leftLoc: 49,
+                    leftLoc: 43,
                     up: false
                 },
                 {
@@ -146,7 +146,7 @@ export default {
                     description: "An area for the young to read, explore, and allow their imagination to come alive.",
                     bg_opacity: "bg-opacity-10",
                     topLoc: 34,
-                    leftLoc: 69,
+                    leftLoc: 66,
                     up: true
                 },
                 {
@@ -154,8 +154,8 @@ export default {
                     imageLink: "/images/directory_images/restroom.JPG",
                     description: "Restroom / Comfort Room for: PWD / Male / Female",
                     bg_opacity: "bg-opacity-10",
-                    topLoc: 23.5,
-                    leftLoc: 46,
+                    topLoc: 23.2,
+                    leftLoc: 41,
                     up: true
                 },
                 {
@@ -164,8 +164,8 @@ export default {
                     description: "A designated emergency exit of Valenzuela City Academic Center for Excellence (ValACE).",
                     bg_opacity: "bg-opacity-30",
                     bg_color: "bg-red-600",
-                    topLoc: 17,
-                    leftLoc: 79,
+                    topLoc: 16.5,
+                    leftLoc: 70.5,
                     up: true
                 },
             ]
