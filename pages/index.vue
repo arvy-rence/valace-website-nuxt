@@ -101,10 +101,6 @@ export default {
             })
         }
         this.removeLoadingPage()
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
     },
 
     mounted() {

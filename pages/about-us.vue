@@ -30,10 +30,7 @@ export default {
     name: "about-us",
     components: {SectionLibraryInfo, SectionContactInfo, SectionMeetTheTeam, SectionOthers},
     created() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
+
     },
     mounted() {
         window.scrollTo({
